@@ -1,6 +1,64 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-primary: #FFB63D;
+  --color-brand-primary-ink: #94671E;
+  --color-brand-primary-soft: #94671E;
+  --color-brand-primary-deep: #7A5518;
+  --color-brand-on-primary: #010506;
+
+  --color-brand-ink: #010506;
+  --color-brand-ink-strong: #000000;
+  --color-brand-body: #3A4243;
+  --color-brand-mute: #66716F;
+  --color-brand-canvas-text-soft: #0C1213;
+
+  --color-brand-hairline: #CED8D7;
+  --color-brand-hairline-soft: #E4EBEA;
+
+  --color-brand-canvas: #ffffff;
+  --color-brand-canvas-soft: #EEF8F7;
+
+  --color-brand-canvas-dark: #010506;
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+}
+
 body {
-  background-color: #faf9f5;
-  color: #010506;
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-canvas);
+  color: var(--color-brand-ink);
+}
+
+.ph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: var(--color-brand-canvas-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ph::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(1,5,6,0.12);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.ph span {
+  position: relative;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: .4px;
+  color: var(--color-brand-mute);
+  text-align: center;
+  max-width: 28ch;
+  text-wrap: pretty;
 }
