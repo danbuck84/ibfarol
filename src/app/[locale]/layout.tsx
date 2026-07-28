@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -15,6 +15,16 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Igreja Batista Farol",
   description: "Uma igreja bíblica, simples e acolhedora.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "IB Farol",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#faf9f5",
 };
 
 export default async function LocaleLayout({
