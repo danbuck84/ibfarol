@@ -1,1 +1,95 @@
-{}
+{
+  "Header": {
+    "alt_logo": "Igreja Batista Farol",
+    "nav_new": "Sou novo",
+    "nav_resources": "Recursos",
+    "nav_ministries": "Ministérios",
+    "nav_give": "Contribua",
+    "btn_plan_visit": "Planeje sua visita",
+    "lang_pt": "PT",
+    "lang_en": "EN"
+  },
+  "Hero": {
+    "image_alt": "Foto da congregação no domingo — pessoas reais, luz natural, plano aberto",
+    "eyebrow": "Domingo, 09h00 · Rua Othon dos Santos Mercadante, 43",
+    "headline": "Bíblica, simples, acolhedora.",
+    "description": "Se é a sua primeira vez, você não vai precisar fazer nada além de sentar e ficar à vontade. A gente te encontra na porta.",
+    "btn_plan_visit": "Planeje sua visita"
+  },
+  "NewHere": {
+    "eyebrow": "Sou novo aqui",
+    "headline": "Três coisas que resolvem a sua primeira visita.",
+    "card1_alt": "Entrada da igreja no domingo de manhã",
+    "card1_title": "O que esperar",
+    "card1_desc": "Cerca de 80 minutos: cânticos, leitura da Bíblia e pregação. Venha com a roupa que você usaria num sábado.",
+    "card2_alt": "Sala do ministério infantil, crianças e voluntários",
+    "card2_title": "Para as crianças",
+    "card2_desc": "Elas ficam com você ou na sala infantil — você escolhe. A equipe é treinada e há cadastro na entrada.",
+    "card3_alt": "Fachada do prédio vista da rua",
+    "card3_title": "Como chegar",
+    "card3_desc": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP."
+  },
+  "LatestMessage": {
+    "video_alt": "Frame da pregação de domingo — o pregador no púlpito",
+    "eyebrow": "Última mensagem",
+    "headline": "A cidade sobre o monte",
+    "meta_pastor": "Pr. Gustavo",
+    "meta_date": "20 jul 2026",
+    "meta_duration": "38 min",
+    "meta_scripture": "Mateus 5.13-16",
+    "description": "Terceira parte da série no Sermão do Monte. O áudio de cada domingo fica disponível aqui na segunda-feira.",
+    "btn_watch": "Assistir agora",
+    "btn_all": "Ver todas as mensagens"
+  },
+  "Ministries": {
+    "eyebrow": "Nossos ministérios",
+    "headline": "Um lugar para cada pessoa da família.",
+    "btn_all": "Ver todos",
+    "card1_alt": "Crianças na sala infantil",
+    "card1_title": "Crianças",
+    "card1_desc": "Domingos, durante o culto",
+    "card2_alt": "Encontro de jovens no sábado",
+    "card2_title": "Jovens",
+    "card2_desc": "Sábados, 16h",
+    "card3_alt": "Pequeno grupo reunido numa casa",
+    "card3_title": "Pequenos grupos",
+    "card3_desc": "Terças e quintas, 20h"
+  },
+  "Quote": {
+    "text": "“Assim brilhe também a luz de vocês diante das pessoas, para que vejam as suas boas obras e glorifiquem o Pai de vocês, que está nos céus.”",
+    "reference": "Mateus 5.16 · NAA"
+  },
+  "ReadingPlan": {
+    "eyebrow": "ESTUDO DA SEMANA",
+    "headline": "Plano de Leitura Bíblica",
+    "subtitle": "Semana 29 (27 de julho a 2 de agosto)",
+    "mon": "Segunda-feira (27/07)",
+    "mon_readings": ["Lucas 10–11", "Salmo 104.1–9"],
+    "tue": "Terça-feira (28/07)",
+    "tue_readings": ["1 Timóteo 1–2", "Salmo 104.10–18"],
+    "wed": "Quarta-feira (29/07)",
+    "wed_readings": ["1 Timóteo 3–4", "Salmo 104.19–30"],
+    "thu": "Quinta-feira (30/07)",
+    "thu_readings": ["Gênesis 30", "Salmo 104.31–35; 105.1–6"],
+    "fri": "Sexta-feira (31/07)",
+    "fri_readings": ["Provérbios 27", "Salmo 105.7–22"],
+    "sat": "Sábado (01/08)",
+    "sat_readings": ["Efésios 2.1–10"],
+    "sun": "Domingo (02/08)",
+    "sun_prayer": "Pai amado, muito obrigado porque, quando nós estávamos mortos em nossos delitos e pecados, o Senhor nos deu vida junto com Cristo. Obrigado porque a nossa salvação não começou em nós, mas na tua misericórdia, no teu grande amor e na riqueza da tua graça. Confessamos que muitas vezes vivemos como se a tua aceitação fosse um salário a ser conquistado, e não um dom recebido. Perdoa-nos. Pela graça somos salvos, mediante a fé, e isso não vem de nós; é presente teu, para que ninguém se glorie. Pai, nesta semana, livra-nos do orgulho de quem pensa que se salvou sozinho e do desânimo de quem pensa que ainda precisa se provar diante de ti. Somos feitura tua, criados em Cristo Jesus para boas obras que o Senhor de antemão preparou. Que a nossa obediência não seja tentativa de pagar a graça, mas gratidão em movimento. Em nome de Jesus, amém."
+  },
+  "Footer": {
+    "alt_logo": "Igreja Batista Farol",
+    "description": "Uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz diferença em sua comunidade.",
+    "address_short": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP, 12212-650",
+    "hours_title": "Horários",
+    "hours_sun": "Domingo",
+    "hours_sun_time": "09h às 12h",
+    "next_steps_title": "Próximos passos",
+    "next_steps_new": "Sou novo",
+    "next_steps_resources": "Recursos",
+    "next_steps_give": "Contribua",
+    "next_steps_bulletin": "Boletim da semana",
+    "copyright": "© Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321"
+  }
+}
