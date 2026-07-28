@@ -10,7 +10,7 @@ export default function Hero() {
       
       <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center pointer-events-none max-w-[1280px]">
         <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary mb-5">
-          Domingo, 10h00 · Rua da Igreja, 120
+          Domingo, 09h00 · Rua Othon dos Santos Mercadante, 43
         </p>
         <h1 className="text-[40px] md:text-[60px] text-white mb-0 max-w-[11ch] leading-[46px] md:leading-[66px] tracking-[-0.65px] text-balance">
           Bíblica, simples, acolhedora.

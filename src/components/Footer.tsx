@@ -10,8 +10,8 @@ export default function Footer() {
           <p className="mt-5 max-w-[34ch]">
             Uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz diferença em sua comunidade.
           </p>
-          <p className="mt-4 text-xs leading-[16px] text-brand-mute max-w-[30ch]">
-            Rua da Igreja, 120 — Centro · Estacionamento na lateral
+          <p className="mt-4 text-xs leading-[16px] text-brand-mute max-w-[40ch]">
+            Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP, 12212-650
           </p>
         </div>
         
@@ -21,16 +21,8 @@ export default function Footer() {
           </p>
           <ul className="flex flex-col gap-2">
             <li className="flex justify-between gap-3">
-              <span>Culto de domingo</span>
-              <span className="text-brand-mute tabular-nums">10h00</span>
-            </li>
-            <li className="flex justify-between gap-3">
-              <span>Escola bíblica</span>
-              <span className="text-brand-mute tabular-nums">09h00</span>
-            </li>
-            <li className="flex justify-between gap-3">
-              <span>Oração — quarta</span>
-              <span className="text-brand-mute tabular-nums">19h30</span>
+              <span>Domingo</span>
+              <span className="text-brand-mute tabular-nums">09h às 12h</span>
             </li>
           </ul>
         </div>
@@ -49,7 +41,7 @@ export default function Footer() {
       </div>
       
       <div className="max-w-[1280px] mx-auto mt-10 pt-4 border-t border-brand-hairline text-brand-mute text-xs leading-[16px]">
-        © Igreja Batista Farol · contato@batistafarol.org · (00) 0000-0000
+        © Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321
       </div>
     </footer>
   );

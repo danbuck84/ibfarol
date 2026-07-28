@@ -49,7 +49,7 @@ export default function NewHere() {
             <div className="p-6">
               <h3 className="text-xl font-semibold leading-[28px] m-0">Como chegar</h3>
               <p className="mt-2 text-base leading-[26px] text-brand-body">
-                Rua da Igreja, 120 — Centro. Estacionamento na lateral e dez minutos a pé do terminal.
+                Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP.
               </p>
             </div>
           </article>
