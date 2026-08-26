@@ -65,7 +65,7 @@
   "Quote": {
     "text": "Se, porém, andarmos na luz, como ele está na luz, mantemos comunhão uns com os outros, e o sangue de Jesus, seu Filho, nos purifica de todo pecado.",
     "reference": "Mateus 5.16 · NAA",
-    "author": "1JO 1.7"
+    "author": "1João 1.7 - NAA"
   },
   "ReadingPlan": {
     "eyebrow": "ESTUDO DA SEMANA",
@@ -112,11 +112,17 @@
     "col2_l2": "O que Cremos",
     "col2_l3": "Recursos",
     "col2_l4": "Sermões",
-    "col3_title": "Envolva-se",
-    "col3_l1": "Planeje sua visita",
-    "col3_l2": "Próximos passos",
-    "col3_l3": "Próximos encontros",
-    "col3_l4": "Sirva"
+    "col3_title": "Recursos",
+    "col3_l1": "Sermões",
+    "col3_l2": "Artigos",
+    "col3_l3": "Materiais de apoio",
+    "col3_l4": "Plano de leitura",
+    "col4_title": "Envolva-se",
+    "col4_l1": "Planeje sua visita",
+    "col4_l2": "Próximos passos",
+    "col4_l3": "Próximos encontros",
+    "col4_l4": "Sirva na IBFarol",
+    "col3_l5": "Calendário"
   },
   "AboutUs": {
     "eyebrow": "Quem Somos",

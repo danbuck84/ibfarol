@@ -6,11 +6,11 @@ export default function Footer() {
   const t = useTranslations('Footer');
   return (
     <footer className="bg-brand-canvas-dark text-[#B4BDBD] py-14 px-8 text-sm leading-[20px]">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Col 1 */}
         <div>
           <Image src="/logo-footer.png" alt={t('alt_logo')} width={140} height={44} className="h-[44px] w-auto" />
-          <p className="mt-6 text-xs leading-[16px] text-brand-mute max-w-[40ch]">
+          <p className="mt-6 text-xs leading-[18px] text-brand-mute">
             {t('address_short')}
           </p>
           <div className="mt-6 flex items-center gap-4">
@@ -31,21 +31,33 @@ export default function Footer() {
           <ul className="flex flex-col gap-2">
             <li><Link href="/sobre" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col2_l1')}</Link></li>
             <li><Link href="/sobre" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col2_l2')}</Link></li>
-            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col2_l3')}</Link></li>
-            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col2_l4')}</Link></li>
           </ul>
         </div>
-        
+
         {/* Col 3 */}
         <div>
           <p className="text-sm font-semibold tracking-[2.52px] uppercase text-white mb-4">
             {t('col3_title')}
           </p>
           <ul className="flex flex-col gap-2">
-            <li><Link href="/#visita" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l1')}</Link></li>
-            <li><Link href="/sobre" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l2')}</Link></li>
-            <li><Link href="/#agenda" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l3')}</Link></li>
-            <li><Link href="/ministerios" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l4')}</Link></li>
+            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l1')}</Link></li>
+            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l2')}</Link></li>
+            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l3')}</Link></li>
+            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l4')}</Link></li>
+            <li><Link href="/#agenda" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col3_l5')}</Link></li>
+          </ul>
+        </div>
+        
+        {/* Col 4 */}
+        <div>
+          <p className="text-sm font-semibold tracking-[2.52px] uppercase text-white mb-4">
+            {t('col4_title')}
+          </p>
+          <ul className="flex flex-col gap-2">
+            <li><Link href="/#visita" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l1')}</Link></li>
+            <li><Link href="/sobre" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l2')}</Link></li>
+            <li><Link href="/#agenda" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l3')}</Link></li>
+            <li><Link href="/ministerios" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l4')}</Link></li>
           </ul>
         </div>
       </div>

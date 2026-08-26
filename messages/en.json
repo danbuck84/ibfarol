@@ -65,7 +65,7 @@
   "Quote": {
     "text": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus, his Son, purifies us from all sin.",
     "reference": "Matthew 5:16 · NIV",
-    "author": "1JN 1:7"
+    "author": "1John 1:7 - ESV"
   },
   "ReadingPlan": {
     "eyebrow": "STUDY OF THE WEEK",
@@ -112,11 +112,17 @@
     "col2_l2": "Our Beliefs",
     "col2_l3": "Resources",
     "col2_l4": "Sermons",
-    "col3_title": "Get Involved",
-    "col3_l1": "Plan Your Visit",
-    "col3_l2": "Next Steps",
-    "col3_l3": "Upcoming Events",
-    "col3_l4": "Serve"
+    "col3_title": "Resources",
+    "col3_l1": "Sermons",
+    "col3_l2": "Articles",
+    "col3_l3": "Support Materials",
+    "col3_l4": "Reading Plan",
+    "col4_title": "Get Involved",
+    "col4_l1": "Plan Your Visit",
+    "col4_l2": "Next Steps",
+    "col4_l3": "Upcoming Events",
+    "col4_l4": "Serve at IBFarol",
+    "col3_l5": "Calendar"
   },
   "AboutUs": {
     "eyebrow": "Who We Are",
