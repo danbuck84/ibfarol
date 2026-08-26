@@ -11,8 +11,8 @@ export default function Header() {
         <Image src="/logo-header.png" alt={t('alt_logo')} width={120} height={38} className="h-[38px] w-auto" />
       </Link>
       <nav className="hidden md:flex items-center gap-7">
-        <Link href="/novo" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
-          {t('nav_new')}
+        <Link href="/sobre" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
+          {t('nav_about')}
         </Link>
         <Link href="/recursos" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
           {t('nav_resources')}
