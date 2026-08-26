@@ -56,7 +56,9 @@
     "min_recepcao": "Recepção",
     "min_infantil": "Ministério Infantil",
     "min_agape": "Projeto Ágape",
-    "min_jiujitsu": "Jiu-jitsu (Em breve)"
+    "min_jiujitsu": "Jiu-jitsu (Em breve)",
+    "min_midia": "Mídia",
+    "min_jovens": "Jovens"
   },
   "Quote": {
     "text": "“Assim brilhe também a luz de vocês diante das pessoas, para que vejam as suas boas obras e glorifiquem o Pai de vocês, que está nos céus.”",
@@ -133,5 +135,21 @@
     "form_email": "E-mail",
     "form_message": "Mensagem",
     "btn_submit": "Enviar Mensagem"
+  },
+  "Agenda": {
+    "eyebrow": "Fique por dentro",
+    "headline": "Nossa Programação",
+    "womens_title": "Reunião das Mulheres",
+    "womens_time": "1º Sábado do mês, 14h às 17h",
+    "mens_title": "Reunião dos Homens",
+    "mens_time": "3º Sábado do mês (Manhã)",
+    "prayer_title": "Reunião de Oração",
+    "prayer_time": "1ª Quarta-feira do mês (na igreja)",
+    "smallgroups_title": "Pequenos Grupos (PGs)",
+    "smallgroups_time": "Demais Quartas-feiras do mês",
+    "communion_title": "Domingo de Ceia",
+    "communion_time": "1º Domingo do mês",
+    "rest_title": "Sábado de Descanso",
+    "rest_time": "Último Sábado do mês (Livre, sem programação oficial)"
   }
 }

@@ -56,7 +56,9 @@
     "min_recepcao": "Welcome Team",
     "min_infantil": "Children's Ministry",
     "min_agape": "Agape Project",
-    "min_jiujitsu": "Jiu-jitsu (Coming soon)"
+    "min_jiujitsu": "Jiu-jitsu (Coming soon)",
+    "min_midia": "Media Team",
+    "min_jovens": "Youth Ministry"
   },
   "Quote": {
     "text": "“In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.”",
@@ -133,5 +135,21 @@
     "form_email": "Email",
     "form_message": "Message",
     "btn_submit": "Send Message"
+  },
+  "Agenda": {
+    "eyebrow": "Stay connected",
+    "headline": "Our Schedule",
+    "womens_title": "Women's Gathering",
+    "womens_time": "1st Saturday of the month, 2 PM to 5 PM",
+    "mens_title": "Men's Gathering",
+    "mens_time": "3rd Saturday of the month (Morning)",
+    "prayer_title": "Prayer Meeting",
+    "prayer_time": "1st Wednesday of the month (at church)",
+    "smallgroups_title": "Small Groups",
+    "smallgroups_time": "Other Wednesdays of the month",
+    "communion_title": "Communion Sunday",
+    "communion_time": "1st Sunday of the month",
+    "rest_title": "Sabbath Rest",
+    "rest_time": "Last Saturday of the month (Free, no official program)"
   }
 }

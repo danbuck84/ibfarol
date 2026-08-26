@@ -33,6 +33,12 @@ export default function Ministries() {
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
                 {t('min_limpeza')}
               </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_midia')}
+              </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_jovens')}
+              </li>
             </ul>
           </div>
 
