@@ -64,17 +64,34 @@
     "headline": "Bible Reading Plan",
     "subtitle": "Week 29 (July 27 to August 2)",
     "mon": "Monday (07/27)",
-    "mon_readings": ["Luke 10–11", "Psalm 104:1–9"],
+    "mon_readings": [
+      "Luke 10–11",
+      "Psalm 104:1–9"
+    ],
     "tue": "Tuesday (07/28)",
-    "tue_readings": ["1 Timothy 1–2", "Psalm 104:10–18"],
+    "tue_readings": [
+      "1 Timothy 1–2",
+      "Psalm 104:10–18"
+    ],
     "wed": "Wednesday (07/29)",
-    "wed_readings": ["1 Timothy 3–4", "Psalm 104:19–30"],
+    "wed_readings": [
+      "1 Timothy 3–4",
+      "Psalm 104:19–30"
+    ],
     "thu": "Thursday (07/30)",
-    "thu_readings": ["Genesis 30", "Psalm 104:31–35; 105:1–6"],
+    "thu_readings": [
+      "Genesis 30",
+      "Psalm 104:31–35; 105:1–6"
+    ],
     "fri": "Friday (07/31)",
-    "fri_readings": ["Proverbs 27", "Psalm 105:7–22"],
+    "fri_readings": [
+      "Proverbs 27",
+      "Psalm 105:7–22"
+    ],
     "sat": "Saturday (08/01)",
-    "sat_readings": ["Ephesians 2:1–10"],
+    "sat_readings": [
+      "Ephesians 2:1–10"
+    ],
     "sun": "Sunday (08/02)",
     "sun_prayer": "Beloved Father, thank you so much because when we were dead in our trespasses and sins, You gave us life together with Christ. Thank you that our salvation did not start with us, but in Your mercy, Your great love, and the richness of Your grace. We confess that we often live as if Your acceptance were a wage to be earned, and not a gift received. Forgive us. For by grace we have been saved, through faith, and this is not from ourselves, it is the gift of God—not by works, so that no one can boast. Father, this week, deliver us from the pride of those who think they saved themselves and the discouragement of those who think they still need to prove themselves before You. We are Your handiwork, created in Christ Jesus to do good works, which You prepared in advance for us to do. May our obedience not be an attempt to pay for grace, but gratitude in motion. In Jesus' name, amen."
   },
@@ -91,5 +108,16 @@
     "next_steps_give": "Give",
     "next_steps_bulletin": "Weekly bulletin",
     "copyright": "© Farol Baptist Church · contato@batistafarol.org · +55 (12) 99162-6321"
+  },
+  "AboutUs": {
+    "eyebrow": "Who We Are",
+    "headline": "Biblical. Simple. Welcoming.",
+    "p1": "Our project began in April 2022, with the goal of serving the northern region of São José dos Campos. Since then, we have gathered every Sunday to worship God and grow together.",
+    "p2": "We believe that a life without Jesus is a life in darkness. We were all lost in our sins, without hope and without God. But because of His great love, He sent Jesus to die in our place on the cross and resurrect, offering us forgiveness and a new life. Christ is the Light — and in Him, we were rescued from darkness.",
+    "p3": "That is why we are called FAROL! We want to shine the light of Christ in this region, helping people find forgiveness at the foot of the cross, a deep relationship with God through the Bible, and a community of simple people, willing to serve and love one another just as Christ loved us.",
+    "mission_title": "MISSION",
+    "mission_text": "To be a biblical, simple, and welcoming church that lives faith practically and makes a difference in its community.",
+    "vision_title": "VISION",
+    "vision_text": "To glorify God through lives transformed by a growing relationship with Jesus."
   }
 }

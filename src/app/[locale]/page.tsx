@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import NewHere from "@/components/NewHere";
 import LatestMessage from "@/components/LatestMessage";
 import Ministries from "@/components/Ministries";
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <AboutUs />
         <NewHere />
         <LatestMessage />
         <Ministries />

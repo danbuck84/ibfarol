@@ -64,17 +64,34 @@
     "headline": "Plano de Leitura Bíblica",
     "subtitle": "Semana 29 (27 de julho a 2 de agosto)",
     "mon": "Segunda-feira (27/07)",
-    "mon_readings": ["Lucas 10–11", "Salmo 104.1–9"],
+    "mon_readings": [
+      "Lucas 10–11",
+      "Salmo 104.1–9"
+    ],
     "tue": "Terça-feira (28/07)",
-    "tue_readings": ["1 Timóteo 1–2", "Salmo 104.10–18"],
+    "tue_readings": [
+      "1 Timóteo 1–2",
+      "Salmo 104.10–18"
+    ],
     "wed": "Quarta-feira (29/07)",
-    "wed_readings": ["1 Timóteo 3–4", "Salmo 104.19–30"],
+    "wed_readings": [
+      "1 Timóteo 3–4",
+      "Salmo 104.19–30"
+    ],
     "thu": "Quinta-feira (30/07)",
-    "thu_readings": ["Gênesis 30", "Salmo 104.31–35; 105.1–6"],
+    "thu_readings": [
+      "Gênesis 30",
+      "Salmo 104.31–35; 105.1–6"
+    ],
     "fri": "Sexta-feira (31/07)",
-    "fri_readings": ["Provérbios 27", "Salmo 105.7–22"],
+    "fri_readings": [
+      "Provérbios 27",
+      "Salmo 105.7–22"
+    ],
     "sat": "Sábado (01/08)",
-    "sat_readings": ["Efésios 2.1–10"],
+    "sat_readings": [
+      "Efésios 2.1–10"
+    ],
     "sun": "Domingo (02/08)",
     "sun_prayer": "Pai amado, muito obrigado porque, quando nós estávamos mortos em nossos delitos e pecados, o Senhor nos deu vida junto com Cristo. Obrigado porque a nossa salvação não começou em nós, mas na tua misericórdia, no teu grande amor e na riqueza da tua graça. Confessamos que muitas vezes vivemos como se a tua aceitação fosse um salário a ser conquistado, e não um dom recebido. Perdoa-nos. Pela graça somos salvos, mediante a fé, e isso não vem de nós; é presente teu, para que ninguém se glorie. Pai, nesta semana, livra-nos do orgulho de quem pensa que se salvou sozinho e do desânimo de quem pensa que ainda precisa se provar diante de ti. Somos feitura tua, criados em Cristo Jesus para boas obras que o Senhor de antemão preparou. Que a nossa obediência não seja tentativa de pagar a graça, mas gratidão em movimento. Em nome de Jesus, amém."
   },
@@ -91,5 +108,16 @@
     "next_steps_give": "Contribua",
     "next_steps_bulletin": "Boletim da semana",
     "copyright": "© Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321"
+  },
+  "AboutUs": {
+    "eyebrow": "Quem Somos",
+    "headline": "Bíblica. Simples. Acolhedora.",
+    "p1": "Nosso projeto começou em abril de 2022, com o objetivo de servir a região norte de São José dos Campos. Desde então, nos reunimos todos os domingos para adorar a Deus e crescer juntos.",
+    "p2": "Acreditamos que uma vida sem Jesus é uma vida nas trevas. Todos nós estávamos perdidos em nossos pecados, sem esperança e sem Deus. Mas ele, por seu grande amor, enviou Jesus para morrer em nosso lugar na cruz e ressuscitar, nos oferecendo perdão e vida nova. Cristo é a Luz — e nele fomos resgatados das trevas.",
+    "p3": "Por isso nos chamamos FAROL! Queremos brilhar a luz de Cristo nesta região, ajudando pessoas a encontrarem perdão aos pés da cruz, relacionamento profundo com Deus por meio da Bíblia, e uma comunidade de pessoas simples, dispostas a servir e amar umas às outras como Cristo nos amou.",
+    "mission_title": "MISSÃO",
+    "mission_text": "Ser uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz a diferença em sua comunidade.",
+    "vision_title": "VISÃO",
+    "vision_text": "Glorificar a Deus através de vidas transformadas por um relacionamento crescente com Jesus."
   }
 }
