@@ -5,9 +5,17 @@ export default function LatestMessage() {
   return (
     <section className="bg-brand-canvas-soft py-16 px-8" id="recursos">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-        <div className="relative rounded-lg overflow-hidden border border-brand-hairline aspect-video">
-          <div className="ph">
-            <span>{t('video_alt')}</span>
+        <div className="relative rounded-lg overflow-hidden border border-brand-hairline aspect-video bg-black group cursor-pointer flex items-center justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+            alt={t('video_alt')}
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+          />
+          <div className="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
         </div>
         

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -25,9 +26,9 @@ export default function Hero() {
           <a href="#visita" className="text-[13px] md:text-sm font-semibold tracking-wider uppercase text-brand-ink bg-[#faf9f5] px-6 md:px-8 py-3.5 transition-colors hover:bg-white cursor-pointer rounded-sm">
             {t('btn_plan_visit')}
           </a>
-          <a href="#ministerios" className="text-[13px] md:text-sm font-semibold tracking-wider uppercase text-white bg-transparent border border-white px-6 md:px-8 py-3.5 transition-colors hover:bg-white/10 cursor-pointer rounded-sm">
+          <Link href="/ministerios" className="text-[13px] md:text-sm font-semibold tracking-wider uppercase text-white bg-transparent border border-white px-6 md:px-8 py-3.5 transition-colors hover:bg-white/10 cursor-pointer rounded-sm">
             {t('btn_get_involved')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
