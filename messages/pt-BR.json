@@ -12,9 +12,10 @@
   "Hero": {
     "image_alt": "Foto da congregação no domingo — pessoas reais, luz natural, plano aberto",
     "eyebrow": "Domingo, 09h00 · Rua Othon dos Santos Mercadante, 43",
-    "headline": "Bíblica, simples, acolhedora.",
+    "headline": "Bíblica.\nSimples.\nAcolhedora.",
     "description": "Se é a sua primeira vez, você não vai precisar fazer nada além de sentar e ficar à vontade. A gente te encontra na porta.",
-    "btn_plan_visit": "Planeje sua visita"
+    "btn_plan_visit": "Planeje sua visita",
+    "btn_get_involved": "Envolva-se"
   },
   "NewHere": {
     "eyebrow": "Sou novo aqui",
