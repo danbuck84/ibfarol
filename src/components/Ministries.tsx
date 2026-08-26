@@ -25,9 +25,6 @@ export default function Ministries() {
                 {t('min_jovens')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_aconselhamento')}
-              </li>
-              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
                 {t('min_infantil')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">

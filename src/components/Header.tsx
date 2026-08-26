@@ -53,6 +53,9 @@ export default function Header() {
         <Link href="/#contribua" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/#contribua')}`}>
           {t('nav_give')}
         </Link>
+        <Link href="/aconselhamento" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/aconselhamento')}`}>
+          {t('nav_counseling')}
+        </Link>
         <Link href="/#visita" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/#visita')}`}>
           {t('nav_contact')}
         </Link>
