@@ -3,9 +3,7 @@ import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
-export default async function CounselingPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+export default function CounselingPage() {
   const t = useTranslations('Counseling');
 
   return (
