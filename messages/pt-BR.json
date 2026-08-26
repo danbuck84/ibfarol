@@ -120,5 +120,16 @@
     "mission_text": "Ser uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz a diferença em sua comunidade.",
     "vision_title": "VISÃO",
     "vision_text": "Glorificar a Deus através de vidas transformadas por um relacionamento crescente com Jesus."
+  },
+  "PlanVisit": {
+    "eyebrow": "Planeje sua visita",
+    "headline": "Estamos te esperando",
+    "address_title": "Onde estamos",
+    "address_text": "Rua Othon dos Santos Mercadante, 43\nVila Sinha, São José dos Campos - SP\n12212-650",
+    "contact_title": "Envie uma mensagem",
+    "form_name": "Nome",
+    "form_email": "E-mail",
+    "form_message": "Mensagem",
+    "btn_submit": "Enviar Mensagem"
   }
 }

@@ -25,9 +25,9 @@ export default function Header() {
         </Link>
       </nav>
       <div className="flex items-center">
-        <button className="font-semibold text-brand-on-primary bg-brand-primary border border-brand-primary px-4 py-3 rounded-md transition-colors hover:bg-brand-primary-deep cursor-pointer">
+        <Link href="#visita" className="font-semibold text-brand-on-primary bg-brand-primary border border-brand-primary px-4 py-3 rounded-md transition-colors hover:bg-brand-primary-deep cursor-pointer">
           {t('btn_plan_visit')}
-        </button>
+        </Link>
         <LanguageSwitcher />
       </div>
     </header>

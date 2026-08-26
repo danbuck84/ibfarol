@@ -120,5 +120,16 @@
     "mission_text": "To be a biblical, simple, and welcoming church that lives faith practically and makes a difference in its community.",
     "vision_title": "VISION",
     "vision_text": "To glorify God through lives transformed by a growing relationship with Jesus."
+  },
+  "PlanVisit": {
+    "eyebrow": "Plan your visit",
+    "headline": "We are waiting for you",
+    "address_title": "Where we are",
+    "address_text": "Rua Othon dos Santos Mercadante, 43\nVila Sinha, São José dos Campos - SP\n12212-650",
+    "contact_title": "Send a message",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "btn_submit": "Send Message"
   }
 }
