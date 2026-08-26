@@ -22,16 +22,19 @@ export default function Ministries() {
             
             <ul className="space-y-4">
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_louvor')}
+                {t('min_jovens')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_recepcao')}
+                {t('min_aconselhamento')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
                 {t('min_infantil')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_limpeza')}
+                {t('min_homens')}
+              </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_louvor')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
                 {t('min_manutencao')}
@@ -40,7 +43,10 @@ export default function Ministries() {
                 {t('min_midia')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_jovens')}
+                {t('min_mulheres')}
+              </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_recepcao')}
               </li>
             </ul>
           </div>
@@ -52,10 +58,13 @@ export default function Ministries() {
             
             <ul className="space-y-4">
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
-                {t('min_agape')}
+                {t('min_acao')}
               </li>
               <li className="bg-brand-canvas-soft border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-mute shadow-sm border-dashed">
                 {t('min_jiujitsu')}
+              </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_agape')}
               </li>
             </ul>
           </div>

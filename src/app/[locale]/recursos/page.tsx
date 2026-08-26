@@ -22,7 +22,7 @@ export default function RecursosPage() {
             </div>
             
             <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline">
-              <h2 className="text-2xl font-bold text-brand-ink mb-4">Artigos / Blog</h2>
+              <h2 className="text-2xl font-bold text-brand-ink mb-4">Artigos</h2>
               <p className="text-brand-body">Textos pastorais e reflexões semanais.</p>
             </div>
 
