@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Farol Baptist Church (Igreja Batista Farol)
 
-## Getting Started
+A modern, fast, and fully responsive website for Farol Baptist Church (Igreja Batista Farol). Built to provide visitors with a welcoming first impression, essential service information, and an interactive Bible reading plan.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+This project is built using a modern web development stack designed for performance, accessibility, and scalability:
+
+- **Framework:** [Next.js (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Internationalization (i18n):** [next-intl](https://next-intl-docs.vercel.app/)
+- **Deployment:** [Netlify](https://www.netlify.com/)
+
+## ✨ Key Features
+
+- **Web-First Responsiveness:** A highly adaptive layout that scales seamlessly from ultra-wide desktop monitors down to mobile devices.
+- **Bilingual Support (i18n):** Full support for Portuguese (PT-BR) and English (EN) with a seamless toggle switch.
+- **PWA Ready:** Configured with `manifest.json` and essential meta tags to lay the foundation for a Progressive Web App.
+- **Reading Plan Section:** Features an interactive weekly Bible reading plan designed for elegant readability.
+
+## 🛠️ Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Branch Strategy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `main`: Production-ready code.
+- `dev`: Active development and staging. All new features and redesigns are pushed here first.
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
