@@ -7,7 +7,7 @@ export default function Header() {
   const t = useTranslations('Header');
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between gap-8 px-8 py-3.5 bg-white/90 backdrop-blur-md border-b border-brand-hairline">
-      <Link href="#inicio" className="flex items-center border-none">
+      <Link href="/" className="flex items-center border-none">
         <Image src="/logo-header.png" alt={t('alt_logo')} width={120} height={38} className="h-[38px] w-auto" />
       </Link>
       <nav className="hidden md:flex items-center gap-7">
@@ -22,6 +22,9 @@ export default function Header() {
         </Link>
         <Link href="/#contribua" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
           {t('nav_give')}
+        </Link>
+        <Link href="/#visita" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
+          {t('nav_contact')}
         </Link>
       </nav>
       <div className="flex items-center">

@@ -34,6 +34,9 @@ export default function Ministries() {
                 {t('min_limpeza')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
+                {t('min_manutencao')}
+              </li>
+              <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">
                 {t('min_midia')}
               </li>
               <li className="bg-white border border-brand-hairline p-6 rounded-lg font-semibold text-lg text-brand-ink shadow-sm">

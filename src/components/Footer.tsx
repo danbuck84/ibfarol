@@ -9,9 +9,6 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-12">
         <div>
           <Image src="/logo-footer.png" alt={t('alt_logo')} width={140} height={44} className="h-[44px] w-auto" />
-          <p className="mt-5 max-w-[34ch]">
-            {t('description')}
-          </p>
           <p className="mt-4 text-xs leading-[16px] text-brand-mute max-w-[40ch]">
             {t('address_short')}
           </p>
@@ -34,10 +31,10 @@ export default function Footer() {
             {t('next_steps_title')}
           </p>
           <ul className="flex flex-col gap-2">
-            <li><Link href="#novo" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_new')}</Link></li>
-            <li><Link href="#recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_resources')}</Link></li>
-            <li><Link href="#contribua" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_give')}</Link></li>
-            <li><Link href="#boletim" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_bulletin')}</Link></li>
+            <li><Link href="/sobre" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_new')}</Link></li>
+            <li><Link href="/recursos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_resources')}</Link></li>
+            <li><Link href="/#contribua" className="text-[#B4BDBD] hover:text-white transition-colors">{t('next_steps_give')}</Link></li>
+            <li><a href="#" className="text-brand-primary hover:text-brand-primary-soft transition-colors">{t('whatsapp_link')}</a></li>
           </ul>
         </div>
       </div>

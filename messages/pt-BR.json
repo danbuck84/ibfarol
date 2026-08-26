@@ -8,7 +8,8 @@
     "btn_plan_visit": "Planeje sua visita",
     "lang_pt": "PT",
     "lang_en": "EN",
-    "nav_about": "Sobre"
+    "nav_about": "Sobre",
+    "nav_contact": "Contato"
   },
   "Hero": {
     "image_alt": "Foto da congregação no domingo — pessoas reais, luz natural, plano aberto",
@@ -58,11 +59,13 @@
     "min_agape": "Projeto Ágape",
     "min_jiujitsu": "Jiu-jitsu (Em breve)",
     "min_midia": "Mídia",
-    "min_jovens": "Jovens"
+    "min_jovens": "Jovens",
+    "min_manutencao": "Manutenção"
   },
   "Quote": {
-    "text": "“Assim brilhe também a luz de vocês diante das pessoas, para que vejam as suas boas obras e glorifiquem o Pai de vocês, que está nos céus.”",
-    "reference": "Mateus 5.16 · NAA"
+    "text": "Se, porém, andarmos na luz, como ele está na luz, mantemos comunhão uns com os outros, e o sangue de Jesus, seu Filho, nos purifica de todo pecado.",
+    "reference": "Mateus 5.16 · NAA",
+    "author": "1JO 1.7"
   },
   "ReadingPlan": {
     "eyebrow": "ESTUDO DA SEMANA",
@@ -112,7 +115,8 @@
     "next_steps_resources": "Recursos",
     "next_steps_give": "Contribua",
     "next_steps_bulletin": "Boletim da semana",
-    "copyright": "© Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321"
+    "copyright": "© Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321",
+    "whatsapp_link": "Grupo de Avisos (WhatsApp)"
   },
   "AboutUs": {
     "eyebrow": "Quem Somos",
@@ -140,13 +144,13 @@
     "eyebrow": "Fique por dentro",
     "headline": "Nossa Programação",
     "womens_title": "Reunião das Mulheres",
-    "womens_time": "1º Sábado do mês, 14h às 17h",
+    "womens_time": "1º Sábado do mês, às 14h",
     "mens_title": "Reunião dos Homens",
-    "mens_time": "3º Sábado do mês (Manhã)",
+    "mens_time": "3º Sábado do mês, às 09h",
     "prayer_title": "Reunião de Oração",
-    "prayer_time": "1ª Quarta-feira do mês (na igreja)",
+    "prayer_time": "1ª Quarta-feira do mês, às 19h30 (na igreja)",
     "smallgroups_title": "Pequenos Grupos (PGs)",
-    "smallgroups_time": "Demais Quartas-feiras do mês",
+    "smallgroups_time": "Demais Quartas-feiras do mês, às 19h30",
     "communion_title": "Domingo de Ceia",
     "communion_time": "1º Domingo do mês",
     "rest_title": "Sábado de Descanso",
