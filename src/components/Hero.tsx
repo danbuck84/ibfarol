@@ -13,11 +13,11 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-8 md:px-12 pt-20 pb-20">
-        <h1 className="text-[52px] md:text-[72px] lg:text-[90px] text-white font-serif font-medium leading-[1.05] tracking-tight whitespace-pre-line">
+        <h1 className="text-[52px] md:text-[72px] lg:text-[90px] text-white font-sans font-bold leading-[1.05] tracking-[-1px] whitespace-pre-line">
           {t('headline')}
         </h1>
         
-        <p className="mt-8 text-sm md:text-base font-bold tracking-[1.5px] uppercase text-white">
+        <p className="mt-6 md:mt-8 text-lg md:text-xl font-medium text-white/90 max-w-[42ch] text-pretty">
           {t('eyebrow')}
         </p>
         
