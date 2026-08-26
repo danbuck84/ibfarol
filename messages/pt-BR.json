@@ -164,5 +164,23 @@
     "communion_time": "1º Domingo do mês",
     "rest_title": "Sábado de Descanso",
     "rest_time": "Último Sábado do mês (Livre, sem programação oficial)"
+  },
+  "Counseling": {
+    "title": "Aconselhamento Bíblico",
+    "intro": "Ninguém foi feito para carregar tudo sozinho. O sofrimento faz parte da nossa vida, e muitas vezes não sabemos como lidar com ele. Se você está passando por um momento difícil — no casamento, na família, no trabalho, dentro de você mesmo — a gente quer caminhar com você.",
+    "what_is_title": "O que é aconselhamento bíblico?",
+    "what_is_p1": "É uma conversa. Séria, cuidadosa e honesta. A ideia é simples: sentar com alguém que vai ouvir você de verdade, entender o que está acontecendo na sua vida, e ajudar você a enxergar aquilo à luz do que Deus diz.",
+    "what_is_p2": "A gente acredita que a Bíblia não é um livro de regras distante da vida real. Ela fala do casamento que esfriou, da ansiedade que não deixa dormir, da raiva que você não entende de onde vem, do luto que ninguém sabe como te ajudar a atravessar. E fala com esperança, porque no centro dela está Jesus — que conhece a dor humana por dentro e não desiste de ninguém.",
+    "what_is_p3": "Ao mesmo tempo, aconselhamento bíblico não promete atalho. Mudança real leva tempo e acontece de dentro pra fora. Mas você não precisa fazer esse caminho sozinho.",
+    "how_it_works_title": "Como funciona na prática",
+    "how_step1": "Você entra em contato. Preenche o formulário contando, em poucas linhas, o que está acontecendo. Nada elaborado — só o suficiente pra gente entender o que você precisa.",
+    "how_step2": "A gente marca o primeiro encontro. Presencial na igreja ou online, o que for melhor pra você. Dura em torno de uma hora.",
+    "how_step3": "A partir daí, caminhamos juntos. Marcaremos outros encontros, com leituras e tarefas entre um e outro — coisas simples e práticas, pra que o que a gente conversa não fique só na conversa.",
+    "important_title": "Duas coisas importantes",
+    "important_p1": "É totalmente gratuito. Aconselhamento não é um serviço que a gente vende — é parte do cuidado que a igreja existe pra oferecer. Você não vai pagar nada, nunca.",
+    "important_p2": "O que você contar fica entre nós. Confidencialidade é levada a sério aqui. As únicas exceções são situações de risco à vida ou casos que a lei exige comunicar — e mesmo nessas, você seria avisado antes.",
+    "cta": "Para agendar uma conversa, acesse esse link:",
+    "cta_button": "Agendar Aconselhamento",
+    "cta_link": "https://calendly.com/gustavo-batistafarol/aconselhamento"
   }
 }

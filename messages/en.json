@@ -164,5 +164,23 @@
     "communion_time": "1st Sunday of the month",
     "rest_title": "Sabbath Rest",
     "rest_time": "Last Saturday of the month (Free, no official program)"
+  },
+  "Counseling": {
+    "title": "Biblical Counseling",
+    "intro": "No one was meant to carry everything alone. Suffering is a part of life, and often we don't know how to handle it. If you are going through a difficult time — in your marriage, family, work, or within yourself — we want to walk alongside you.",
+    "what_is_title": "What is biblical counseling?",
+    "what_is_p1": "It is a conversation. Serious, careful, and honest. The idea is simple: sitting down with someone who will truly listen to you, understand what is happening in your life, and help you see it in light of what God says.",
+    "what_is_p2": "We believe the Bible is not a rulebook disconnected from real life. It addresses the marriage that has grown cold, the anxiety that keeps you awake, the anger you don't understand, and the grief no one knows how to help you through. And it speaks with hope, because at its center is Jesus — who knows human pain from the inside and doesn't give up on anyone.",
+    "what_is_p3": "At the same time, biblical counseling promises no shortcuts. Real change takes time and happens from the inside out. But you do not have to walk this path alone.",
+    "how_it_works_title": "How it works in practice",
+    "how_step1": "You reach out. Fill out the form sharing, in a few lines, what is happening. Nothing elaborate — just enough for us to understand your needs.",
+    "how_step2": "We schedule the first meeting. In person at the church or online, whatever works best for you. It lasts about an hour.",
+    "how_step3": "From then on, we walk together. We will schedule other meetings, with readings and tasks in between — simple and practical things, so that what we discuss doesn't stay just a discussion.",
+    "important_title": "Two important things",
+    "important_p1": "It is completely free. Counseling is not a service we sell — it is part of the care the church exists to offer. You will never pay anything.",
+    "important_p2": "What you share stays between us. Confidentiality is taken seriously here. The only exceptions are life-threatening situations or cases where the law requires reporting — and even then, you would be notified first.",
+    "cta": "To schedule a conversation, access this link:",
+    "cta_button": "Schedule Counseling",
+    "cta_link": "https://calendly.com/gustavo-batistafarol/aconselhamento"
   }
 }
