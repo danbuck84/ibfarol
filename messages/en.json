@@ -33,18 +33,6 @@
     "card3_title": "How to get here",
     "card3_desc": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP."
   },
-  "LatestMessage": {
-    "video_alt": "Sunday preaching frame — the preacher at the pulpit",
-    "eyebrow": "Latest message",
-    "headline": "The city on a hill",
-    "meta_pastor": "Pr. Gustavo",
-    "meta_date": "Jul 20, 2026",
-    "meta_duration": "38 min",
-    "meta_scripture": "Matthew 5:13-16",
-    "description": "Third part of the Sermon on the Mount series. Every Sunday's audio is available here on Monday.",
-    "btn_watch": "Watch now",
-    "btn_all": "See all messages"
-  },
   "Ministries": {
     "eyebrow": "Our ministries",
     "headline": "A biblical, simple, and welcoming church.",
@@ -164,7 +152,10 @@
     "communion_title": "Communion Sunday",
     "communion_time": "1st Sunday of the month",
     "rest_title": "Sabbath Rest",
-    "rest_time": "Last Saturday of the month (Free, no official program)"
+    "rest_time": "Last Saturday of the month (Free, no official program)",
+    "current_events_title": "Current Events",
+    "no_events": "No special events scheduled at the moment. Check out our fixed programming below!",
+    "fixed_events_title": "Fixed Programming"
   },
   "Counseling": {
     "title": "Biblical Counseling",
@@ -208,5 +199,14 @@
     "info_desc": "The dates for the meetings will be set soon and shared with all registrants. It will be a privilege to have you with us on this journey.\n\nWith love,\nFarol Baptist Church",
     "cta_button": "Sign Up Here!",
     "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
+  },
+  "Highlights": {
+    "headline": "Highlights",
+    "youtube_title": "Series: In the Beginning",
+    "youtube_desc": "Follow the new message series in the book of Genesis.",
+    "btn_watch": "Watch on YouTube",
+    "spotify_title": "Podcast & Worship",
+    "spotify_desc": "Listen to our messages and the songs we sing on Sundays.",
+    "btn_listen": "Listen on Spotify"
   }
 }

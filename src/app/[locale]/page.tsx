@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
-import LatestMessage from "@/components/LatestMessage";
+import HighlightsCarousel from "@/components/HighlightsCarousel";
 import Agenda from "@/components/Agenda";
 import PlanVisit from "@/components/PlanVisit";
 import Quote from "@/components/Quote";
@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <AboutUs />
-        <LatestMessage />
+        <HighlightsCarousel />
         <Agenda />
         <PlanVisit />
         <Quote />

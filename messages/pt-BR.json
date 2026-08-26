@@ -33,18 +33,6 @@
     "card3_title": "Como chegar",
     "card3_desc": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP."
   },
-  "LatestMessage": {
-    "video_alt": "Frame da pregação de domingo — o pregador no púlpito",
-    "eyebrow": "Última mensagem",
-    "headline": "A cidade sobre o monte",
-    "meta_pastor": "Pr. Gustavo",
-    "meta_date": "20 jul 2026",
-    "meta_duration": "38 min",
-    "meta_scripture": "Mateus 5.13-16",
-    "description": "Terceira parte da série no Sermão do Monte. O áudio de cada domingo fica disponível aqui na segunda-feira.",
-    "btn_watch": "Assistir agora",
-    "btn_all": "Ver todas as mensagens"
-  },
   "Ministries": {
     "eyebrow": "Nossos ministérios",
     "headline": "Uma igreja bíblica, simples e acolhedora.",
@@ -164,7 +152,10 @@
     "communion_title": "Domingo de Ceia",
     "communion_time": "1º Domingo do mês",
     "rest_title": "Sábado de Descanso",
-    "rest_time": "Último Sábado do mês (Livre, sem programação oficial)"
+    "rest_time": "Último Sábado do mês (Livre, sem programação oficial)",
+    "current_events_title": "Programação Corrente",
+    "no_events": "Nenhum evento especial programado no momento. Confira nossa programação fixa abaixo!",
+    "fixed_events_title": "Programação Fixa"
   },
   "Counseling": {
     "title": "Aconselhamento Bíblico",
@@ -208,5 +199,14 @@
     "info_desc": "As datas dos encontros serão definidas em breve e compartilhadas com todos os inscritos. Será um privilégio ter você conosco nessa caminhada.\n\nCom carinho,\nIgreja Batista Farol",
     "cta_button": "Inscreva-se Aqui!",
     "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
+  },
+  "Highlights": {
+    "headline": "Destaques",
+    "youtube_title": "Série: No Princípio",
+    "youtube_desc": "Acompanhe a nova série de mensagens no livro de Gênesis.",
+    "btn_watch": "Assistir no YouTube",
+    "spotify_title": "Podcast & Louvor",
+    "spotify_desc": "Ouça nossas mensagens e as músicas que cantamos nos domingos.",
+    "btn_listen": "Ouvir no Spotify"
   }
 }
