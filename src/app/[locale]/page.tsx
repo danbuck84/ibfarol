@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import LatestMessage from "@/components/LatestMessage";
 import PlanVisit from "@/components/PlanVisit";
-import ReadingPlan from "@/components/ReadingPlan";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
 
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <LatestMessage />
-        <ReadingPlan />
         <PlanVisit />
         <Quote />
       </main>

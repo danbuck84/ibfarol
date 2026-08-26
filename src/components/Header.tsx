@@ -14,7 +14,7 @@ export default function Header() {
         <Link href="/novo" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
           {t('nav_new')}
         </Link>
-        <Link href="/#recursos" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
+        <Link href="/recursos" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
           {t('nav_resources')}
         </Link>
         <Link href="/ministerios" className="text-sm text-brand-body decoration-transparent pb-1 border-b-2 border-transparent hover:border-brand-hairline-soft">
