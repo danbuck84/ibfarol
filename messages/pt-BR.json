@@ -125,7 +125,8 @@
     "col4_l2": "Próximos Passos",
     "col4_l3": "Próximos Encontros",
     "col4_l4": "Sirva na IBFarol",
-    "col3_l5": "Calendário"
+    "col3_l5": "Calendário",
+    "col4_l5": "Novos Membros"
   },
   "AboutUs": {
     "eyebrow": "Quem Somos",
@@ -182,5 +183,30 @@
     "cta": "Para agendar uma conversa, acesse esse link:",
     "cta_button": "Agendar Aconselhamento",
     "cta_link": "https://calendly.com/gustavo-batistafarol/aconselhamento"
+  },
+  "NewMembers": {
+    "title": "Classe de Novos Membros",
+    "intro": "Bem-vindo à Classe de Novos Membros da Igreja Batista Farol! Estamos muito felizes com o seu interesse em caminhar conosco.",
+    "identity_title": "Nossa Identidade",
+    "identity_mission": "Nossa missão é glorificar a Deus através de vidas transformadas por um relacionamento crescente com Jesus.",
+    "identity_vision": "Nossa visão é ser uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz a diferença em nossa comunidade.",
+    "course_title": "O Curso",
+    "course_desc": "Este curso foi preparado para que possamos, juntos, conhecer melhor o evangelho, a vida cristã e o que significa fazer parte da família de Deus e da nossa igreja. Ao longo de 2 meses de encontros, vamos conversar sobre temas importantes, como:",
+    "topics": [
+      "O Evangelho",
+      "A Bíblia",
+      "O Coração",
+      "A Família",
+      "A Missão",
+      "A Igreja",
+      "A Mudança",
+      "O Sofrimento",
+      "Os Dons",
+      "Os Recursos"
+    ],
+    "info_title": "Informações",
+    "info_desc": "As datas dos encontros serão definidas em breve e compartilhadas com todos os inscritos. Será um privilégio ter você conosco nessa caminhada.\n\nCom carinho,\nIgreja Batista Farol",
+    "cta_button": "Inscreva-se Aqui!",
+    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
   }
 }

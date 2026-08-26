@@ -125,7 +125,8 @@
     "col4_l2": "Next Steps",
     "col4_l3": "Upcoming Events",
     "col4_l4": "Serve at IBFarol",
-    "col3_l5": "Calendar"
+    "col3_l5": "Calendar",
+    "col4_l5": "New Members"
   },
   "AboutUs": {
     "eyebrow": "Who We Are",
@@ -182,5 +183,30 @@
     "cta": "To schedule a conversation, access this link:",
     "cta_button": "Schedule Counseling",
     "cta_link": "https://calendly.com/gustavo-batistafarol/aconselhamento"
+  },
+  "NewMembers": {
+    "title": "New Members Class",
+    "intro": "Welcome to the New Members Class of Farol Baptist Church! We are very happy with your interest in walking with us.",
+    "identity_title": "Our Identity",
+    "identity_mission": "Our mission is to glorify God through lives transformed by a growing relationship with Jesus.",
+    "identity_vision": "Our vision is to be a biblical, simple, and welcoming church that lives out its faith practically and makes a difference in our community.",
+    "course_title": "The Course",
+    "course_desc": "This course was prepared so that we can, together, better understand the gospel, the Christian life, and what it means to be part of God's family and our church. Over 2 months of meetings, we will discuss important topics such as:",
+    "topics": [
+      "The Gospel",
+      "The Bible",
+      "The Heart",
+      "The Family",
+      "The Mission",
+      "The Church",
+      "Change",
+      "Suffering",
+      "Gifts",
+      "Resources"
+    ],
+    "info_title": "Information",
+    "info_desc": "The dates for the meetings will be set soon and shared with all registrants. It will be a privilege to have you with us on this journey.\n\nWith love,\nFarol Baptist Church",
+    "cta_button": "Sign Up Here!",
+    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
   }
 }
