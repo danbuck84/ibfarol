@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Col 1 */}
         <div>
           <Image src="/logo-footer.png" alt={t('alt_logo')} width={140} height={44} className="h-[44px] w-auto" />
-          <p className="mt-6 text-xs leading-[18px] text-brand-mute">
+          <p className="mt-6 text-xs leading-[18px] text-brand-mute whitespace-pre-line">
             {t('address_short')}
           </p>
           <div className="mt-6 flex items-center gap-4">
