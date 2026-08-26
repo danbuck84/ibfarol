@@ -44,7 +44,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased font-sans`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

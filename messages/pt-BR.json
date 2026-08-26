@@ -104,19 +104,19 @@
     "sun_prayer": "Pai amado, muito obrigado porque, quando nós estávamos mortos em nossos delitos e pecados, o Senhor nos deu vida junto com Cristo. Obrigado porque a nossa salvação não começou em nós, mas na tua misericórdia, no teu grande amor e na riqueza da tua graça. Confessamos que muitas vezes vivemos como se a tua aceitação fosse um salário a ser conquistado, e não um dom recebido. Perdoa-nos. Pela graça somos salvos, mediante a fé, e isso não vem de nós; é presente teu, para que ninguém se glorie. Pai, nesta semana, livra-nos do orgulho de quem pensa que se salvou sozinho e do desânimo de quem pensa que ainda precisa se provar diante de ti. Somos feitura tua, criados em Cristo Jesus para boas obras que o Senhor de antemão preparou. Que a nossa obediência não seja tentativa de pagar a graça, mas gratidão em movimento. Em nome de Jesus, amém."
   },
   "Footer": {
-    "alt_logo": "Igreja Batista Farol",
-    "description": "Uma igreja bíblica, simples e acolhedora, que vive a fé de forma prática e faz diferença em sua comunidade.",
-    "address_short": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, São José dos Campos - SP, 12212-650",
-    "hours_title": "Horários",
-    "hours_sun": "Domingo",
-    "hours_sun_time": "09h às 12h",
-    "next_steps_title": "Próximos passos",
-    "next_steps_new": "Sou novo",
-    "next_steps_resources": "Recursos",
-    "next_steps_give": "Contribua",
-    "next_steps_bulletin": "Boletim da semana",
-    "copyright": "© Igreja Batista Farol · contato@batistafarol.org · (12) 99162-6321",
-    "whatsapp_link": "Grupo de Avisos (WhatsApp)"
+    "alt_logo": "Logo Igreja Batista Farol",
+    "address_short": "Rua Othon dos Santos Mercadante, 43 - Vila Sinha, SJC",
+    "copyright": "© 2026 Igreja Batista Farol. Todos os direitos reservados.",
+    "col2_title": "Sobre",
+    "col2_l1": "Nossa História",
+    "col2_l2": "O que Cremos",
+    "col2_l3": "Recursos",
+    "col2_l4": "Sermões",
+    "col3_title": "Envolva-se",
+    "col3_l1": "Planeje sua visita",
+    "col3_l2": "Próximos passos",
+    "col3_l3": "Próximos encontros",
+    "col3_l4": "Sirva"
   },
   "AboutUs": {
     "eyebrow": "Quem Somos",
