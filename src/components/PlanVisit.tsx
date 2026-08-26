@@ -38,7 +38,7 @@ export default function PlanVisit() {
           {/* Contact Form */}
           <div>
             <h3 className="text-xl font-bold tracking-wider text-brand-ink mb-4">{t('contact_title')}</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-brand-body mb-1">{t('form_name')}</label>
                 <input type="text" id="name" className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary" />

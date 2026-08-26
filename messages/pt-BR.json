@@ -45,17 +45,18 @@
   },
   "Ministries": {
     "eyebrow": "Nossos ministérios",
-    "headline": "Um lugar para cada pessoa da família.",
+    "headline": "Um lugar para servir e ser família.",
     "btn_all": "Ver todos",
-    "card1_alt": "Crianças na sala infantil",
-    "card1_title": "Crianças",
-    "card1_desc": "Domingos, durante o culto",
-    "card2_alt": "Encontro de jovens no sábado",
-    "card2_title": "Jovens",
-    "card2_desc": "Sábados, 16h",
-    "card3_alt": "Pequeno grupo reunido numa casa",
-    "card3_title": "Pequenos grupos",
-    "card3_desc": "Terças e quintas, 20h"
+    "internal_title": "Dentro da Igreja",
+    "internal_desc": "Servindo nossa comunidade local durante os encontros.",
+    "external_title": "Para Fora",
+    "external_desc": "Abençoando a cidade e estendendo a mão ao próximo.",
+    "min_louvor": "Louvor",
+    "min_limpeza": "Limpeza",
+    "min_recepcao": "Recepção",
+    "min_infantil": "Ministério Infantil",
+    "min_agape": "Projeto Ágape",
+    "min_jiujitsu": "Jiu-jitsu (Em breve)"
   },
   "Quote": {
     "text": "“Assim brilhe também a luz de vocês diante das pessoas, para que vejam as suas boas obras e glorifiquem o Pai de vocês, que está nos céus.”",

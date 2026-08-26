@@ -45,17 +45,18 @@
   },
   "Ministries": {
     "eyebrow": "Our ministries",
-    "headline": "A place for every person in the family.",
+    "headline": "A place to serve and be family.",
     "btn_all": "See all",
-    "card1_alt": "Kids in the children's room",
-    "card1_title": "Kids",
-    "card1_desc": "Sundays, during the service",
-    "card2_alt": "Youth gathering on Saturday",
-    "card2_title": "Youth",
-    "card2_desc": "Saturdays, 4 PM",
-    "card3_alt": "Small group gathered in a home",
-    "card3_title": "Small groups",
-    "card3_desc": "Tuesdays and Thursdays, 8 PM"
+    "internal_title": "Inside the Church",
+    "internal_desc": "Serving our local community during our gatherings.",
+    "external_title": "Reaching Out",
+    "external_desc": "Blessing the city and reaching out to others.",
+    "min_louvor": "Worship",
+    "min_limpeza": "Cleaning Team",
+    "min_recepcao": "Welcome Team",
+    "min_infantil": "Children's Ministry",
+    "min_agape": "Agape Project",
+    "min_jiujitsu": "Jiu-jitsu (Coming soon)"
   },
   "Quote": {
     "text": "“In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.”",
