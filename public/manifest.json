@@ -1,10 +1,10 @@
 {
-  "name": "Igreja Batista Farol",
-  "short_name": "IB Farol",
+  "name": "IBFarol",
+  "short_name": "IBFarol",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#010506",
-  "theme_color": "#faf9f5",
+  "background_color": "#000000",
+  "theme_color": "#010506",
   "icons": [
     {
       "src": "/icon-192x192.png",
