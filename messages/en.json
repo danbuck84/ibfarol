@@ -210,5 +210,9 @@
     "spotify_title": "Podcast & Worship",
     "spotify_desc": "Listen to our messages and the songs we sing on Sundays.",
     "btn_listen": "Listen on Spotify"
+  },
+  "Give": {
+    "headline": "Worship Through Giving",
+    "description": "[Short paragraph explaining the biblical vision of why the church receives offerings and how it blesses the community]"
   }
 }

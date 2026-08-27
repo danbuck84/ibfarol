@@ -210,5 +210,9 @@
     "spotify_title": "Podcast & Louvor",
     "spotify_desc": "Ouça nossas mensagens e as músicas que cantamos nos domingos.",
     "btn_listen": "Ouvir no Spotify"
+  },
+  "Give": {
+    "headline": "Adoração Através da Contribuição",
+    "description": "[Parágrafo curto explicando a visão bíblica sobre por que a igreja recebe ofertas e como isso abençoa a comunidade]"
   }
 }

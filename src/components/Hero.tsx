@@ -8,8 +8,7 @@ export default function Hero() {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 bg-[#010506]">
         <div 
-          className="w-full h-full bg-slate-800 opacity-50 bg-cover bg-center" 
-          style={{ backgroundImage: "url('/hero-bg-placeholder.jpg')" }}
+          className="w-full h-full bg-slate-800 opacity-50 bg-cover bg-center"
         ></div>
       </div>
       
