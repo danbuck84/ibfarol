@@ -21,7 +21,7 @@ export default function PlanVisit() {
             <p className="text-base text-brand-body leading-[26px] whitespace-pre-line mb-6">
               {t('address_text')}
             </p>
-            <div className="w-full h-[300px] bg-slate-100 rounded-md overflow-hidden relative border border-brand-hairline">
+            <div className="w-full h-[300px] bg-slate-100 rounded-md overflow-hidden relative border border-brand-hairline mb-6">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.652174317926!2d-45.89433192389146!3d-23.182885979062327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4ba49ec6e8c7%3A0xc3b8332152843bb3!2sR.%20Othon%20dos%20Santos%20Mercadante%2C%2043%20-%20Vila%20Sinha%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012212-650!5e0!3m2!1sen!2sbr!4v1716922340510!5m2!1sen!2sbr" 
                 width="100%" 
@@ -32,6 +32,19 @@ export default function PlanVisit() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0"
               ></iframe>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-brand-canvas-soft border border-brand-hairline p-4 rounded-lg">
+                <h4 className="font-bold text-brand-ink text-sm uppercase tracking-wider mb-2">Horários</h4>
+                <p className="text-brand-body text-sm font-medium">Domingo às 10h</p>
+                <p className="text-brand-body text-sm font-medium">Domingo às 18h</p>
+              </div>
+              <div className="bg-brand-canvas-soft border border-brand-hairline p-4 rounded-lg">
+                <h4 className="font-bold text-brand-ink text-sm uppercase tracking-wider mb-2">Contato</h4>
+                <p className="text-brand-body text-sm font-medium">WhatsApp: (12) 0000-0000</p>
+                <p className="text-brand-body text-sm font-medium">@ibfarol</p>
+              </div>
             </div>
           </div>
 

@@ -51,7 +51,8 @@
     "min_manutencao": "Manutenção",
     "min_acao": "Ação Comunitária",
     "min_homens": "Homens",
-    "min_mulheres": "Mulheres"
+    "min_mulheres": "Mulheres",
+    "btn_whatsapp": "Falar"
   },
   "Quote": {
     "text": "Se, porém, andarmos na luz, como ele está na luz, mantemos comunhão uns com os outros, e o sangue de Jesus, seu Filho, nos purifica de todo pecado.",
@@ -114,7 +115,8 @@
     "col4_l3": "Próximos Encontros",
     "col4_l4": "Sirva na IBFarol",
     "col3_l5": "Calendário",
-    "col4_l5": "Novos Membros"
+    "col4_l5": "Novos Membros",
+    "col4_l6": "Próximos Passos"
   },
   "AboutUs": {
     "eyebrow": "Quem Somos",

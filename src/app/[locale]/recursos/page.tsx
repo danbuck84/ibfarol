@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import ReadingPlan from "@/components/ReadingPlan";
 import Footer from "@/components/Footer";
+import { Link } from "@/i18n/routing";
 
 export default function RecursosPage() {
   return (
@@ -10,25 +11,42 @@ export default function RecursosPage() {
         <section className="py-20 px-8 max-w-[1280px] mx-auto">
           <h1 className="text-[40px] font-bold text-brand-ink mb-12">Recursos</h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {/* Sermões */}
+            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline flex flex-col">
               <h2 className="text-2xl font-bold text-brand-ink mb-4">Sermões</h2>
-              <p className="text-brand-body">Acesse nossas mensagens em áudio e vídeo.</p>
+              <p className="text-brand-body mb-8 flex-grow">Acesse nossas mensagens em áudio e vídeo.</p>
+              <Link href="/sermoes" className="inline-block bg-brand-primary text-brand-on-primary font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-brand-primary-deep">
+                Ver Sermões
+              </Link>
             </div>
             
-            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline">
+            {/* Materiais de Apoio */}
+            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline flex flex-col">
               <h2 className="text-2xl font-bold text-brand-ink mb-4">Materiais de Apoio</h2>
-              <p className="text-brand-body">Arquivos, apostilas e guias para estudos.</p>
+              <p className="text-brand-body mb-8 flex-grow">Arquivos, apostilas e guias para estudos.</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#4285F4] text-white font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-[#3367D6]">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.23 7.82h6.46l3.23 5.584-3.23 5.585h-6.46l-3.23-5.585 3.23-5.584z"/></svg>
+                Acessar Drive
+              </a>
             </div>
             
-            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline">
+            {/* Artigos */}
+            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline flex flex-col">
               <h2 className="text-2xl font-bold text-brand-ink mb-4">Artigos</h2>
-              <p className="text-brand-body">Textos pastorais e reflexões semanais.</p>
+              <p className="text-brand-body mb-8 flex-grow">Textos pastorais e reflexões semanais.</p>
+              <Link href="/artigos" className="inline-block bg-brand-canvas border border-brand-hairline text-brand-ink font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-gray-50">
+                Ler Artigos
+              </Link>
             </div>
 
-            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline">
-              <h2 className="text-2xl font-bold text-brand-ink mb-4">Indicações</h2>
-              <p className="text-brand-body">Livros e materiais recomendados pela nossa comunidade.</p>
+            {/* Indicações */}
+            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline border-dashed opacity-70 flex flex-col">
+              <h2 className="text-2xl font-bold text-brand-mute mb-4">Indicações</h2>
+              <p className="text-brand-body mb-8 flex-grow">Livros e materiais recomendados pela nossa comunidade.</p>
+              <span className="inline-block bg-gray-100 text-brand-mute font-bold px-6 py-3 rounded-md text-center cursor-not-allowed">
+                Em breve
+              </span>
             </div>
           </div>
         </section>

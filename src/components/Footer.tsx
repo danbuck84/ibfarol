@@ -59,6 +59,7 @@ export default function Footer() {
             <li><Link href="/#agenda" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l3')}</Link></li>
             <li><Link href="/ministerios" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l4')}</Link></li>
             <li><Link href="/novosmembros" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l5')}</Link></li>
+            <li><Link href="/proximospassos" className="text-[#B4BDBD] hover:text-white transition-colors">{t('col4_l6')}</Link></li>
           </ul>
         </div>
       </div>

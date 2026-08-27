@@ -51,7 +51,8 @@
     "min_manutencao": "Maintenance Team",
     "min_acao": "Community Action",
     "min_homens": "Men",
-    "min_mulheres": "Women"
+    "min_mulheres": "Women",
+    "btn_whatsapp": "Message"
   },
   "Quote": {
     "text": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus, his Son, purifies us from all sin.",
@@ -114,7 +115,8 @@
     "col4_l3": "Upcoming Events",
     "col4_l4": "Serve at IBFarol",
     "col3_l5": "Calendar",
-    "col4_l5": "New Members"
+    "col4_l5": "New Members",
+    "col4_l6": "Next Steps"
   },
   "AboutUs": {
     "eyebrow": "Who We Are",
