@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getTranslations } from "next-intl/server";
 
-export default function SermoesPage() {
+export default async function SermoesPage() {
+  const t = await getTranslations('Sermoes');
   const sermons = [
     { id: 1, title: "O Propósito de Deus", series: "No Princípio", preacher: "Pr. Gustavo", date: "22 Set 2026", videoId: "dQw4w9WgXcQ" },
     { id: 2, title: "A Queda do Homem", series: "No Princípio", preacher: "Pr. Gustavo", date: "15 Set 2026", videoId: "dQw4w9WgXcQ" },
@@ -14,8 +16,8 @@ export default function SermoesPage() {
       <Header />
       <main className="min-h-[70vh] bg-brand-canvas py-20 px-8">
         <div className="max-w-[1280px] mx-auto">
-          <h1 className="text-[40px] font-bold text-brand-ink mb-4">Sermões</h1>
-          <p className="text-xl text-brand-body mb-12">Assista ou ouça nossas mensagens recentes.</p>
+          <h1 className="text-[40px] font-bold text-brand-ink mb-4">{t('title')}</h1>
+          <p className="text-xl text-brand-body mb-12">{t('desc')}</p>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {sermons.map(sermon => (
@@ -39,10 +41,10 @@ export default function SermoesPage() {
                   </div>
                   <div className="mt-5 flex gap-3">
                     <button className="flex-1 bg-gray-100 hover:bg-gray-200 text-brand-ink font-bold py-2 rounded-md transition-colors text-sm">
-                      Assistir
+                      {t('watch')}
                     </button>
                     <button className="flex-1 bg-[#1DB954]/10 hover:bg-[#1DB954]/20 text-[#1DB954] font-bold py-2 rounded-md transition-colors text-sm">
-                      Ouvir (Spotify)
+                      {t('listen')}
                     </button>
                   </div>
                 </div>

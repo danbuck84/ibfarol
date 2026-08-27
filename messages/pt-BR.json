@@ -214,5 +214,48 @@
   "Give": {
     "headline": "Adoração Através da Contribuição",
     "description": "[Parágrafo curto explicando a visão bíblica sobre por que a igreja recebe ofertas e como isso abençoa a comunidade]"
+  },
+  "Artigos": {
+    "title": "Artigos",
+    "desc": "Textos pastorais e reflexões semanais para edificar sua vida.",
+    "by": "Por:"
+  },
+  "Sermoes": {
+    "title": "Sermões",
+    "desc": "Assista ou ouça nossas mensagens recentes.",
+    "watch": "Assistir",
+    "listen": "Ouvir (Spotify)"
+  },
+  "ProximosPassos": {
+    "title": "Próximos Passos",
+    "desc": "Nós acreditamos que a vida cristã não é estática. Existe uma trilha de crescimento e envolvimento na igreja local. Descubra qual é o seu próximo passo.",
+    "ready": "Pronto para dar o próximo passo?",
+    "ready_desc": "Inscreva-se na nossa próxima Classe de Novos Membros e comece sua jornada.",
+    "btn": "Inscrever-se na Classe",
+    "step1_title": "Visitar",
+    "step1_desc": "Conhecer nossa comunidade em um de nossos cultos de domingo.",
+    "step2_title": "Novos Membros",
+    "step2_desc": "Participar da classe de integração para entender nossa visão e valores.",
+    "step3_title": "Membresia",
+    "step3_desc": "Se comprometer oficialmente com a igreja local e sua liderança.",
+    "step4_title": "Pequeno Grupo",
+    "step4_desc": "Fazer parte de uma comunidade menor para pastoreio e comunhão.",
+    "step5_title": "Servir",
+    "step5_desc": "Usar seus dons e talentos em um de nossos ministérios."
+  },
+  "Recursos": {
+    "title": "Recursos",
+    "sermons_title": "Sermões",
+    "sermons_desc": "Acesse nossas mensagens em áudio e vídeo.",
+    "sermons_btn": "Ver Sermões",
+    "materials_title": "Materiais de Apoio",
+    "materials_desc": "Arquivos, apostilas e guias para estudos.",
+    "materials_btn": "Acessar Drive",
+    "articles_title": "Artigos",
+    "articles_desc": "Textos pastorais e reflexões semanais.",
+    "articles_btn": "Ler Artigos",
+    "books_title": "Indicações",
+    "books_desc": "Livros e materiais recomendados pela nossa comunidade.",
+    "books_btn": "Em breve"
   }
 }

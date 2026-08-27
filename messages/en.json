@@ -214,5 +214,48 @@
   "Give": {
     "headline": "Worship Through Giving",
     "description": "[Short paragraph explaining the biblical vision of why the church receives offerings and how it blesses the community]"
+  },
+  "Artigos": {
+    "title": "Articles",
+    "desc": "Pastoral texts and weekly reflections to edify your life.",
+    "by": "By:"
+  },
+  "Sermoes": {
+    "title": "Sermons",
+    "desc": "Watch or listen to our recent messages.",
+    "watch": "Watch",
+    "listen": "Listen (Spotify)"
+  },
+  "ProximosPassos": {
+    "title": "Next Steps",
+    "desc": "We believe the Christian life is not static. There is a path of growth and involvement in the local church. Discover your next step.",
+    "ready": "Ready to take the next step?",
+    "ready_desc": "Sign up for our next New Members Class and start your journey.",
+    "btn": "Sign up for the Class",
+    "step1_title": "Visit",
+    "step1_desc": "Get to know our community at one of our Sunday services.",
+    "step2_title": "New Members",
+    "step2_desc": "Join the integration class to understand our vision and values.",
+    "step3_title": "Membership",
+    "step3_desc": "Officially commit to the local church and its leadership.",
+    "step4_title": "Small Group",
+    "step4_desc": "Be part of a smaller community for pastoring and fellowship.",
+    "step5_title": "Serve",
+    "step5_desc": "Use your gifts and talents in one of our ministries."
+  },
+  "Recursos": {
+    "title": "Resources",
+    "sermons_title": "Sermons",
+    "sermons_desc": "Access our audio and video messages.",
+    "sermons_btn": "View Sermons",
+    "materials_title": "Support Materials",
+    "materials_desc": "Files, booklets, and study guides.",
+    "materials_btn": "Access Drive",
+    "articles_title": "Articles",
+    "articles_desc": "Pastoral texts and weekly reflections.",
+    "articles_btn": "Read Articles",
+    "books_title": "Recommendations",
+    "books_desc": "Books and materials recommended by our community.",
+    "books_btn": "Coming soon"
   }
 }
