@@ -89,28 +89,26 @@ export default function Header() {
       </div>
 
       {/* Mobile Dropdown */}
-      {isMenuOpen && (
-        <div className="absolute top-[66px] left-0 w-full bg-brand-canvas-dark border-b border-white/10 lg:hidden flex flex-col py-4 px-6 shadow-xl">
-          <Link href="/sobre" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/sobre')}`}>
-            {t('nav_about')}
-          </Link>
-          <Link href="/recursos" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/recursos')}`}>
-            {t('nav_resources')}
-          </Link>
-          <Link href="/ministerios" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/ministerios')}`}>
-            {t('nav_ministries')}
-          </Link>
-          <Link href="/#contribua" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/#contribua')}`}>
-            {t('nav_give')}
-          </Link>
-          <Link href="/aconselhamento" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/aconselhamento')}`}>
-            {t('nav_counseling')}
-          </Link>
-          <Link href="/#visita" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg ${isMobileActive('/#visita')}`}>
-            {t('nav_contact')}
-          </Link>
-        </div>
-      )}
+      <div className={`absolute top-[66px] left-0 w-full bg-brand-canvas-dark border-b border-white/10 lg:hidden flex flex-col py-4 px-6 shadow-xl transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}>
+        <Link href="/sobre" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/sobre')}`}>
+          {t('nav_about')}
+        </Link>
+        <Link href="/recursos" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/recursos')}`}>
+          {t('nav_resources')}
+        </Link>
+        <Link href="/ministerios" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/ministerios')}`}>
+          {t('nav_ministries')}
+        </Link>
+        <Link href="/#contribua" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/#contribua')}`}>
+          {t('nav_give')}
+        </Link>
+        <Link href="/aconselhamento" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/aconselhamento')}`}>
+          {t('nav_counseling')}
+        </Link>
+        <Link href="/#visita" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg ${isMobileActive('/#visita')}`}>
+          {t('nav_contact')}
+        </Link>
+      </div>
     </header>
   );
 }

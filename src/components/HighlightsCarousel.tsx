@@ -54,8 +54,8 @@ export default function HighlightsCarousel() {
   };
 
   return (
-    <section className="bg-brand-canvas-soft py-16 px-8 overflow-hidden" id="destaques">
-      <div className="max-w-[1280px] mx-auto mb-10">
+    <section className="bg-brand-canvas-soft py-16 overflow-hidden" id="destaques">
+      <div className="max-w-[1280px] mx-auto mb-10 px-6 md:px-8">
          <h2 className="text-[28px] md:text-[36px] font-bold leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
             {t('headline')}
           </h2>
@@ -63,7 +63,7 @@ export default function HighlightsCarousel() {
 
       <div 
         ref={scrollRef}
-        className={`flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 max-w-[1280px] mx-auto scrollbar-hide select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 px-6 md:px-8 max-w-[1280px] mx-auto scrollbar-hide select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}

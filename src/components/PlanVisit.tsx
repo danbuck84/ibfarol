@@ -1,7 +1,25 @@
+"use client";
 import { useTranslations } from "next-intl";
+import { FormEvent, useRef } from "react";
 
 export default function PlanVisit() {
   const t = useTranslations('PlanVisit');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+    
+    const subject = `Mensagem enviada pelo site: ${name}`;
+    const body = `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`;
+    
+    window.location.href = `mailto:gustavo@batistafarol.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section className="py-16 px-8 bg-white border-t border-brand-hairline" id="visita">
       <div className="max-w-[1280px] mx-auto">
@@ -44,7 +62,7 @@ export default function PlanVisit() {
                 <h4 className="font-bold text-brand-ink text-sm uppercase tracking-wider mb-2">Contato</h4>
                 <p className="text-brand-body text-sm font-medium">WhatsApp: (12) 99162-6321</p>
                 <p className="text-brand-body text-sm font-medium">Instagram: @ib.farol</p>
-                <p className="text-brand-body text-sm font-medium">contato@batistafarol.org</p>
+                <p className="text-brand-body text-sm font-medium break-all">contato@batistafarol.org</p>
               </div>
             </div>
           </div>
@@ -52,18 +70,18 @@ export default function PlanVisit() {
           {/* Contact Form */}
           <div>
             <h3 className="text-xl font-bold tracking-wider text-brand-ink mb-4">{t('contact_title')}</h3>
-            <form className="space-y-4">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-brand-body mb-1">{t('form_name')}</label>
-                <input type="text" id="name" className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary" />
+                <input type="text" name="name" id="name" required className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-brand-body mb-1">{t('form_email')}</label>
-                <input type="email" id="email" className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary" />
+                <input type="email" name="email" id="email" required className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-brand-body mb-1">{t('form_message')}</label>
-                <textarea id="message" rows={5} className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary resize-none"></textarea>
+                <textarea name="message" id="message" required rows={5} className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary resize-none"></textarea>
               </div>
               <button type="submit" className="w-full font-semibold text-brand-on-primary bg-brand-primary border border-brand-primary px-4 py-3 rounded-md transition-colors hover:bg-brand-primary-deep cursor-pointer">
                 {t('btn_submit')}
