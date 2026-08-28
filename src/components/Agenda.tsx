@@ -90,8 +90,11 @@ export default function Agenda() {
       {/* Programação Fixa */}
       <div className="py-20 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-           <div className="mb-12 text-center md:text-left">
-             <h3 className="text-2xl font-bold text-brand-ink mb-6 border-b border-brand-hairline pb-4 inline-block">{t('fixed_events_title') || "Programação Fixa"}</h3>
+           <div className="mb-12 text-center">
+             <h2 className="text-[28px] md:text-[36px] font-bold leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink mb-2">
+               {t('fixed_events_title') || "Programação Fixa"}
+             </h2>
+             <div className="w-12 h-1 bg-brand-primary mx-auto rounded-full mt-6"></div>
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

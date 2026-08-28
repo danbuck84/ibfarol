@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-function MinistryCard({ title, leader, phone, role, isInactive = false, btnText, icon = "/avatar-placeholder.svg", iconBg = "bg-brand-canvas-soft" }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string, icon?: string, iconBg?: string }) {
+function MinistryCard({ title, leader, phone, role, isInactive = false, btnText, icon = "/avatar-placeholder.svg", iconBg = "bg-brand-ink" }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string, icon?: string, iconBg?: string }) {
   const cleanPhone = phone.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/55${cleanPhone}`;
   
