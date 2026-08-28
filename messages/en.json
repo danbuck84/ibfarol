@@ -116,7 +116,11 @@
     "col4_l4": "Serve at IBFarol",
     "col3_l5": "Calendar",
     "col4_l5": "New Members",
-    "col4_l6": "Next Steps"
+    "col4_l6": "Next Steps",
+    "address1": "Rua Dr. Othon dos Santos Mercadante, 43 — Vila Sinha",
+    "address2": "São José dos Campos/SP · CEP 12.212-650",
+    "phone": "(12) 99162-6321",
+    "email": "contato@batistafarol.org"
   },
   "AboutUs": {
     "eyebrow": "Who We Are",
@@ -133,7 +137,7 @@
     "eyebrow": "Plan your visit",
     "headline": "We are waiting for you",
     "address_title": "Where we are",
-    "address_text": "Rua Othon dos Santos Mercadante, 43\nVila Sinha, São José dos Campos - SP\n12212-650",
+    "address_text": "Rua Dr. Othon dos Santos Mercadante, 43 — Vila Sinha\nSão José dos Campos/SP · CEP 12.212-650",
     "contact_title": "Send a message",
     "form_name": "Name",
     "form_email": "Email",
@@ -256,6 +260,10 @@
     "articles_btn": "Read Articles",
     "books_title": "Recommendations",
     "books_desc": "Books and materials recommended by our community.",
-    "books_btn": "Coming soon"
+    "books_btn": "View Library"
+  },
+  "Livros": {
+    "title": "Book Recommendations",
+    "desc": "A recommended library for your spiritual growth."
   }
 }

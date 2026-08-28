@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Col 1 */}
         <div className="order-last md:order-first mt-8 md:mt-0">
-          <Image src="/logo-footer.png" alt={t('alt_logo')} width={140} height={44} className="h-[44px] w-auto" />
+          <Image src="/logo.png" alt={t('alt_logo')} width={140} height={44} className="h-[44px] w-auto" />
           <p className="mt-6 text-xs leading-[18px] text-brand-mute whitespace-pre-line">
             {t('address_short')}
           </p>

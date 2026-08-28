@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between gap-8 px-5 md:px-8 py-3.5 bg-brand-canvas-dark/95 backdrop-blur-md border-b border-white/10">
       <Link href="/" className="flex items-center border-none">
-        <Image src="/logo-header.png" alt={t('alt_logo')} width={120} height={38} className="h-[34px] md:h-[38px] w-auto" />
+        <Image src="/logo.png" alt={t('alt_logo')} width={120} height={38} className="h-[34px] md:h-[38px] w-auto" />
       </Link>
       
       <nav className="hidden lg:flex items-center gap-7">

@@ -27,7 +27,7 @@ export default async function RecursosPage() {
             <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline flex flex-col">
               <h2 className="text-2xl font-bold text-brand-ink mb-4">{t('materials_title')}</h2>
               <p className="text-brand-body mb-8 flex-grow">{t('materials_desc')}</p>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#4285F4] text-white font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-[#3367D6]">
+              <a href="https://drive.google.com/drihomeolders/1bqcHjARUNoxh1seFbc5YQlEmnqojiASD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#4285F4] text-white font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-[#3367D6]">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.23 7.82h6.46l3.23 5.584-3.23 5.585h-6.46l-3.23-5.585 3.23-5.584z"/></svg>
                 {t('materials_btn')}
               </a>
@@ -43,12 +43,12 @@ export default async function RecursosPage() {
             </div>
 
             {/* Indicações */}
-            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline border-dashed opacity-70 flex flex-col">
-              <h2 className="text-2xl font-bold text-brand-mute mb-4">{t('books_title')}</h2>
+            <div className="bg-brand-canvas-soft p-8 rounded-lg border border-brand-hairline flex flex-col">
+              <h2 className="text-2xl font-bold text-brand-ink mb-4">{t('books_title')}</h2>
               <p className="text-brand-body mb-8 flex-grow">{t('books_desc')}</p>
-              <span className="inline-block bg-gray-100 text-brand-mute font-bold px-6 py-3 rounded-md text-center cursor-not-allowed">
+              <Link href="/livros" className="inline-block bg-brand-primary text-white font-bold px-6 py-3 rounded-md text-center transition-colors hover:bg-brand-primary-deep">
                 {t('books_btn')}
-              </span>
+              </Link>
             </div>
           </div>
         </section>

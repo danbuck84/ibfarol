@@ -3,11 +3,6 @@ import { useTranslations } from "next-intl";
 
 export default function Give() {
   const t = useTranslations('Give');
-  
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("00.000.000/0001-00");
-    alert("Chave PIX copiada!");
-  };
 
   return (
     <section className="py-20 px-8 bg-brand-canvas" id="contribua">
@@ -19,24 +14,36 @@ export default function Give() {
             {t('description') || "[Parágrafo curto explicando a visão bíblica sobre por que a igreja recebe ofertas e como isso abençoa a comunidade]"}
           </p>
           
-          <div className="bg-brand-canvas-soft border border-brand-hairline p-5 rounded-lg">
-            <p className="text-brand-ink font-bold mb-1">Chave PIX (CNPJ)</p>
-            <div className="flex items-center gap-4">
-              <code className="bg-white px-3 py-2 border border-brand-hairline rounded text-brand-ink font-mono text-lg flex-grow">
-                00.000.000/0001-00
-              </code>
-              <button onClick={copyToClipboard} className="bg-brand-primary text-white px-4 py-2 rounded-md font-bold hover:bg-brand-primary-deep transition-colors">
-                Copiar
-              </button>
+          <div className="bg-brand-canvas-soft border border-brand-hairline p-5 rounded-lg space-y-4">
+            <div>
+              <p className="text-brand-ink font-bold mb-1">Chave PIX (CNPJ)</p>
+              <div className="flex items-center gap-4">
+                <code className="bg-white px-3 py-2 border border-brand-hairline rounded text-brand-ink font-mono text-base sm:text-lg flex-grow">
+                  61.652.008/0001-27
+                </code>
+                <button onClick={() => navigator.clipboard.writeText("61.652.008/0001-27")} className="bg-brand-primary text-white px-4 py-2 rounded-md font-bold hover:bg-brand-primary-deep transition-colors">
+                  Copiar
+                </button>
+              </div>
             </div>
-            <p className="text-sm text-brand-mute mt-3 italic">Igreja Batista Farol</p>
+            <div>
+              <p className="text-brand-ink font-bold mb-1">Chave PIX (E-mail)</p>
+              <div className="flex items-center gap-4">
+                <code className="bg-white px-3 py-2 border border-brand-hairline rounded text-brand-ink font-mono text-base sm:text-lg flex-grow">
+                  ofertas@batistafarol.org
+                </code>
+                <button onClick={() => navigator.clipboard.writeText("ofertas@batistafarol.org")} className="bg-brand-primary text-white px-4 py-2 rounded-md font-bold hover:bg-brand-primary-deep transition-colors">
+                  Copiar
+                </button>
+              </div>
+            </div>
+            <p className="text-sm text-brand-mute mt-3 italic font-medium">Igreja Batista Farol · Banco Cora</p>
           </div>
         </div>
         
         <div className="bg-brand-canvas-soft border-l border-brand-hairline p-10 md:w-2/5 flex flex-col items-center justify-center">
           <p className="text-brand-ink font-bold mb-4 text-center">Escaneie o QR Code</p>
           <div className="w-[200px] h-[200px] bg-white border border-brand-hairline rounded-lg p-2 shadow-sm flex items-center justify-center">
-            {/* Placeholder for QR Code */}
             <div className="text-center text-brand-mute">
               [QR CODE]
             </div>
