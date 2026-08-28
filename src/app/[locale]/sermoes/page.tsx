@@ -5,10 +5,10 @@ import { getTranslations } from "next-intl/server";
 export default async function SermoesPage() {
   const t = await getTranslations('Sermoes');
   const sermons = [
-    { id: 1, title: "O Propósito de Deus", series: "No Princípio", preacher: "Pr. Gustavo", date: "22 Set 2026", videoId: "dQw4w9WgXcQ" },
-    { id: 2, title: "A Queda do Homem", series: "No Princípio", preacher: "Pr. Gustavo", date: "15 Set 2026", videoId: "dQw4w9WgXcQ" },
-    { id: 3, title: "Graça Incalculável", series: "Efésios", preacher: "Pr. Gustavo", date: "08 Set 2026", videoId: "dQw4w9WgXcQ" },
-    { id: 4, title: "Firmados em Cristo", series: "Efésios", preacher: "Pr. Gustavo", date: "01 Set 2026", videoId: "dQw4w9WgXcQ" },
+    { id: 1, title: "O Propósito de Deus", series: "No Princípio", preacher: "Pr. Gustavo", date: "22 Set 2026", videoId: "DrmJw_7Z4Gw" },
+    { id: 2, title: "A Queda do Homem", series: "No Princípio", preacher: "Pr. Gustavo", date: "15 Set 2026", videoId: "DrmJw_7Z4Gw" },
+    { id: 3, title: "Graça Incalculável", series: "Efésios", preacher: "Pr. Gustavo", date: "08 Set 2026", videoId: "DrmJw_7Z4Gw" },
+    { id: 4, title: "Firmados em Cristo", series: "Efésios", preacher: "Pr. Gustavo", date: "01 Set 2026", videoId: "DrmJw_7Z4Gw" },
   ];
 
   return (

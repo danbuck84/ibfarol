@@ -76,8 +76,8 @@ export default function HighlightsCarousel() {
             <div className="relative w-full h-[250px] bg-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
-                alt="YouTube"
+                src="https://img.youtube.com/vi/DrmJw_7Z4Gw/maxresdefault.jpg" 
+                alt="Ultimo Sermao"
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 flex items-center justify-center">
