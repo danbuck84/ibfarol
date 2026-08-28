@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ibfarol-pwa-v1';
+const CACHE_NAME = 'ibfarol-pwa-v2';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -19,13 +19,15 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   
   event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        // Optionally cache the response here if needed
-        return response;
-      })
-      .catch(() => {
-        return caches.match(event.request);
-      })
+    fetch(event.request).catch(async () => {
+      const cached = await caches.match(event.request);
+      if (cached) return cached;
+      
+      return new Response('You are offline.', {
+        status: 503,
+        statusText: 'Service Unavailable',
+        headers: new Headers({ 'Content-Type': 'text/plain' })
+      });
+    })
   );
 });
