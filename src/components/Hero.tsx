@@ -9,11 +9,18 @@ export default function Hero() {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 bg-[#010506]">
         <Image 
-          src="/hero-bg.jpg" 
+          src="/hero-bg-mobile.jpg" 
           alt="Congregação da Igreja Batista Farol"
           fill
           priority
-          className="object-cover object-[center_40%] opacity-40 grayscale-[20%]"
+          className="object-cover object-[center_40%] opacity-40 grayscale-[20%] md:hidden"
+        />
+        <Image 
+          src="/hero-bg-desktop.jpg" 
+          alt="Congregação da Igreja Batista Farol culto"
+          fill
+          priority
+          className="object-cover object-[center_70%] opacity-40 grayscale-[20%] hidden md:block"
         />
       </div>
       
