@@ -1,15 +1,15 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-function MinistryCard({ title, leader, phone, role, isInactive = false, btnText, icon = "/avatar-placeholder.svg" }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string, icon?: string }) {
+function MinistryCard({ title, leader, phone, role, isInactive = false, btnText, icon = "/avatar-placeholder.svg", iconBg = "bg-brand-canvas-soft" }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string, icon?: string, iconBg?: string }) {
   const cleanPhone = phone.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/55${cleanPhone}`;
   
   return (
     <li className={`bg-white border ${isInactive ? 'border-dashed border-brand-hairline opacity-70 bg-brand-canvas-soft' : 'border-brand-hairline shadow-sm'} p-6 rounded-lg flex flex-col md:flex-row items-center gap-6`}>
-      <div className="w-16 h-16 rounded-full bg-brand-hairline overflow-hidden flex-shrink-0">
+      <div className={`w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border border-brand-hairline ${iconBg}`}>
          {/* eslint-disable-next-line @next/next/no-img-element */}
-         <img src={icon} alt={title} className="w-full h-full object-cover" />
+         <img src={icon} alt={title} className="w-full h-full object-contain p-2 drop-shadow-sm" />
       </div>
       <div className="flex-grow text-center md:text-left">
         <h4 className={`font-semibold text-xl ${isInactive ? 'text-brand-mute' : 'text-brand-ink'}`}>{title}</h4>
@@ -68,7 +68,7 @@ export default function Ministries() {
             
             <ul className="space-y-4">
               <MinistryCard title="Ação Comunitária" leader="Steve" phone="(12) 99779-6271" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolamarelo.png" />
-              <MinistryCard title="Ágape" leader="Mafê" phone="(11) 94158-4679" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolbranco.png" />
+              <MinistryCard title="Ágape" leader="Mafê" phone="(11) 94158-4679" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolbranco.png" iconBg="bg-brand-ink" />
               <MinistryCard title="Jiu-jitsu" leader="Emerson" phone="(12) 99154-0089" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolpreto.png" />
             </ul>
           </div>

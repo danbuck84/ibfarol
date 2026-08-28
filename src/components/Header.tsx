@@ -89,7 +89,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Dropdown */}
-      <div className={`absolute top-[66px] left-0 w-full bg-brand-canvas-dark border-b border-white/10 lg:hidden flex flex-col py-4 px-6 shadow-xl transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}>
+      <div className={`absolute top-[66px] left-0 w-full bg-black/85 backdrop-blur-xl border-b border-white/10 lg:hidden flex flex-col py-4 px-6 shadow-xl transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}>
         <Link href="/sobre" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/sobre')}`}>
           {t('nav_about')}
         </Link>
