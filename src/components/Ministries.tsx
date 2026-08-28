@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-function MinistryCard({ title, leader, phone, role, isInactive = false, btnText }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string }) {
+function MinistryCard({ title, leader, phone, role, isInactive = false, btnText, icon = "/avatar-placeholder.svg" }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string, icon?: string }) {
   const cleanPhone = phone.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/55${cleanPhone}`;
   
@@ -9,7 +9,7 @@ function MinistryCard({ title, leader, phone, role, isInactive = false, btnText 
     <li className={`bg-white border ${isInactive ? 'border-dashed border-brand-hairline opacity-70 bg-brand-canvas-soft' : 'border-brand-hairline shadow-sm'} p-6 rounded-lg flex flex-col md:flex-row items-center gap-6`}>
       <div className="w-16 h-16 rounded-full bg-brand-hairline overflow-hidden flex-shrink-0">
          {/* eslint-disable-next-line @next/next/no-img-element */}
-         <img src="/avatar-placeholder.svg" alt={leader} className="w-full h-full object-cover" />
+         <img src={icon} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="flex-grow text-center md:text-left">
         <h4 className={`font-semibold text-xl ${isInactive ? 'text-brand-mute' : 'text-brand-ink'}`}>{title}</h4>
@@ -47,17 +47,17 @@ export default function Ministries() {
             <p className="text-brand-body mb-8">{t('internal_desc')}</p>
             
             <ul className="space-y-4">
-              <MinistryCard title=".JPEG (Jovens)" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Diaconia" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Eventos" leader="Rose" phone="(12) 98894-0818" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Homens" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Infantil" leader="Débora" phone="(12) 99147-5318" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Integração" leader="Stephanie" phone="(12) 98188-7745" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Louvor" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Manutenção" leader="Marco" phone="(12) 99739-0398" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Mídia" leader="Talita" phone="(12) 98819-0546" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Mulheres" leader="Amanda" phone="(12) 99612-2402" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Som e Multimídia" leader="William" phone="(12) 99164-7935" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title=".JPEG (Jovens)" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/faroljovens.png" />
+              <MinistryCard title="Diaconia" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/faroldiaconia.png" />
+              <MinistryCard title="Eventos" leader="Rose" phone="(12) 98894-0818" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/faroleventos.png" />
+              <MinistryCard title="Homens" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolhomens.png" />
+              <MinistryCard title="Infantil" leader="Débora" phone="(12) 99147-5318" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolkids1.png" />
+              <MinistryCard title="Integração" leader="Stephanie" phone="(12) 98188-7745" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolmembros.png" />
+              <MinistryCard title="Louvor" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farollouvor.png" />
+              <MinistryCard title="Manutenção" leader="Marco" phone="(12) 99739-0398" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolmanutencao.png" />
+              <MinistryCard title="Mídia" leader="Talita" phone="(12) 98819-0546" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolmidia.png" />
+              <MinistryCard title="Mulheres" leader="Amanda" phone="(12) 99612-2402" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolmulheres1.png" />
+              <MinistryCard title="Som e Multimídia" leader="William" phone="(12) 99164-7935" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farol2.png" />
             </ul>
           </div>
 
@@ -67,9 +67,9 @@ export default function Ministries() {
             <p className="text-brand-body mb-8">{t('external_desc')}</p>
             
             <ul className="space-y-4">
-              <MinistryCard title="Ação Comunitária" leader="Steve" phone="(12) 99779-6271" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Ágape" leader="Mafê" phone="(11) 94158-4679" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Jiu-jitsu" leader="Emerson" phone="(12) 99154-0089" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Ação Comunitária" leader="Steve" phone="(12) 99779-6271" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolamarelo.png" />
+              <MinistryCard title="Ágape" leader="Mafê" phone="(11) 94158-4679" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolbranco.png" />
+              <MinistryCard title="Jiu-jitsu" leader="Emerson" phone="(12) 99154-0089" role="Líder" btnText={t('btn_whatsapp')} icon="/icons/farolpreto.png" />
             </ul>
           </div>
         </div>
