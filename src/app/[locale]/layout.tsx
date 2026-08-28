@@ -1,4 +1,5 @@
 import PwaRegistry from "@/components/PwaRegistry";
+import CookieBanner from "@/components/CookieBanner";
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
+    statusBarStyle: "black-translucent",
     title: "IB Farol",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#faf9f5",
+  themeColor: "#000000",
 };
 
 export default async function LocaleLayout({
@@ -43,13 +44,13 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-
   return (
     <html lang={locale} className="scroll-smooth">
       <body className={`${poppins.variable} antialiased font-sans`}>
         <NextIntlClientProvider messages={messages}>
           <PwaRegistry />
           {children}
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

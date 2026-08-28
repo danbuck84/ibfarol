@@ -1,0 +1,106 @@
+
+> ibfarol@0.1.0 start
+> next start
+
+▲ Next.js 16.2.12
+- Local:         http://localhost:3000
+- Network:       http://54.232.189.113:3000
+✓ Ready in 80ms
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  {href: ..., target: "_blank", rel: ..., className: ..., onClick: function onClick, children: ...}
+                                                                   ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>) {
+  digest: '3442765910'
+}

@@ -79,18 +79,12 @@ export default function Header() {
         <LanguageSwitcher />
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white p-2 focus:outline-none"
+          className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none"
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
+          <span className={`block absolute h-[2px] w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}></span>
+          <span className={`block absolute h-[2px] w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
+          <span className={`block absolute h-[2px] w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}></span>
         </button>
       </div>
 

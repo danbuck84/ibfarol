@@ -7,6 +7,7 @@ import Give from "@/components/Give";
 import PlanVisit from "@/components/PlanVisit";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -14,12 +15,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AboutUs />
-        <HighlightsCarousel />
-        <Agenda />
-        <Give />
-        <PlanVisit />
-        <Quote />
+        <FadeIn><AboutUs /></FadeIn>
+        <FadeIn><HighlightsCarousel /></FadeIn>
+        <FadeIn><Agenda /></FadeIn>
+        <FadeIn><Give /></FadeIn>
+        <FadeIn><PlanVisit /></FadeIn>
+        <FadeIn><Quote /></FadeIn>
       </main>
       <Footer />
     </>

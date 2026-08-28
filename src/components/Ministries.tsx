@@ -1,3 +1,4 @@
+"use client";
 import { useTranslations } from "next-intl";
 
 function MinistryCard({ title, leader, phone, role, isInactive = false, btnText }: { title: string, leader: string, phone: string, role: string, isInactive?: boolean, btnText: string }) {
