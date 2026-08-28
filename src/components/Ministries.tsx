@@ -47,17 +47,17 @@ export default function Ministries() {
             <p className="text-brand-body mb-8">{t('internal_desc')}</p>
             
             <ul className="space-y-4">
-              <MinistryCard title="Mulheres" leader="Amanda" phone="(12) 99612-2402" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Homens" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
               <MinistryCard title=".JPEG (Jovens)" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Louvor" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
               <MinistryCard title="Diaconia" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Manutenção" leader="Bruno" phone="(19) 98440-0520" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Som e Multimídia" leader="William" phone="(12) 99164-7935" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Mídia" leader="Talita" phone="(12) 98819-0546" role="Líder" btnText={t('btn_whatsapp')} />
               <MinistryCard title="Eventos" leader="Rose" phone="(12) 98894-0818" role="Líder" btnText={t('btn_whatsapp')} />
-              <MinistryCard title="Integração" leader="Stephanie" phone="(12) 98188-7745" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Homens" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
               <MinistryCard title="Infantil" leader="Débora" phone="(12) 99147-5318" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Integração" leader="Stephanie" phone="(12) 98188-7745" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Louvor" leader="Gustavo" phone="(12) 99162-6321" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Manutenção" leader="Marco" phone="(12) 99739-0398" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Mídia" leader="Talita" phone="(12) 98819-0546" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Mulheres" leader="Amanda" phone="(12) 99612-2402" role="Líder" btnText={t('btn_whatsapp')} />
+              <MinistryCard title="Som e Multimídia" leader="William" phone="(12) 99164-7935" role="Líder" btnText={t('btn_whatsapp')} />
             </ul>
           </div>
 

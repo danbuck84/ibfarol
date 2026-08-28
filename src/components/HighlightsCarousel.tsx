@@ -10,6 +10,25 @@ export default function HighlightsCarousel() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, clientWidth, scrollWidth } = scrollRef.current;
+    
+    // Quick boundary checks
+    if (scrollLeft <= 0) {
+      setActiveIndex(0);
+      return;
+    }
+    if (scrollLeft + clientWidth >= scrollWidth - 10) {
+      setActiveIndex(2);
+      return;
+    }
+    
+    const index = Math.round(scrollLeft / (scrollWidth / 3));
+    setActiveIndex(Math.min(Math.max(index, 0), 2));
+  };
 
   const handleMouseDown = (e: ReactMouseEvent) => {
     if (!scrollRef.current) return;
@@ -49,6 +68,7 @@ export default function HighlightsCarousel() {
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        onScroll={handleScroll}
       >
         {/* YouTube Card */}
         <div className="flex-none w-[90vw] md:w-[70vw] lg:w-[600px] snap-center">
@@ -100,6 +120,15 @@ export default function HighlightsCarousel() {
              <ReadingPlan compact={true} />
            </div>
         </div>
+      </div>
+
+      <div className="flex justify-center items-center gap-2.5 mt-2">
+        {[0, 1, 2].map(idx => (
+          <div 
+            key={idx} 
+            className={`rounded-full transition-all duration-300 ${activeIndex === idx ? 'w-8 h-2 bg-brand-primary' : 'w-2 h-2 bg-brand-hairline/80'}`}
+          />
+        ))}
       </div>
       
       <style dangerouslySetInnerHTML={{__html: `
