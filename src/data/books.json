@@ -1,0 +1,247 @@
+[
+  {
+    "category": "Comece Por Aqui",
+    "books": [
+      {
+        "title": "O que é o Evangelho?",
+        "author": "Greg Gilbert",
+        "cover": null
+      },
+      {
+        "title": "Cristianismo Puro e Simples",
+        "author": "C. S. Lewis",
+        "cover": null
+      },
+      {
+        "title": "A Cruz de Cristo",
+        "author": "John Stott",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Conhecendo a Deus",
+    "books": [
+      {
+        "title": "Conhecendo a Deus",
+        "author": "J. I. Packer",
+        "cover": null
+      },
+      {
+        "title": "Teologia Concisa",
+        "author": "J. I. Packer",
+        "cover": null
+      },
+      {
+        "title": "O Conhecimento do Deus Santo",
+        "author": "A. W. Tozer",
+        "cover": null
+      },
+      {
+        "title": "Manso e Humilde",
+        "author": "Dane Ortlund",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Como Estudar a Bíblia",
+    "books": [
+      {
+        "title": "Entendes o que Lês?",
+        "author": "Gordon Fee e Douglas Stuart",
+        "cover": null
+      },
+      {
+        "title": "Como Ler a Bíblia Livro por Livro",
+        "author": "Fee e Stuart",
+        "cover": null
+      },
+      {
+        "title": "Mulheres da Palavra",
+        "author": "Jen Wilkin",
+        "cover": null
+      },
+      {
+        "title": "Levando Deus a Sério",
+        "author": "Kevin DeYoung",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Vida Devocional e Disciplinas Espirituais",
+    "books": [
+      {
+        "title": "Disciplinas Espirituais para a Vida Cristã",
+        "author": "Donald Whitney",
+        "cover": null
+      },
+      {
+        "title": "O Vale da Visão",
+        "author": "orações puritanas",
+        "cover": null
+      },
+      {
+        "title": "Não Desperdice Sua Vida",
+        "author": "John Piper",
+        "cover": null
+      },
+      {
+        "title": "Brecha em Nossa Santidade",
+        "author": "Kevin DeYoung",
+        "cover": null
+      },
+      {
+        "title": "Faça Alguma Coisa",
+        "author": "Kevin DeYoung",
+        "cover": null
+      },
+      {
+        "title": "A Vida Centrada no Evangelho",
+        "author": "Robert Thune e Will Walker",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Casamento",
+    "books": [
+      {
+        "title": "O Significado do Casamento",
+        "author": "Timothy e Kathy Keller",
+        "cover": null
+      },
+      {
+        "title": "Quando Pecadores Dizem \"Sim\"",
+        "author": "Dave Harvey",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Filhos e Parentalidade",
+    "books": [
+      {
+        "title": "Desafio aos Pais",
+        "author": "Paul David Tripp",
+        "cover": null
+      },
+      {
+        "title": "Pastores da Família",
+        "author": "Voddie Baucham",
+        "cover": null
+      },
+      {
+        "title": "Pastoreando o Coração da Criança",
+        "author": "Tedd Tripp",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Sofrimento, Ansiedade e Medo",
+    "books": [
+      {
+        "title": "Confiando em Deus",
+        "author": "Jerry Bridges",
+        "cover": null
+      },
+      {
+        "title": "Como Vencer o Medo e a Ansiedade",
+        "author": "Edward Welch",
+        "cover": null
+      },
+      {
+        "title": "A Resposta do Evangelho às Aflições do Coração",
+        "author": "Robert Jones, Robert Green e Kristin Kellen",
+        "cover": null
+      },
+      {
+        "title": "O Segredo do Contentamento",
+        "author": "William Barcley",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "O Coração e a Mudança",
+    "books": [
+      {
+        "title": "Instrumentos nas Mãos do Redentor",
+        "author": "Paul David Tripp",
+        "cover": null
+      },
+      {
+        "title": "O Coração Dinâmico na Vida Diária",
+        "author": "Jeremy Pierre",
+        "cover": null
+      },
+      {
+        "title": "Quando as Pessoas São Grandes e Deus é Pequeno",
+        "author": "Edward Welch",
+        "cover": null
+      },
+      {
+        "title": "O Desejo de Agradar Outros",
+        "author": "Edward Welch",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Pureza Sexual",
+    "books": [
+      {
+        "title": "Finalmente Livre",
+        "author": "Heath Lambert",
+        "cover": null
+      },
+      {
+        "title": "Com Toda Pureza",
+        "author": "Tim Chester",
+        "cover": null
+      },
+      {
+        "title": "Desintoxicação Sexual",
+        "author": "Tim Challies",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Dinheiro",
+    "books": [
+      {
+        "title": "Dinheiro, Posses e Eternidade",
+        "author": "Randy Alcorn",
+        "cover": null
+      }
+    ]
+  },
+  {
+    "category": "Para as Crianças",
+    "books": [
+      {
+        "title": "A Bíblia de Histórias de Jesus",
+        "author": "Sally Lloyd-Jones",
+        "cover": null
+      },
+      {
+        "title": "Série Boas-Novas para os Coraçõezinhos",
+        "author": "Editora Fiel",
+        "cover": null
+      },
+      {
+        "title": "Grandes Verdades para Corações Pequenos",
+        "author": "Carine Mackenzie",
+        "cover": null
+      },
+      {
+        "title": "Novo Catecismo",
+        "author": "52 perguntas e respostas",
+        "cover": null
+      }
+    ]
+  }
+]
