@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -7,9 +8,13 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-canvas-dark">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 bg-[#010506]">
-        <div 
-          className="w-full h-full bg-slate-800 opacity-50 bg-cover bg-center"
-        ></div>
+        <Image 
+          src="/hero-bg.jpg" 
+          alt="Congregação da Igreja Batista Farol"
+          fill
+          priority
+          className="object-cover object-[center_40%] opacity-40 grayscale-[20%]"
+        />
       </div>
       
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-8 md:px-12 pt-20 pb-20">
