@@ -4,7 +4,7 @@ export default function HighlightsCarousel() {
   const t = useTranslations('Highlights');
 
   return (
-    <section className="bg-brand-canvas-soft py-16" id="destaques">
+    <section className="bg-white py-16" id="destaques">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           
@@ -41,6 +41,30 @@ export default function HighlightsCarousel() {
             <h2 className="text-2xl font-bold text-brand-ink mb-6">Outros Recursos</h2>
             <div className="flex flex-col gap-4">
               
+              {/* Spotify Podcast */}
+              <a href="https://open.spotify.com/show/3HrOmNVXUmosBJARnDqC4P?si=0feafb769c624480" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-[#191414] rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-10 h-10 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">Podcast de Mensagens</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">Ouça nossas mensagens e as séries de pregações nos domingos.</p>
+                  <span className="text-xs font-bold text-[#1DB954] uppercase mt-2 block group-hover:underline">Ouvir agora</span>
+                </div>
+              </a>
+
+              {/* Spotify Playlist */}
+              <a href="https://open.spotify.com/playlist/7febx03V2BfDHGR7Qdxv5r?si=f4d6de968b1f4733" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-[#191414] rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-10 h-10 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">Playlist de Louvores</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">As músicas que cantamos juntos todos os domingos.</p>
+                  <span className="text-xs font-bold text-[#1DB954] uppercase mt-2 block group-hover:underline">Ouvir agora</span>
+                </div>
+              </a>
+
               {/* Reading Plan */}
               <a href="#estudo" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
                 <div className="w-20 h-20 bg-brand-primary/10 rounded-lg flex items-center justify-center shrink-0">
@@ -50,30 +74,6 @@ export default function HighlightsCarousel() {
                   <h4 className="font-bold text-brand-ink text-lg">Plano de Leitura</h4>
                   <p className="text-sm text-brand-body line-clamp-2">Acompanhe nossa leitura bíblica diária da semana.</p>
                   <span className="text-xs font-bold text-brand-primary-ink uppercase mt-2 block group-hover:underline">Acessar</span>
-                </div>
-              </a>
-
-              {/* Calendar */}
-              <a href="https://claude.ai/code/artifact/d9edf148-2b8f-4459-91e6-c40fc2636412" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
-                <div className="w-20 h-20 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-ink text-lg">Calendário Completo</h4>
-                  <p className="text-sm text-brand-body line-clamp-2">Fique por dentro de todos os eventos e programações.</p>
-                  <span className="text-xs font-bold text-blue-600 uppercase mt-2 block group-hover:underline">Ver Agenda</span>
-                </div>
-              </a>
-
-              {/* Spotify */}
-              <a href="https://open.spotify.com/show/3HrOmNVXUmosBJARnDqC4P?si=0feafb769c624480" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
-                <div className="w-20 h-20 bg-[#191414] rounded-lg flex items-center justify-center shrink-0">
-                  <svg className="w-10 h-10 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-ink text-lg">{t('spotify_title')}</h4>
-                  <p className="text-sm text-brand-body line-clamp-2">{t('spotify_desc')}</p>
-                  <span className="text-xs font-bold text-[#1DB954] uppercase mt-2 block group-hover:underline">Ouvir agora</span>
                 </div>
               </a>
 

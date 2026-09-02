@@ -1,12 +1,52 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function SobrePage() {
+  const t = useTranslations('AboutUs');
+
   return (
     <>
       <Header />
-      <main className="min-h-[70vh] py-20 px-8">
+      <main className="min-h-[70vh] py-20 px-8 bg-brand-canvas">
         <div className="max-w-[1280px] mx-auto space-y-24">
+          
+          <section>
+            <h1 className="text-[36px] font-bold text-brand-ink mb-10">Missão e Visão</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-[1100px]">
+              {/* Missão Card */}
+              <div className="flex flex-col bg-white">
+                <div className="relative h-[300px] md:h-[350px] w-full">
+                  <Image src="/hero-bg-mobile.jpg" alt="Missão" fill className="object-cover" />
+                </div>
+                <div className="bg-[#181d1e] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
+                  <h3 className="text-lg md:text-xl font-bold tracking-[3px] text-[#9A8974] mb-6 uppercase">
+                    {t('mission_title')}
+                  </h3>
+                  <p className="text-base md:text-lg text-[#9A8974] leading-[1.8] font-light max-w-sm italic">
+                    {t('mission_text')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Visão Card */}
+              <div className="flex flex-col bg-white">
+                <div className="relative h-[300px] md:h-[350px] w-full">
+                  <Image src="/hero-bg-desktop.jpg" alt="Visão" fill className="object-cover" />
+                </div>
+                <div className="bg-[#111516] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
+                  <h3 className="text-lg md:text-xl font-bold tracking-[3px] text-[#9A8974] mb-6 uppercase">
+                    {t('vision_title')}
+                  </h3>
+                  <p className="text-base md:text-lg text-[#9A8974] leading-[1.8] font-light max-w-sm italic">
+                    {t('vision_text')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section>
             <h1 className="text-[36px] font-bold text-brand-ink mb-6">Nossa História</h1>
             <p className="text-lg text-brand-body leading-[28px] max-w-[80ch]">

@@ -17,7 +17,6 @@ export default function Home() {
       <main>
         <Hero />
         <FadeIn><AboutUs /></FadeIn>
-        <FadeIn><ReadingPlan /></FadeIn>
         <FadeIn><HighlightsCarousel /></FadeIn>
         <FadeIn><Agenda /></FadeIn>
         <FadeIn><Give /></FadeIn>
