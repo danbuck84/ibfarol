@@ -11,7 +11,7 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
-    <nav className="bg-brand-canvas-soft border-b border-brand-hairline py-3 px-8 text-sm">
+    <nav className="sticky top-[66px] z-20 bg-brand-canvas-soft border-b border-brand-hairline py-3 px-8 text-sm">
       <div className="max-w-[1280px] mx-auto flex items-center gap-2 text-brand-mute font-medium">
         {items.map((item, idx) => (
           <span key={idx} className="flex items-center gap-2">
