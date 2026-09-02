@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookCategory from "@/components/BookCategory";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getTranslations } from "next-intl/server";
 import fs from 'fs';
 import path from 'path';
@@ -19,6 +20,7 @@ export default async function LivrosPage() {
   return (
     <>
       <Header />
+      <Breadcrumb items={[{ label: 'Recursos', href: '/recursos' }, { label: 'Indicações de Leitura' }]} />
       <main className="min-h-[70vh] bg-brand-canvas py-20 px-8">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center md:text-left mb-16">

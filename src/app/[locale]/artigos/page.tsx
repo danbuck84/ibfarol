@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getTranslations } from "next-intl/server";
 
 export default async function ArtigosPage() {
@@ -16,6 +17,7 @@ export default async function ArtigosPage() {
   return (
     <>
       <Header />
+      <Breadcrumb items={[{ label: 'Recursos', href: '/recursos' }, { label: 'Artigos' }]} />
       <main className="min-h-[70vh] bg-brand-canvas py-20 px-8">
         <div className="max-w-[1000px] mx-auto">
           <h1 className="text-[40px] font-bold text-brand-ink mb-4">{t('title')}</h1>
