@@ -7,7 +7,7 @@ export default function Agenda() {
   return (
     <section id="agenda" className="border-t border-brand-hairline">
       {/* Programação Fixa */}
-      <div className="py-20 bg-brand-canvas-soft">
+      <div className="py-20 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-8">
            <div className="mb-12 text-center">
              <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
