@@ -31,8 +31,8 @@ export default function AboutUs() {
               className="object-cover"
             />
           </div>
-          <div className="bg-[#9fa99e] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
-            <h3 className="text-lg md:text-xl font-medium tracking-[3px] text-white mb-6 uppercase">
+          <div className="bg-[#181d1e] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
+            <h3 className="text-lg md:text-xl font-medium tracking-[3px] text-brand-primary mb-6 uppercase">
               {t('mission_title')}
             </h3>
             <p className="text-base md:text-lg text-white/90 leading-[1.8] font-light max-w-sm italic">
@@ -51,8 +51,8 @@ export default function AboutUs() {
               className="object-cover"
             />
           </div>
-          <div className="bg-[#585755] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
-            <h3 className="text-lg md:text-xl font-medium tracking-[3px] text-white mb-6 uppercase">
+          <div className="bg-[#111516] p-10 md:p-14 text-center flex-grow flex flex-col justify-center items-center">
+            <h3 className="text-lg md:text-xl font-medium tracking-[3px] text-brand-primary mb-6 uppercase">
               {t('vision_title')}
             </h3>
             <p className="text-base md:text-lg text-white/90 leading-[1.8] font-light max-w-sm italic">
