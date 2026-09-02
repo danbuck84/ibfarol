@@ -92,7 +92,7 @@ export default function HighlightsCarousel() {
               <p className="text-sm font-semibold tracking-[2px] uppercase text-brand-primary-ink mb-2">YouTube</p>
               <h3 className="text-xl font-bold text-brand-ink leading-snug">{t('youtube_title')}</h3>
               <p className="text-brand-body mt-2 line-clamp-2">{t('youtube_desc')}</p>
-              <a href="#" className="pointer-events-auto inline-block mt-4 text-brand-primary font-bold hover:underline">{t('btn_watch')}</a>
+              <a href="https://www.youtube.com/@batistafarol" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-block mt-4 text-brand-primary font-bold hover:underline">{t('btn_watch')}</a>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function HighlightsCarousel() {
               <p className="text-sm font-semibold tracking-[2px] uppercase text-[#1DB954] mb-2">Spotify</p>
               <h3 className="text-xl font-bold text-brand-ink leading-snug">{t('spotify_title')}</h3>
               <p className="text-brand-body mt-2 line-clamp-2">{t('spotify_desc')}</p>
-              <a href="#" className="pointer-events-auto inline-block mt-4 text-[#1DB954] font-bold hover:underline">{t('btn_listen')}</a>
+              <a href="https://open.spotify.com/show/3HrOmNVXUmosBJARnDqC4P?si=0feafb769c624480" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-block mt-4 text-[#1DB954] font-bold hover:underline">{t('btn_listen')}</a>
             </div>
           </div>
         </div>
