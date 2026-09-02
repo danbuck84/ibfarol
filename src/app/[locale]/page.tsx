@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="relative">
-        <div className="sticky top-[66px] z-10 bg-white"><Hero /></div>
-        <div className="sticky top-[66px] z-20 bg-[#E2D769]"><FadeIn><AboutUs /></FadeIn></div>
-        <div className="sticky top-[66px] z-30 bg-white"><FadeIn><HighlightsCarousel /></FadeIn></div>
-        <div className="sticky top-[66px] z-40 bg-white"><FadeIn><Agenda /></FadeIn></div>
-        <div className="sticky top-[66px] z-50 bg-black"><FadeIn><Give /></FadeIn></div>
-        <div className="sticky top-[66px] z-60 bg-white"><FadeIn><PlanVisit /></FadeIn></div>
-        <div className="sticky top-[66px] z-70 bg-brand-canvas"><FadeIn><Quote /></FadeIn></div>
+      <main>
+        <Hero />
+        <FadeIn><AboutUs /></FadeIn>
+        <FadeIn><HighlightsCarousel /></FadeIn>
+        <FadeIn><Agenda /></FadeIn>
+        <FadeIn><Give /></FadeIn>
+        <FadeIn><PlanVisit /></FadeIn>
+        <FadeIn><Quote /></FadeIn>
       </main>
       <Footer />
     </>

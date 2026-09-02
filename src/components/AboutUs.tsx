@@ -2,7 +2,7 @@ import { Link } from "@/i18n/routing";
 
 export default function AboutUs() {
   return (
-    <section id="sobre" className="w-full bg-[#E2D769] py-20 px-6 md:px-8">
+    <section id="sobre" className="w-full bg-[#e2d7c9] py-20 px-6 md:px-8">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Big Title */}
         <div>

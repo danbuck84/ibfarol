@@ -5,8 +5,8 @@ export default function Give() {
   const t = useTranslations('Give');
 
   return (
-    <section className="py-20 px-8 bg-black" id="contribua">
-      <div className="max-w-[800px] mx-auto bg-black rounded-xl overflow-hidden shadow-xl border border-white/10">
+    <section className="min-h-[90vh] flex items-center justify-center py-20 px-8 bg-black" id="contribua">
+      <div className="max-w-[800px] w-full mx-auto bg-black rounded-xl overflow-hidden shadow-xl border border-white/10">
         {/* Imagem com o QR Code e chaves */}
         <img src="/contribua-pix.jpg" alt="Contribua via PIX" className="w-full h-auto object-cover" />
         
