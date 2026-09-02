@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* Fade Transition */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-ink to-transparent z-10 pointer-events-none"></div>
       
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-8 md:px-12 pt-20 pb-20">
         <h1 className="text-[52px] md:text-[72px] lg:text-[90px] text-white font-sans font-bold leading-[1.05] tracking-[-1px] whitespace-pre-line">
