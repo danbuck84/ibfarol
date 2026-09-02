@@ -51,20 +51,6 @@ export default function PlanVisit() {
                 className="absolute inset-0"
               ></iframe>
             </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-brand-canvas-soft border border-brand-hairline p-4 rounded-lg">
-                <h4 className="font-bold text-brand-ink text-sm uppercase tracking-wider mb-2">Horários</h4>
-                <p className="text-brand-body text-sm font-medium">Domingo às 10h</p>
-                <p className="text-brand-body text-sm font-medium">Domingo às 18h</p>
-              </div>
-              <div className="bg-brand-canvas-soft border border-brand-hairline p-4 rounded-lg">
-                <h4 className="font-bold text-brand-ink text-sm uppercase tracking-wider mb-2">Contato</h4>
-                <p className="text-brand-body text-sm font-medium">WhatsApp: (12) 99162-6321</p>
-                <p className="text-brand-body text-sm font-medium">Instagram: @ib.farol</p>
-                <p className="text-brand-body text-sm font-medium break-all">contato@batistafarol.org</p>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
