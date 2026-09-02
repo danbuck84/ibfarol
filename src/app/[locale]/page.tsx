@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import HighlightsCarousel from "@/components/HighlightsCarousel";
+import ReadingPlan from "@/components/ReadingPlan";
 import Agenda from "@/components/Agenda";
 import Give from "@/components/Give";
 import PlanVisit from "@/components/PlanVisit";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <FadeIn><AboutUs /></FadeIn>
+        <FadeIn><ReadingPlan /></FadeIn>
         <FadeIn><HighlightsCarousel /></FadeIn>
         <FadeIn><Agenda /></FadeIn>
         <FadeIn><Give /></FadeIn>

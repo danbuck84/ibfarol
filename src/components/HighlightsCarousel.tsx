@@ -1,146 +1,87 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { useRef, useState, MouseEvent as ReactMouseEvent } from "react";
-import ReadingPlan from "./ReadingPlan";
 
 export default function HighlightsCarousel() {
   const t = useTranslations('Highlights');
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, clientWidth, scrollWidth } = scrollRef.current;
-    
-    // Quick boundary checks
-    if (scrollLeft <= 0) {
-      setActiveIndex(0);
-      return;
-    }
-    if (scrollLeft + clientWidth >= scrollWidth - 10) {
-      setActiveIndex(2);
-      return;
-    }
-    
-    // Width of one full item (including gap if any)
-    const index = Math.round(scrollLeft / clientWidth);
-    setActiveIndex(Math.min(Math.max(index, 0), 2));
-  };
-
-  const handleMouseDown = (e: ReactMouseEvent) => {
-    if (!scrollRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: ReactMouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
 
   return (
-    <section className="bg-brand-canvas-soft py-16 overflow-hidden" id="destaques">
-      <div className="max-w-[1280px] mx-auto mb-10 px-6 md:px-8">
-         <h2 className="text-[28px] md:text-[36px] font-bold leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
-            {t('headline')}
-          </h2>
-      </div>
-
-      <div 
-        ref={scrollRef}
-        className={`flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 max-w-[1280px] mx-auto scrollbar-hide select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onScroll={handleScroll}
-      >
-        {/* YouTube Card */}
-        <div className="flex-none w-full shrink-0 flex justify-center snap-center px-6 md:px-8">
-          <div className="w-full max-w-[600px] bg-white border border-brand-hairline rounded-lg overflow-hidden shadow-sm h-[400px] md:h-[450px] flex flex-col pointer-events-none">
-            <div className="relative w-full h-[250px] bg-black">
+    <section className="bg-brand-canvas-soft py-16" id="destaques">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+          
+          {/* Left Column */}
+          <div className="lg:col-span-2">
+            <h2 className="text-2xl font-bold text-brand-ink mb-6">Última Mensagem</h2>
+            <a href="https://www.youtube.com/@batistafarol" target="_blank" rel="noopener noreferrer" className="block relative bg-black rounded-xl overflow-hidden shadow-sm group h-[300px] md:h-[450px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="https://img.youtube.com/vi/DrmJw_7Z4Gw/maxresdefault.jpg" 
-                alt="Ultimo Sermao"
-                className="absolute inset-0 w-full h-full object-cover opacity-80"
+                alt="Último Sermão" 
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
               />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+              
               <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 </div>
               </div>
-            </div>
-            <div className="p-6 flex-grow flex flex-col justify-center">
-              <p className="text-sm font-semibold tracking-[2px] uppercase text-brand-primary-ink mb-2">YouTube</p>
-              <h3 className="text-xl font-bold text-brand-ink leading-snug">{t('youtube_title')}</h3>
-              <p className="text-brand-body mt-2 line-clamp-2">{t('youtube_desc')}</p>
-              <a href="https://www.youtube.com/@batistafarol" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-block mt-4 text-brand-primary font-bold hover:underline">{t('btn_watch')}</a>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{t('youtube_title')}</h3>
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                  <p className="text-white/80 md:text-lg">{t('youtube_desc')}</p>
+                  <span className="font-semibold text-white md:ml-auto mt-2 md:mt-0 opacity-0 md:opacity-100 group-hover:opacity-100 transition-opacity">Assistir no YouTube &rarr;</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/* Right Column */}
+          <div className="lg:col-span-1">
+            <h2 className="text-2xl font-bold text-brand-ink mb-6">Outros Recursos</h2>
+            <div className="flex flex-col gap-4">
+              
+              {/* Reading Plan */}
+              <a href="#estudo" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-brand-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-8 h-8 text-brand-primary-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">Plano de Leitura</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">Acompanhe nossa leitura bíblica diária da semana.</p>
+                  <span className="text-xs font-bold text-brand-primary-ink uppercase mt-2 block group-hover:underline">Acessar</span>
+                </div>
+              </a>
+
+              {/* Calendar */}
+              <a href="https://claude.ai/code/artifact/d9edf148-2b8f-4459-91e6-c40fc2636412" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">Calendário Completo</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">Fique por dentro de todos os eventos e programações.</p>
+                  <span className="text-xs font-bold text-blue-600 uppercase mt-2 block group-hover:underline">Ver Agenda</span>
+                </div>
+              </a>
+
+              {/* Spotify */}
+              <a href="https://open.spotify.com/show/3HrOmNVXUmosBJARnDqC4P?si=0feafb769c624480" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-[#191414] rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-10 h-10 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">{t('spotify_title')}</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">{t('spotify_desc')}</p>
+                  <span className="text-xs font-bold text-[#1DB954] uppercase mt-2 block group-hover:underline">Ouvir agora</span>
+                </div>
+              </a>
+
             </div>
           </div>
-        </div>
 
-        {/* Spotify Card */}
-        <div className="flex-none w-full shrink-0 flex justify-center snap-center px-6 md:px-8">
-          <div className="w-full max-w-[600px] bg-white border border-brand-hairline rounded-lg overflow-hidden shadow-sm h-[400px] md:h-[450px] flex flex-col pointer-events-none">
-            <div className="relative w-full h-[250px] bg-[#191414] flex items-center justify-center">
-               <svg className="w-24 h-24 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-               </svg>
-            </div>
-            <div className="p-6 flex-grow flex flex-col justify-center">
-              <p className="text-sm font-semibold tracking-[2px] uppercase text-[#1DB954] mb-2">Spotify</p>
-              <h3 className="text-xl font-bold text-brand-ink leading-snug">{t('spotify_title')}</h3>
-              <p className="text-brand-body mt-2 line-clamp-2">{t('spotify_desc')}</p>
-              <a href="https://open.spotify.com/show/3HrOmNVXUmosBJARnDqC4P?si=0feafb769c624480" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-block mt-4 text-[#1DB954] font-bold hover:underline">{t('btn_listen')}</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Reading Plan Card */}
-        <div className="flex-none w-full shrink-0 flex justify-center snap-center px-6 md:px-8">
-           <div className="w-full max-w-[600px] pointer-events-auto h-[400px] md:h-[450px]">
-             <ReadingPlan compact={true} />
-           </div>
         </div>
       </div>
-
-      <div className="flex justify-center items-center gap-2.5 mt-2">
-        {[0, 1, 2].map(idx => (
-          <div 
-            key={idx} 
-            className={`rounded-full transition-all duration-300 ${activeIndex === idx ? 'w-8 h-2 bg-brand-primary' : 'w-2 h-2 bg-brand-hairline/80'}`}
-          />
-        ))}
-      </div>
-      
-      <style dangerouslySetInnerHTML={{__html: `
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-      `}} />
     </section>
   );
 }
