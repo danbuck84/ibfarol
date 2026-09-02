@@ -15,10 +15,10 @@ export default function NewMembersPage() {
         <div className="max-w-[800px] mx-auto space-y-16">
           
           <section className="text-center">
-            <h1 className="text-[40px] leading-[48px] font-bold text-brand-ink mb-6 text-balance">
+            <h1 className="text-[40px] leading-[48px] font-bold text-brand-ink mb-6">
               {t('title')}
             </h1>
-            <p className="text-xl text-brand-body leading-[32px] text-balance">
+            <p className="text-xl text-brand-body leading-[32px]">
               {t('intro')}
             </p>
           </section>
