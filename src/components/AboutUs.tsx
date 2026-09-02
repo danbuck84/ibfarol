@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Link } from "@/i18n/routing";
 
 export default function AboutUs() {
   const t = useTranslations('AboutUs');
@@ -8,15 +9,17 @@ export default function AboutUs() {
       
       {/* Welcome Message */}
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center mb-24">
-        <h3 className="text-sm font-semibold tracking-[3px] text-brand-primary mb-4 uppercase">
-          {t('eyebrow')}
-        </h3>
-        <h2 className="text-3xl md:text-[40px] font-bold text-brand-ink leading-[1.2] mb-6 uppercase">
-          {t('headline')}
+        <h2 className="text-3xl md:text-[40px] font-bold text-brand-ink leading-[1.2] mb-8 uppercase">
+          SEJA BEM-VINDO!
         </h2>
-        <p className="text-lg md:text-xl text-brand-body leading-relaxed max-w-[700px] text-balance italic">
-          {t('p1')}
-        </p>
+        <div className="text-lg md:text-xl text-brand-body leading-relaxed max-w-[700px] text-balance italic space-y-6">
+          <p>
+            É um prazer para nós receber você! Esperamos que se sinta acolhido, amado, e à vontade entre nós. Desejamos que aqui você conheça mais de Jesus.
+          </p>
+          <p>
+            Se precisar de qualquer coisa, <Link href="/ministerios" className="text-brand-primary-ink font-semibold hover:underline decoration-brand-primary-ink underline-offset-4">entre em contato conosco</Link>!
+          </p>
+        </div>
       </div>
 
       {/* Cards */}
