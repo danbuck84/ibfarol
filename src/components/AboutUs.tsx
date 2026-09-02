@@ -2,8 +2,8 @@ import { Link } from "@/i18n/routing";
 
 export default function AboutUs() {
   return (
-    <section id="sobre" className="w-full bg-[#e2d7c9] py-20 px-6 md:px-8">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="sobre" className="w-full bg-[#e2d7c9] py-20 px-6 md:px-8 min-h-[calc(100vh-66px)] flex flex-col justify-center">
+      <div className="max-w-[1280px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Big Title */}
         <div>
           <h2 className="text-4xl md:text-5xl lg:text-[60px] font-bold text-brand-ink leading-[1.1] uppercase tracking-tight">

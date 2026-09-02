@@ -5,10 +5,10 @@ export default function Agenda() {
   const t = useTranslations('Agenda');
 
   return (
-    <section id="agenda" className="border-t border-brand-hairline">
+    <section id="agenda" className="border-t border-brand-hairline bg-white min-h-[calc(100vh-66px)] flex flex-col justify-center">
       {/* Programação Fixa */}
-      <div className="py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+      <div className="py-20 w-full">
+        <div className="max-w-[1280px] w-full mx-auto px-6 md:px-8">
            <div className="mb-12 text-center">
              <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
                {t('eyebrow')}

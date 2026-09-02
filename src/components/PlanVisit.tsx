@@ -35,8 +35,8 @@ export default function PlanVisit() {
   };
 
   return (
-    <section className="py-16 px-8 bg-white border-t border-brand-hairline" id="visita">
-      <div className="max-w-[1280px] mx-auto">
+    <section className="py-16 px-8 bg-brand-canvas border-t border-brand-hairline min-h-[calc(100vh-66px)] flex flex-col justify-center" id="visita">
+      <div className="max-w-[1280px] w-full mx-auto">
         <div className="mb-12 text-center md:text-left">
           <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
             {t('eyebrow')}

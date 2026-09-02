@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   const t = useTranslations('Hero');
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-canvas-dark">
+    <section className="relative min-h-[calc(100vh-66px)] flex items-center overflow-hidden bg-brand-canvas-dark">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 bg-[#010506]">
         <Image 
