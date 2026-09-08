@@ -4,7 +4,6 @@ import AboutUs from "@/components/AboutUs";
 import HighlightsCarousel from "@/components/HighlightsCarousel";
 import ReadingPlan from "@/components/ReadingPlan";
 import Agenda from "@/components/Agenda";
-import Give from "@/components/Give";
 import PlanVisit from "@/components/PlanVisit";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
@@ -19,7 +18,6 @@ export default function Home() {
         <FadeIn><AboutUs /></FadeIn>
         <FadeIn><HighlightsCarousel /></FadeIn>
         <FadeIn><Agenda /></FadeIn>
-        <FadeIn><Give /></FadeIn>
         <FadeIn><PlanVisit /></FadeIn>
         <FadeIn><Quote /></FadeIn>
       </main>

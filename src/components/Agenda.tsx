@@ -5,7 +5,7 @@ export default function Agenda() {
   const t = useTranslations('Agenda');
 
   return (
-    <section id="agenda" className="border-t border-brand-hairline bg-white min-h-[calc(100vh-66px)] flex flex-col justify-center">
+    <section id="agenda" className="border-t border-brand-hairline bg-white ">
       {/* Programação Fixa */}
       <div className="py-20 w-full">
         <div className="max-w-[1280px] w-full mx-auto px-6 md:px-8">

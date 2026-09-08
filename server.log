@@ -104,3 +104,7 @@ If you need interactivity, consider converting part of this to a Client Componen
     at stringify (<anonymous>) {
   digest: '3442765910'
 }
+⨯ Error: Could not find the module "[project]/src/components/HighlightsCarousel.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2953789286'
+}

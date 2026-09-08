@@ -4,7 +4,7 @@ export default function HighlightsCarousel() {
   const t = useTranslations('Highlights');
 
   return (
-    <section className="bg-white py-16 min-h-[calc(100vh-66px)] flex flex-col justify-center" id="destaques">
+    <section className="bg-brand-canvas py-16" id="destaques">
       <div className="max-w-[1280px] w-full mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           
