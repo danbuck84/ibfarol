@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import HighlightsCarousel from "@/components/HighlightsCarousel";
-import ReadingPlan from "@/components/ReadingPlan";
 import Agenda from "@/components/Agenda";
 import PlanVisit from "@/components/PlanVisit";
 import Quote from "@/components/Quote";

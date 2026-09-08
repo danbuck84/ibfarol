@@ -7,7 +7,7 @@ export default function AboutUs() {
         {/* Left: Big Title */}
         <div>
           <h2 className="text-4xl md:text-5xl lg:text-[60px] font-bold text-brand-ink leading-[1.1] uppercase tracking-tight">
-            SEJA BEM-VINDO!
+            SEJA <br className="md:hidden" /> BEM-VINDO!
           </h2>
         </div>
         

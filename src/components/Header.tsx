@@ -56,7 +56,7 @@ export default function Header() {
         <Link href="/ministerios" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/ministerios')}`}>
           {t('nav_ministries')}
         </Link>
-        <Link href="/#contribua" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/#contribua')}`}>
+        <Link href="/contribua" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/contribua')}`}>
           {t('nav_give')}
         </Link>
         <Link href="/aconselhamento" className={`text-sm decoration-transparent pb-2 border-b-2 transition-colors ${isActive('/aconselhamento')}`}>
@@ -99,7 +99,7 @@ export default function Header() {
         <Link href="/ministerios" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/ministerios')}`}>
           {t('nav_ministries')}
         </Link>
-        <Link href="/#contribua" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/#contribua')}`}>
+        <Link href="/contribua" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/contribua')}`}>
           {t('nav_give')}
         </Link>
         <Link href="/aconselhamento" onClick={() => setIsMenuOpen(false)} className={`py-3 text-lg border-b border-white/10 ${isMobileActive('/aconselhamento')}`}>
