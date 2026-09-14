@@ -20,9 +20,9 @@ export default function BookCategory({ category, books }: BookCategoryProps) {
     <section className="bg-white border border-brand-hairline rounded-lg overflow-hidden shadow-sm">
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className="w-full flex items-center justify-between p-6 bg-white hover:bg-brand-canvas-soft transition-colors focus:outline-none"
+        className="w-full flex items-center justify-between p-6 bg-white hover:bg-brand-canvas-soft transition-colors focus:outline-none text-left"
       >
-        <h2 className="text-xl md:text-2xl font-bold text-brand-ink m-0">
+        <h2 className="text-xl md:text-2xl font-bold text-brand-ink m-0 text-left">
           {category}
         </h2>
         <svg 
