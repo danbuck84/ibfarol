@@ -1,11 +1,28 @@
+"use client";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { readingPlans, ReadingPlan as ReadingPlanType } from "@/data/readingPlans";
 
 export default function ReadingPlan({ compact = false }: { compact?: boolean }) {
   const t = useTranslations('ReadingPlan');
   
-  const content = (
+  // Sort plans descending by id (assuming year-week format sorts nicely)
+  const sortedPlans = [...readingPlans].sort((a, b) => b.id.localeCompare(a.id));
+  const currentPlan = sortedPlans[0];
+  const archivedPlans = sortedPlans.slice(1);
+  
+  // Group archived plans by year
+  const archivedByYear = archivedPlans.reduce((acc, plan) => {
+    if (!acc[plan.year]) acc[plan.year] = [];
+    acc[plan.year].push(plan);
+    return acc;
+  }, {} as Record<number, ReadingPlanType[]>);
+
+  const [expandedArchiveId, setExpandedArchiveId] = useState<string | null>(null);
+
+  const renderPlanContent = (plan: ReadingPlanType, isCompact: boolean) => (
     <>
-      {!compact && (
+      {!isCompact && (
         <div className="text-center mb-10">
           <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
             {t('eyebrow')}
@@ -13,35 +30,35 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
           <h2 className="text-[28px] md:text-[36px] font-normal leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
             {t('headline')}
           </h2>
-          <p className="mt-3 text-lg text-brand-body">
-            {t('subtitle')}
+          <p className="mt-3 text-lg text-brand-body font-medium">
+            {plan.subtitle}
           </p>
         </div>
       )}
+      {isCompact && (
+        <h3 className="text-xl font-bold text-brand-ink mb-6 text-center">{plan.subtitle}</h3>
+      )}
       
       <div className="space-y-6">
-        {['mon', 'tue', 'wed', 'thu', 'fri', 'sat'].map((dayKey) => {
-          const readings = t.raw(`${dayKey}_readings`) as string[];
-          return (
-            <div key={dayKey} className={`border-b border-brand-hairline-soft ${compact ? 'pb-2' : 'pb-4'}`}>
-              <h3 className={`${compact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{t(dayKey)}</h3>
-              <ul className={`mt-1 text-brand-body ${compact ? 'text-sm' : ''}`}>
-                {readings.map((reading: string, idx: number) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-brand-primary mt-1 leading-none">•</span> 
-                    <span className="leading-snug">{reading}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+        {plan.days.map((day) => (
+          <div key={day.key} className={`border-b border-brand-hairline-soft ${isCompact ? 'pb-2' : 'pb-4'}`}>
+            <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{day.name}</h3>
+            <ul className={`mt-1 text-brand-body ${isCompact ? 'text-sm' : ''}`}>
+              {day.readings.map((reading: string, idx: number) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-brand-primary mt-1 leading-none">•</span> 
+                  <span className="leading-snug">{reading}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
 
-        <div className={compact ? 'pt-1' : 'pt-2'}>
-          <h3 className={`${compact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{t('sun')}</h3>
+        <div className={isCompact ? 'pt-1' : 'pt-2'}>
+          <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{plan.sunday.name}</h3>
           <div className={`mt-2 p-4 bg-brand-canvas border-l-4 border-brand-primary rounded-r-lg`}>
-            <p className={`${compact ? 'text-sm' : 'text-sm md:text-base'} leading-[1.4] text-brand-body italic`}>
-              "{t('sun_prayer')}"
+            <p className={`${isCompact ? 'text-sm' : 'text-sm md:text-base'} leading-[1.4] text-brand-body italic`}>
+              "{plan.sunday.prayer}"
             </p>
           </div>
         </div>
@@ -49,19 +66,57 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
     </>
   );
 
+  if (!currentPlan) return null;
+
   if (compact) {
     return (
       <div className="bg-white border border-brand-hairline rounded-lg p-6 md:p-8 shadow-sm h-full overflow-y-auto w-full">
-        <h2 className="text-2xl font-bold text-brand-ink mb-6">{t('headline')}</h2>
-        {content}
+        <h2 className="text-2xl font-bold text-brand-ink mb-2">{t('headline')}</h2>
+        {renderPlanContent(currentPlan, true)}
       </div>
     );
   }
 
   return (
-    <section className="bg-[#faf9f5] py-16 px-8" id="estudo">
-      <div className="max-w-[800px] mx-auto bg-white border border-brand-hairline rounded-lg p-8 md:p-12 shadow-sm">
-        {content}
+    <section className="bg-[#faf9f5] py-16 px-6 md:px-8" id="estudo">
+      <div className="max-w-[800px] mx-auto space-y-12">
+        {/* CURRENT WEEK */}
+        <div className="bg-white border border-brand-hairline rounded-lg p-8 md:p-12 shadow-sm">
+          {renderPlanContent(currentPlan, false)}
+        </div>
+
+        {/* ARCHIVE */}
+        {Object.keys(archivedByYear).length > 0 && (
+          <div className="bg-white border border-brand-hairline rounded-lg p-8 md:p-12 shadow-sm">
+            <h2 className="text-2xl font-bold text-brand-ink mb-8 text-center uppercase tracking-wider">Arquivo</h2>
+            
+            <div className="space-y-8">
+              {Object.keys(archivedByYear).sort((a,b) => Number(b) - Number(a)).map(year => (
+                <div key={year}>
+                  <h3 className="text-xl font-bold text-brand-primary-ink border-b border-brand-hairline pb-2 mb-4">{year}</h3>
+                  <div className="space-y-4">
+                    {archivedByYear[Number(year)].map(plan => (
+                      <div key={plan.id} className="border border-brand-hairline rounded-lg overflow-hidden">
+                        <button 
+                          onClick={() => setExpandedArchiveId(expandedArchiveId === plan.id ? null : plan.id)}
+                          className="w-full text-left px-6 py-4 bg-brand-canvas-soft hover:bg-brand-canvas transition-colors flex justify-between items-center font-semibold text-brand-ink"
+                        >
+                          <span>{plan.subtitle}</span>
+                          <svg className={`w-5 h-5 transform transition-transform ${expandedArchiveId === plan.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        {expandedArchiveId === plan.id && (
+                          <div className="p-6 bg-white">
+                            {renderPlanContent(plan, true)}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
