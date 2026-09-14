@@ -96,7 +96,7 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
                 <div key={year} className="border border-brand-hairline rounded-lg overflow-hidden">
                   <button 
                     onClick={() => setExpandedYear(expandedYear === year ? null : year)}
-                    className="w-full text-left px-6 py-4 bg-brand-canvas-dark hover:bg-brand-ink transition-colors flex justify-between items-center font-bold text-white uppercase tracking-wider"
+                    className="w-full text-left px-6 py-4 bg-brand-primary-ink hover:bg-brand-primary-ink/90 transition-colors flex justify-between items-center font-bold text-white uppercase tracking-wider"
                   >
                     <span>{year}</span>
                     <svg className={`w-5 h-5 transform transition-transform ${expandedYear === year ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
