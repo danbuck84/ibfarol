@@ -31,13 +31,17 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
           <h2 className="text-[28px] md:text-[36px] font-normal leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
             {t('headline')}
           </h2>
-          <p className="mt-3 text-lg text-brand-body font-medium">
-            {plan.subtitle}
+          <p className="mt-3 text-lg text-brand-body font-medium flex flex-col items-center">
+            <span>{plan.subtitle}</span>
+            {plan.dateRange && <span className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</span>}
           </p>
         </div>
       )}
       {isCompact && (
-        <h3 className="text-xl font-bold text-brand-ink mb-6 text-center">{plan.subtitle}</h3>
+        <div className="text-center mb-6">
+          <h3 className="text-xl font-bold text-brand-ink">{plan.subtitle}</h3>
+          {plan.dateRange && <p className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</p>}
+        </div>
       )}
       
       <div className="space-y-6">
@@ -110,8 +114,11 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
                             onClick={() => setExpandedArchiveId(expandedArchiveId === plan.id ? null : plan.id)}
                             className="w-full text-left px-6 py-4 bg-white hover:bg-brand-canvas transition-colors flex justify-between items-center font-semibold text-brand-ink"
                           >
-                            <span>{plan.subtitle}</span>
-                            <svg className={`w-5 h-5 transform transition-transform ${expandedArchiveId === plan.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                            <div className="flex flex-col">
+                              <span>{plan.subtitle}</span>
+                              {plan.dateRange && <span className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</span>}
+                            </div>
+                            <svg className={`w-5 h-5 transform transition-transform ${expandedArchiveId === plan.id ? 'rotate-180' : ''} shrink-0 ml-4`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                           </button>
                           {expandedArchiveId === plan.id && (
                             <div className="p-6 bg-white border-t border-brand-hairline">

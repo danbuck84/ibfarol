@@ -2,7 +2,8 @@ export type ReadingPlan = {
   id: string; // e.g. "2026-23"
   year: number;
   weekNumber: number;
-  subtitle: string; // e.g. "Semana 23 (15/06 a 21/06)"
+  subtitle: string;
+  dateRange?: string; // e.g. "Semana 23 (15/06 a 21/06)"
   days: {
     key: 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
     name: string;
@@ -21,6 +22,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 36,
     "subtitle": "Semana 36",
+    "dateRange": "(14/09 a 20/09)",
     "days": [
       {
         "key": "mon",
@@ -84,6 +86,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 35,
     "subtitle": "Semana 35",
+    "dateRange": "(07/09 a 13/09)",
     "days": [
       {
         "key": "mon",
@@ -143,6 +146,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 34,
     "subtitle": "Semana 34",
+    "dateRange": "(31/08 a 06/09)",
     "days": [
       {
         "key": "mon",
@@ -202,6 +206,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 33,
     "subtitle": "Semana 33",
+    "dateRange": "(24/08 a 30/08)",
     "days": [
       {
         "key": "mon",
@@ -261,6 +266,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 32,
     "subtitle": "Semana 32",
+    "dateRange": "(17/08 a 23/08)",
     "days": [
       {
         "key": "mon",
@@ -320,6 +326,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 31,
     "subtitle": "Semana 31",
+    "dateRange": "(10/08 a 16/08)",
     "days": [
       {
         "key": "mon",
@@ -381,6 +388,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 30,
     "subtitle": "Semana 30",
+    "dateRange": "(03/08 a 09/08)",
     "days": [
       {
         "key": "mon",
@@ -440,6 +448,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 29,
     "subtitle": "Semana 29",
+    "dateRange": "(27/07 a 02/08)",
     "days": [
       {
         "key": "mon",
@@ -499,6 +508,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 28,
     "subtitle": "Semana 28",
+    "dateRange": "(20/07 a 26/07)",
     "days": [
       {
         "key": "mon",
@@ -558,6 +568,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 27,
     "subtitle": "Semana 27",
+    "dateRange": "(13/07 a 19/07)",
     "days": [
       {
         "key": "mon",
@@ -617,6 +628,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 26,
     "subtitle": "Semana 26",
+    "dateRange": "(06/07 a 12/07)",
     "days": [
       {
         "key": "mon",
@@ -677,6 +689,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 25,
     "subtitle": "Semana 25",
+    "dateRange": "(29/06 a 05/07)",
     "days": [
       {
         "key": "mon",
@@ -736,6 +749,7 @@ export const readingPlans: ReadingPlan[] = [
     "year": 2026,
     "weekNumber": 24,
     "subtitle": "Semana 24",
+    "dateRange": "(22/06 a 28/06)",
     "days": [
       {
         "key": "mon",
@@ -796,6 +810,7 @@ export const readingPlans: ReadingPlan[] = [
     year: 2026,
     weekNumber: 23,
     subtitle: "Semana 23",
+    dateRange: "(15/06 a 21/06)",
     days: [
       { key: "mon", name: "Segunda-feira (15/06)", readings: ["Mateus 26–27", "Salmo 79"] },
       { key: "tue", name: "Terça-feira (16/06)", readings: ["Gálatas 5–6", "Salmo 80.1–7"] },
