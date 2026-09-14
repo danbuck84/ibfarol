@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export default function Quote() {
   const t = useTranslations('Quote');
   return (
-    <section className="px-8 pb-16  bg-brand-canvas-soft">
+    <section className="px-8 py-16 bg-brand-canvas-soft">
       <div className="max-w-[1280px] w-full mx-auto border-t-2 border-b-2 border-brand-primary-ink py-10 text-center">
         <blockquote className="text-xl md:text-2xl leading-[32px] md:leading-[36px] italic text-brand-ink mx-auto max-w-[46ch] text-pretty m-0">
           {t('text')}
