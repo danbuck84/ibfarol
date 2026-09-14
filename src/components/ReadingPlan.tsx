@@ -19,6 +19,7 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
   }, {} as Record<number, ReadingPlanType[]>);
 
   const [expandedArchiveId, setExpandedArchiveId] = useState<string | null>(null);
+  const [expandedYear, setExpandedYear] = useState<string | null>(null);
 
   const renderPlanContent = (plan: ReadingPlanType, isCompact: boolean) => (
     <>
@@ -90,28 +91,37 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
           <div className="bg-white border border-brand-hairline rounded-lg p-8 md:p-12 shadow-sm">
             <h2 className="text-2xl font-bold text-brand-ink mb-8 text-center uppercase tracking-wider">Arquivo</h2>
             
-            <div className="space-y-8">
+            <div className="space-y-4">
               {Object.keys(archivedByYear).sort((a,b) => Number(b) - Number(a)).map(year => (
-                <div key={year}>
-                  <h3 className="text-xl font-bold text-brand-primary-ink border-b border-brand-hairline pb-2 mb-4">{year}</h3>
-                  <div className="space-y-4">
-                    {archivedByYear[Number(year)].map(plan => (
-                      <div key={plan.id} className="border border-brand-hairline rounded-lg overflow-hidden">
-                        <button 
-                          onClick={() => setExpandedArchiveId(expandedArchiveId === plan.id ? null : plan.id)}
-                          className="w-full text-left px-6 py-4 bg-brand-canvas-soft hover:bg-brand-canvas transition-colors flex justify-between items-center font-semibold text-brand-ink"
-                        >
-                          <span>{plan.subtitle}</span>
-                          <svg className={`w-5 h-5 transform transition-transform ${expandedArchiveId === plan.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                        </button>
-                        {expandedArchiveId === plan.id && (
-                          <div className="p-6 bg-white">
-                            {renderPlanContent(plan, true)}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                <div key={year} className="border border-brand-hairline rounded-lg overflow-hidden">
+                  <button 
+                    onClick={() => setExpandedYear(expandedYear === year ? null : year)}
+                    className="w-full text-left px-6 py-4 bg-brand-canvas-dark hover:bg-brand-ink transition-colors flex justify-between items-center font-bold text-white uppercase tracking-wider"
+                  >
+                    <span>{year}</span>
+                    <svg className={`w-5 h-5 transform transition-transform ${expandedYear === year ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  </button>
+                  
+                  {expandedYear === year && (
+                    <div className="p-4 md:p-6 bg-brand-canvas-soft space-y-4">
+                      {archivedByYear[Number(year)].map(plan => (
+                        <div key={plan.id} className="border border-brand-hairline rounded-lg overflow-hidden">
+                          <button 
+                            onClick={() => setExpandedArchiveId(expandedArchiveId === plan.id ? null : plan.id)}
+                            className="w-full text-left px-6 py-4 bg-white hover:bg-brand-canvas transition-colors flex justify-between items-center font-semibold text-brand-ink"
+                          >
+                            <span>{plan.subtitle}</span>
+                            <svg className={`w-5 h-5 transform transition-transform ${expandedArchiveId === plan.id ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                          </button>
+                          {expandedArchiveId === plan.id && (
+                            <div className="p-6 bg-white border-t border-brand-hairline">
+                              {renderPlanContent(plan, true)}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
