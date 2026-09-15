@@ -223,14 +223,14 @@
     "category": "Para as Crianças",
     "books": [
       {
-        "title": "A Bíblia de Histórias de Jesus",
+        "title": "Livro de Histórias Bíblicas de Jesus",
         "author": "Sally Lloyd-Jones",
         "cover": "https://m.media-amazon.com/images/I/61kC4R9ZLmL.jpg"
       },
       {
         "title": "Série Boas-Novas para os Coraçõezinhos",
         "author": "Editora Fiel (série completa)",
-        "cover": "https://m.media-amazon.com/images/I/912Dm4ADhCL.jpg"
+        "cover": "/boas-novas-serie.jpg"
       },
       {
         "title": "Grandes Verdades para Corações Pequenos",
@@ -239,7 +239,7 @@
       },
       {
         "title": "Novo Catecismo",
-        "author": "52 perguntas e respostas, uma por semana",
+        "author": "52 perguntas e respostas",
         "cover": "https://m.media-amazon.com/images/I/511XUMxc6ML.jpg"
       },
       {
