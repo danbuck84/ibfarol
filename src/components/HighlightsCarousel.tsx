@@ -88,7 +88,7 @@ export default async function HighlightsCarousel() {
                   <p className="text-sm text-brand-body line-clamp-2">Acompanhe nossa leitura bíblica diária da semana.</p>
                   <span className="text-xs font-bold text-brand-primary-ink uppercase mt-2 block group-hover:underline">Acessar</span>
                 </div>
-              </a>
+              </Link>
 
             </div>
           </div>
