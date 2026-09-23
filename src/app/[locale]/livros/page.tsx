@@ -20,7 +20,7 @@ export default async function LivrosPage() {
   return (
     <>
       <Header />
-      <Breadcrumb items={[{ label: 'Recursos', href: '/recursos' }, { label: 'Indicações de Leitura' }]} />
+      <Breadcrumb items={[{ label: t('breadcrumb_recursos'), href: '/recursos' }, { label: t('breadcrumb_livros') }]} />
       <main className="min-h-[70vh] bg-brand-canvas py-20 px-8">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center md:text-left mb-16">

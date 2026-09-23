@@ -74,8 +74,8 @@ export default function PlanVisit() {
             {status === "success" ? (
               <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-lg text-center">
                 <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                <h4 className="text-xl font-bold mb-2">Mensagem Enviada!</h4>
-                <p>Obrigado pelo seu contato. Em breve o Pastor Gustavo responderá sua mensagem.</p>
+                <h4 className="text-xl font-bold mb-2">{t('success_title')}</h4>
+                <p>{t('success_msg')}</p>
                 <button onClick={() => setStatus("idle")} className="mt-6 text-green-700 font-semibold hover:underline">
                   Enviar outra mensagem
                 </button>
@@ -99,14 +99,14 @@ export default function PlanVisit() {
                   <textarea name="message" id="message" required rows={5} className="w-full border border-brand-hairline rounded-md px-4 py-2 text-brand-ink focus:outline-none focus:border-brand-primary resize-none"></textarea>
                 </div>
                 {status === "error" && (
-                  <p className="text-red-500 text-sm font-medium">Ocorreu um erro ao enviar. Tente novamente mais tarde.</p>
+                  <p className="text-red-500 text-sm font-medium">{t('error_msg')}</p>
                 )}
                 <button 
                   type="submit" 
                   disabled={status === "submitting"}
                   className="w-full font-semibold text-brand-on-primary bg-brand-primary border border-brand-primary px-4 py-3 rounded-md transition-colors hover:bg-brand-primary-deep cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {status === "submitting" ? "Enviando..." : t('btn_submit')}
+                  {status === "submitting" ? t('submitting') : t('btn_submit')}
                 </button>
               </form>
             )}

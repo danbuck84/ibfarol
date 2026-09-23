@@ -18,7 +18,9 @@
     "headline": "Bíblica.\nSimples.\nAcolhedora.",
     "description": "Se é a sua primeira vez, você não vai precisar fazer nada além de sentar e ficar à vontade. A gente te encontra na porta.",
     "btn_plan_visit": "Planeje sua visita",
-    "btn_get_involved": "Envolva-se"
+    "btn_get_involved": "Envolva-se",
+    "hero_alt_1": "Congregação da Igreja Batista Farol",
+    "hero_alt_2": "Congregação da Igreja Batista Farol culto"
   },
   "NewHere": {
     "eyebrow": "Sou novo aqui",
@@ -52,7 +54,22 @@
     "min_acao": "Ação Comunitária",
     "min_homens": "Homens",
     "min_mulheres": "Mulheres",
-    "btn_whatsapp": "Falar"
+    "btn_whatsapp": "Falar",
+    "min_jpeg": ".JPEG (Jovens)",
+    "min_diaconia": "Diaconia",
+    "min_eventos": "Eventos",
+    "min_homens_list": "Homens",
+    "min_infantil_list": "Infantil",
+    "min_integracao": "Integração",
+    "min_louvor_list": "Louvor",
+    "min_manutencao_list": "Manutenção",
+    "min_midia_list": "Mídia",
+    "min_mulheres_list": "Mulheres",
+    "min_som": "Som e Multimídia",
+    "min_acao_list": "Ação Comunitária",
+    "min_agape_list": "Ágape",
+    "min_jiujitsu_list": "Jiu-jitsu",
+    "role_leader": "Líder"
   },
   "Quote": {
     "text": "Se, porém, andarmos na luz, como ele está na luz, mantemos comunhão uns com os outros, e o sangue de Jesus, seu Filho, nos purifica de todo pecado.",
@@ -93,7 +110,8 @@
       "Efésios 2.1–10"
     ],
     "sun": "Domingo (02/08)",
-    "sun_prayer": "Pai amado, muito obrigado porque, quando nós estávamos mortos em nossos delitos e pecados, o Senhor nos deu vida junto com Cristo. Obrigado porque a nossa salvação não começou em nós, mas na tua misericórdia, no teu grande amor e na riqueza da tua graça. Confessamos que muitas vezes vivemos como se a tua aceitação fosse um salário a ser conquistado, e não um dom recebido. Perdoa-nos. Pela graça somos salvos, mediante a fé, e isso não vem de nós; é presente teu, para que ninguém se glorie. Pai, nesta semana, livra-nos do orgulho de quem pensa que se salvou sozinho e do desânimo de quem pensa que ainda precisa se provar diante de ti. Somos feitura tua, criados em Cristo Jesus para boas obras que o Senhor de antemão preparou. Que a nossa obediência não seja tentativa de pagar a graça, mas gratidão em movimento. Em nome de Jesus, amém."
+    "sun_prayer": "Pai amado, muito obrigado porque, quando nós estávamos mortos em nossos delitos e pecados, o Senhor nos deu vida junto com Cristo. Obrigado porque a nossa salvação não começou em nós, mas na tua misericórdia, no teu grande amor e na riqueza da tua graça. Confessamos que muitas vezes vivemos como se a tua aceitação fosse um salário a ser conquistado, e não um dom recebido. Perdoa-nos. Pela graça somos salvos, mediante a fé, e isso não vem de nós; é presente teu, para que ninguém se glorie. Pai, nesta semana, livra-nos do orgulho de quem pensa que se salvou sozinho e do desânimo de quem pensa que ainda precisa se provar diante de ti. Somos feitura tua, criados em Cristo Jesus para boas obras que o Senhor de antemão preparou. Que a nossa obediência não seja tentativa de pagar a graça, mas gratidão em movimento. Em nome de Jesus, amém.",
+    "archive": "Arquivo"
   },
   "Footer": {
     "alt_logo": "Logo Igreja Batista Farol",
@@ -142,7 +160,12 @@
     "form_name": "Nome",
     "form_email": "E-mail",
     "form_message": "Mensagem",
-    "btn_submit": "Enviar Mensagem"
+    "btn_submit": "Enviar Mensagem",
+    "success_title": "Mensagem Enviada!",
+    "success_msg": "Obrigado pelo seu contato. Em breve o Pastor Gustavo responderá sua mensagem.",
+    "send_another": "Enviar outra mensagem",
+    "error_msg": "Ocorreu um erro ao enviar. Tente novamente mais tarde.",
+    "submitting": "Enviando..."
   },
   "Agenda": {
     "eyebrow": "Fique por dentro",
@@ -205,7 +228,9 @@
     "info_title": "Informações",
     "info_desc": "As datas dos encontros serão definidas em breve e compartilhadas com todos os inscritos. Será um privilégio ter você conosco nessa caminhada.\n\nCom carinho,\nIgreja Batista Farol",
     "cta_button": "Inscreva-se Aqui!",
-    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
+    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105",
+    "mission_label": "Missão:",
+    "vision_label": "Visão:"
   },
   "Highlights": {
     "headline": "Destaques",
@@ -234,7 +259,9 @@
   "Artigos": {
     "title": "Artigos",
     "desc": "Textos pastorais e reflexões semanais para edificar sua vida.",
-    "by": "Por:"
+    "by": "Por:",
+    "breadcrumb_recursos": "Recursos",
+    "breadcrumb_artigos": "Artigos"
   },
   "Sermoes": {
     "title": "Sermões",
@@ -279,7 +306,9 @@
   },
   "Livros": {
     "title": "Indicações de Livros",
-    "desc": "Uma biblioteca recomendada para o seu crescimento espiritual."
+    "desc": "Uma biblioteca recomendada para o seu crescimento espiritual.",
+    "breadcrumb_recursos": "Recursos",
+    "breadcrumb_livros": "Indicações de Leitura"
   },
   "Contribua": {
     "title": "Contribua",
@@ -331,5 +360,36 @@
     "p2_prefix": "Se precisar de qualquer coisa, ",
     "p2_link": "entre em contato conosco",
     "p2_suffix": "!"
+  },
+  "Sobre": {
+    "history_title": "Nossa História",
+    "history_p1": "Nosso projeto começou em abril de 2022, com o objetivo de servir a região norte de São José dos Campos. Desde então, nos reunimos todos os domingos para adorar a Deus e crescer juntos.",
+    "history_p2": "Acreditamos que uma vida sem Jesus é uma vida nas trevas. Todos nós estávamos perdidos em nossos pecados, sem esperança e sem Deus. Mas ele, por seu grande amor, enviou Jesus para morrer em nosso lugar na cruz e ressuscitar, nos oferecendo perdão e vida nova.",
+    "history_p3": "Por isso nos chamamos FAROL! Queremos brilhar a luz de Cristo nesta região, ajudando pessoas a encontrarem perdão aos pés da cruz, relacionamento profundo com Deus por meio da Bíblia, e uma comunidade de pessoas simples, dispostas a servir e amar umas às outras.",
+    "beliefs_title": "O que Cremos",
+    "belief_1": "Cremos que a Bíblia (os 39 livros do Velho Testamento e os 27 livros do Novo Testamento reconhecidos pelas Igrejas Evangélicas) é divinamente inspirada, inerrante e infalível (2 Pedro 1.19–21), e que a pregação e o ensino da Palavra são a base de transformação do indivíduo e da congregação, visando glorificar a Deus (João 14.21; 15.7,8, 2 Timóteo 3.16,17, Tiago 1.23–25).",
+    "belief_2": "Cremos que toda a criação, incluindo o ser humano, foi feita para o louvor da glória de Deus. O Senhor é o centro de todas as coisas, único Deus, Todo-Poderoso (Salmo 145; Isaías 6.1–8; Efésios 1.3–12; Filipenses 2.5–11).",
+    "belief_3": "Cremos que a família foi criada por Deus e tem seus padrões estabelecidos nas Escrituras (Gênesis 1.26–28; 2.23–24).",
+    "belief_4": "Cremos que o ser humano é pecador desde o nascimento, por natureza e escolha pessoal (Romanos 3.10–12).",
+    "belief_5": "Cremos que Jesus Cristo nasceu da virgem, sem pecado, morreu na cruz por nossos pecados, ressuscitou da morte ao terceiro dia e voltará outra vez para reinar (Atos 10.36–43). Cremos que Ele é perfeitamente Deus e perfeitamente homem (Colossenses 2.8–9; 1 Timóteo 2.5).",
+    "belief_6": "Cremos que a salvação do ser humano é um dom gratuito, concedido pela graça soberana de Deus e recebido pela fé (Efésios 2.4–10), sendo assegurada somente pela Pessoa e obra de Jesus Cristo (Atos 4.12). Cremos que uma vez salvos, nos tornamos filhos de Deus e temos segurança eterna (Romanos 8.28–39).",
+    "belief_7": "Cremos que o batismo é a afirmação externa de uma realidade interna, simbolizando a identificação do crente com a morte, sepultamento, ressurreição de Cristo, e com a Igreja (Romanos 6.3–4), sendo ministrado àqueles que creram em Jesus (Atos 8.35–39).",
+    "belief_8": "Cremos que a Ceia é um memorial da morte e ressurreição de Jesus, e um anúncio de Seu retorno (1 Coríntios 11.23–36), participando todos os crentes presentes em comunhão com suas igrejas locais (1 Coríntios 11.27–30).",
+    "belief_9": "Cremos que a Igreja é a comunidade dos crentes em Jesus, a noiva de Cristo, o Seu Corpo na terra (Efésios 2.19; 5.25–27). A igreja local é a agência de Deus na terra (Atos 13.1–3), sendo governada por homens que Deus deu como pastores/presbíteros/bispos (1 Pedro 5.1–3).",
+    "belief_10": "Cremos que o Espírito Santo é recebido por todo crente no momento da conversão a Cristo, ocasião quando somos batizados/selados nele (Efésios 1.13–14). Cremos que os dons espirituais são capacidades dadas soberanamente aos crentes pelo Espírito Santo para a glorificação de Deus e edificação da Igreja (1 Coríntios 12.8–11; Romanos 1.11–13; 1 Pedro 4.10–11).",
+    "belief_11": "Cremos que a segunda vinda de Jesus será pessoal, física e visível (Atos 1.11), e que ao fim haverá a criação de novos céus e de nova terra, onde não haverá mais a presença ou a possibilidade de pecado (Apocalipse 19–22)."
+  },
+  "BookCategories": {
+    "Comece por Aqui": "Comece por Aqui",
+    "Conhecendo a Deus": "Conhecendo a Deus",
+    "Como Estudar a Bíblia": "Como Estudar a Bíblia",
+    "Vida Devocional e Disciplinas Espirituais": "Vida Devocional e Disciplinas Espirituais",
+    "Casamento": "Casamento",
+    "Filhos e Parentalidade": "Filhos e Parentalidade",
+    "Sofrimento, Ansiedade e Medo": "Sofrimento, Ansiedade e Medo",
+    "O Coração e a Mudança": "O Coração e a Mudança",
+    "Pureza Sexual": "Pureza Sexual",
+    "Dinheiro": "Dinheiro",
+    "Para as Crianças": "Para as Crianças"
   }
 }

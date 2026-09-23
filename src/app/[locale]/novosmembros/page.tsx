@@ -26,8 +26,8 @@ export default function NewMembersPage() {
           <section>
             <h2 className="text-3xl font-bold text-brand-ink mb-6">{t('identity_title')}</h2>
             <div className="space-y-6 text-lg text-brand-body leading-[28px]">
-              <p><strong>Missão:</strong> {t('identity_mission')}</p>
-              <p><strong>Visão:</strong> {t('identity_vision')}</p>
+              <p><strong>{t('mission_label')}</strong> {t('identity_mission')}</p>
+              <p><strong>{t('vision_label')}</strong> {t('identity_vision')}</p>
             </div>
           </section>
 

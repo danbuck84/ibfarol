@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";\nimport { translateReadingPlan } from "@/lib/readingPlanI18n";
 import { readingPlans, ReadingPlan as ReadingPlanType } from "@/data/readingPlans";
 
 export default function ReadingPlan({ compact = false }: { compact?: boolean }) {
@@ -93,7 +93,7 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
         {/* ARCHIVE */}
         {Object.keys(archivedByYear).length > 0 && (
           <div className="bg-white border border-brand-hairline rounded-lg p-8 md:p-12 shadow-sm">
-            <h2 className="text-2xl font-bold text-brand-ink mb-8 text-center uppercase tracking-wider">Arquivo</h2>
+            <h2 className="text-2xl font-bold text-brand-ink mb-8 text-center uppercase tracking-wider">{t('archive')}</h2>
             
             <div className="space-y-4">
               {Object.keys(archivedByYear).sort((a,b) => Number(b) - Number(a)).map(year => (

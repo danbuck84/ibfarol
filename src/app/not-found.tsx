@@ -29,7 +29,7 @@ export default function NotFound() {
             
             <div className="max-w-lg mx-auto bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl mb-10 backdrop-blur-sm">
               <p className="text-lg md:text-xl text-[#FFB63D] italic mb-4 font-medium">
-                "Aquele que anda nas trevas não sabe para onde vai."
+                "Aquele que anda nas trevas<br />não sabe para onde vai."
               </p>
               <p className="text-sm md:text-base text-gray-400 font-semibold tracking-widest uppercase">
                 João 12:35

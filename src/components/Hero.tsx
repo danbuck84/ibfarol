@@ -10,14 +10,14 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-[#010506]">
         <Image 
           src="/hero-bg-mobile.jpg" 
-          alt="Congregação da Igreja Batista Farol"
+          alt={t('hero_alt_1')}
           fill
           priority
           className="object-cover object-[center_40%] opacity-40 grayscale-[20%] md:hidden"
         />
         <Image 
           src="/hero-bg-desktop.jpg" 
-          alt="Congregação da Igreja Batista Farol culto"
+          alt={t('hero_alt_2')}
           fill
           priority
           className="object-cover object-[center_70%] opacity-40 grayscale-[20%] hidden md:block"

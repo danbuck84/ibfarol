@@ -18,7 +18,9 @@
     "headline": "Biblical.\nSimple.\nWelcoming.",
     "description": "If it's your first time, you won't need to do anything but sit back and relax. We'll meet you at the door.",
     "btn_plan_visit": "Plan your visit",
-    "btn_get_involved": "Get Involved"
+    "btn_get_involved": "Get Involved",
+    "hero_alt_1": "Farol Baptist Church Congregation",
+    "hero_alt_2": "Farol Baptist Church Sunday Service"
   },
   "NewHere": {
     "eyebrow": "I'm new here",
@@ -52,7 +54,22 @@
     "min_acao": "Community Action",
     "min_homens": "Men",
     "min_mulheres": "Women",
-    "btn_whatsapp": "Message"
+    "btn_whatsapp": "Message",
+    "min_jpeg": ".JPEG (Youth)",
+    "min_diaconia": "Deacons",
+    "min_eventos": "Events",
+    "min_homens_list": "Men",
+    "min_infantil_list": "Children",
+    "min_integracao": "Integration",
+    "min_louvor_list": "Worship",
+    "min_manutencao_list": "Maintenance",
+    "min_midia_list": "Media",
+    "min_mulheres_list": "Women",
+    "min_som": "Sound & Multimedia",
+    "min_acao_list": "Community Outreach",
+    "min_agape_list": "Agape",
+    "min_jiujitsu_list": "Jiu-jitsu",
+    "role_leader": "Leader"
   },
   "Quote": {
     "text": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus, his Son, purifies us from all sin.",
@@ -93,7 +110,8 @@
       "Ephesians 2:1–10"
     ],
     "sun": "Sunday (08/02)",
-    "sun_prayer": "Beloved Father, thank you so much because when we were dead in our trespasses and sins, You gave us life together with Christ. Thank you that our salvation did not start with us, but in Your mercy, Your great love, and the richness of Your grace. We confess that we often live as if Your acceptance were a wage to be earned, and not a gift received. Forgive us. For by grace we have been saved, through faith, and this is not from ourselves, it is the gift of God—not by works, so that no one can boast. Father, this week, deliver us from the pride of those who think they saved themselves and the discouragement of those who think they still need to prove themselves before You. We are Your handiwork, created in Christ Jesus to do good works, which You prepared in advance for us to do. May our obedience not be an attempt to pay for grace, but gratitude in motion. In Jesus' name, amen."
+    "sun_prayer": "Beloved Father, thank you so much because when we were dead in our trespasses and sins, You gave us life together with Christ. Thank you that our salvation did not start with us, but in Your mercy, Your great love, and the richness of Your grace. We confess that we often live as if Your acceptance were a wage to be earned, and not a gift received. Forgive us. For by grace we have been saved, through faith, and this is not from ourselves, it is the gift of God—not by works, so that no one can boast. Father, this week, deliver us from the pride of those who think they saved themselves and the discouragement of those who think they still need to prove themselves before You. We are Your handiwork, created in Christ Jesus to do good works, which You prepared in advance for us to do. May our obedience not be an attempt to pay for grace, but gratitude in motion. In Jesus' name, amen.",
+    "archive": "Archive"
   },
   "Footer": {
     "alt_logo": "Lighthouse Baptist Church Logo",
@@ -142,7 +160,12 @@
     "form_name": "Name",
     "form_email": "Email",
     "form_message": "Message",
-    "btn_submit": "Send Message"
+    "btn_submit": "Send Message",
+    "success_title": "Message Sent!",
+    "success_msg": "Thank you for reaching out. Pastor Gustavo will respond to your message soon.",
+    "send_another": "Send another message",
+    "error_msg": "An error occurred while sending. Please try again later.",
+    "submitting": "Sending..."
   },
   "Agenda": {
     "eyebrow": "Stay connected",
@@ -205,7 +228,9 @@
     "info_title": "Information",
     "info_desc": "The dates for the meetings will be set soon and shared with all registrants. It will be a privilege to have you with us on this journey.\n\nWith love,\nFarol Baptist Church",
     "cta_button": "Sign Up Here!",
-    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105"
+    "cta_link": "https://gustavo-santos.notion.site/137754dc2c3780cca602ea2ac4d0c380?pvs=105",
+    "mission_label": "Mission:",
+    "vision_label": "Vision:"
   },
   "Highlights": {
     "headline": "Highlights",
@@ -234,7 +259,9 @@
   "Artigos": {
     "title": "Articles",
     "desc": "Pastoral texts and weekly reflections to edify your life.",
-    "by": "By:"
+    "by": "By:",
+    "breadcrumb_recursos": "Resources",
+    "breadcrumb_artigos": "Articles"
   },
   "Sermoes": {
     "title": "Sermons",
@@ -279,7 +306,9 @@
   },
   "Livros": {
     "title": "Book Recommendations",
-    "desc": "A recommended library for your spiritual growth."
+    "desc": "A recommended library for your spiritual growth.",
+    "breadcrumb_recursos": "Resources",
+    "breadcrumb_livros": "Book Recommendations"
   },
   "Contribua": {
     "title": "Give",
@@ -331,5 +360,36 @@
     "p2_prefix": "If you need anything, ",
     "p2_link": "get in touch with us",
     "p2_suffix": "!"
+  },
+  "Sobre": {
+    "history_title": "Our Story",
+    "history_p1": "Our project began in April 2022, with the goal of serving the northern region of São José dos Campos. Since then, we have gathered every Sunday to worship God and grow together.",
+    "history_p2": "We believe that a life without Jesus is a life in darkness. We were all lost in our sins, without hope and without God. But because of His great love, He sent Jesus to die in our place on the cross and rise again, offering us forgiveness and new life.",
+    "history_p3": "That is why we are called FAROL (Lighthouse)! We want to shine the light of Christ in this region, helping people find forgiveness at the foot of the cross, a deep relationship with God through the Bible, and a community of simple people, willing to serve and love one another.",
+    "beliefs_title": "What We Believe",
+    "belief_1": "We believe that the Bible (the 39 books of the Old Testament and the 27 books of the New Testament recognized by Evangelical churches) is divinely inspired, inerrant, and infallible (2 Peter 1:19–21), and that the preaching and teaching of the Word are the foundation for the transformation of individuals and the congregation, aimed at glorifying God (John 14:21; 15:7-8, 2 Timothy 3:16-17, James 1:23–25).",
+    "belief_2": "We believe that all creation, including human beings, was made for the praise of the glory of God. The Lord is the center of all things, the only God, Almighty (Psalm 145; Isaiah 6:1–8; Ephesians 1:3–12; Philippians 2:5–11).",
+    "belief_3": "We believe that the family was created by God and has its standards established in Scripture (Genesis 1:26–28; 2:23–24).",
+    "belief_4": "We believe that human beings are sinners from birth, by nature and personal choice (Romans 3:10–12).",
+    "belief_5": "We believe that Jesus Christ was born of a virgin, without sin, died on the cross for our sins, rose from the dead on the third day, and will return again to reign (Acts 10:36–43). We believe He is perfectly God and perfectly man (Colossians 2:8–9; 1 Timothy 2:5).",
+    "belief_6": "We believe that the salvation of human beings is a free gift, granted by the sovereign grace of God and received by faith (Ephesians 2:4–10), secured only by the Person and work of Jesus Christ (Acts 4:12). We believe that once saved, we become children of God and have eternal security (Romans 8:28–39).",
+    "belief_7": "We believe that baptism is the outward affirmation of an inward reality, symbolizing the believer's identification with the death, burial, and resurrection of Christ, and with the Church (Romans 6:3–4), administered to those who have believed in Jesus (Acts 8:35–39).",
+    "belief_8": "We believe that the Lord's Supper is a memorial of the death and resurrection of Jesus, and an announcement of His return (1 Corinthians 11:23–36), participated in by all believers present in communion with their local churches (1 Corinthians 11:27–30).",
+    "belief_9": "We believe that the Church is the community of believers in Jesus, the bride of Christ, His Body on earth (Ephesians 2:19; 5:25–27). The local church is God's agency on earth (Acts 13:1–3), governed by men whom God gave as pastors/elders/bishops (1 Peter 5:1–3).",
+    "belief_10": "We believe that the Holy Spirit is received by every believer at the moment of conversion to Christ, at which time we are baptized/sealed in Him (Ephesians 1:13–14). We believe that spiritual gifts are abilities sovereignly given to believers by the Holy Spirit for the glorification of God and the edification of the Church (1 Corinthians 12:8–11; Romans 1:11–13; 1 Peter 4:10–11).",
+    "belief_11": "We believe that the second coming of Jesus will be personal, physical, and visible (Acts 1:11), and that in the end there will be the creation of new heavens and a new earth, where there will no longer be the presence or possibility of sin (Revelation 19–22)."
+  },
+  "BookCategories": {
+    "Comece por Aqui": "Start Here",
+    "Conhecendo a Deus": "Knowing God",
+    "Como Estudar a Bíblia": "How to Study the Bible",
+    "Vida Devocional e Disciplinas Espirituais": "Devotional Life & Spiritual Disciplines",
+    "Casamento": "Marriage",
+    "Filhos e Parentalidade": "Children & Parenting",
+    "Sofrimento, Ansiedade e Medo": "Suffering, Anxiety & Fear",
+    "O Coração e a Mudança": "The Heart & Change",
+    "Pureza Sexual": "Sexual Purity",
+    "Dinheiro": "Money",
+    "Para as Crianças": "For the Kids"
   }
 }
