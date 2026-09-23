@@ -98,7 +98,7 @@
   "Footer": {
     "alt_logo": "Lighthouse Baptist Church Logo",
     "address_short": "43 Othon dos Santos Mercadante St\nVila Sinhá, São José dos Campos - SP\nZIP: 12212-650",
-    "copyright": "© 2026 Lighthouse Baptist Church. All rights reserved.",
+    "copyright": "© 2026 Igreja Batista Farol. Todos os direitos reservados.",
     "col2_title": "About Us",
     "col2_l1": "Our Story",
     "col2_l2": "Our Beliefs",
@@ -161,7 +161,8 @@
     "rest_time": "Last Saturday of the month (Free, no official program)",
     "current_events_title": "Current Events",
     "no_events": "No special events scheduled at the moment. Check out our fixed programming below!",
-    "fixed_events_title": "Fixed Programming"
+    "fixed_events_title": "Fixed Programming",
+    "btn_calendar": "View Full Calendar"
   },
   "Counseling": {
     "title": "Biblical Counseling",
@@ -209,11 +210,22 @@
   "Highlights": {
     "headline": "Highlights",
     "youtube_title": "Series: In the Beginning",
-    "youtube_desc": "Follow the new message series in the book of Genesis.",
     "btn_watch": "Watch on YouTube",
     "spotify_title": "Podcast & Worship",
     "spotify_desc": "Listen to our messages and the songs we sing on Sundays.",
-    "btn_listen": "Listen on Spotify"
+    "btn_listen": "Listen on Spotify",
+    "section_title": "Latest Message",
+    "other_resources": "Other Resources",
+    "watch_youtube": "Watch on YouTube",
+    "sermons_title": "Previous Messages",
+    "sermons_desc": "Watch previous services and messages.",
+    "sermons_btn": "Access Archive",
+    "playlist_title": "Worship Playlist",
+    "playlist_desc": "The songs we sing together every Sunday.",
+    "playlist_btn": "Listen now",
+    "reading_title": "Reading Plan",
+    "reading_desc": "Follow our weekly daily Bible reading plan.",
+    "reading_btn": "Access"
   },
   "Give": {
     "headline": "Worship Through Giving",
@@ -228,7 +240,10 @@
     "title": "Sermons",
     "desc": "Watch or listen to our recent messages.",
     "watch": "Watch",
-    "listen": "Listen (Spotify)"
+    "listen": "Listen (Spotify)",
+    "no_messages": "No messages found at the moment.",
+    "published": "Published on",
+    "breadcrumb": "Previous Messages"
   },
   "ProximosPassos": {
     "title": "Next Steps",
@@ -309,5 +324,12 @@
     "analyt_desc": "Help us understand how visitors interact with the site by collecting information anonymously.",
     "btn_back": "Back",
     "btn_save": "Save My Choices"
+  },
+  "AboutUs_Home": {
+    "title": "WELCOME!",
+    "p1": "It is a pleasure for us to welcome you! We hope you feel embraced, loved, and at ease among us. We want you to know more of Jesus here.",
+    "p2_prefix": "If you need anything, ",
+    "p2_link": "get in touch with us",
+    "p2_suffix": "!"
   }
 }

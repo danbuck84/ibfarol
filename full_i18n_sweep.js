@@ -1,0 +1,301 @@
+const fs = require('fs');
+
+// =============================================
+// 1. UPDATE TRANSLATION FILES
+// =============================================
+
+const pt = JSON.parse(fs.readFileSync('messages/pt-BR.json', 'utf8'));
+const en = JSON.parse(fs.readFileSync('messages/en.json', 'utf8'));
+
+// --- AboutUs: completely hardcoded, needs full i18n ---
+pt.AboutUs_Home = {
+  title: "SEJA BEM-VINDO!",
+  p1: "É um prazer para nós receber você! Esperamos que se sinta acolhido, amado, e à vontade entre nós. Desejamos que aqui você conheça mais de Jesus.",
+  p2_prefix: "Se precisar de qualquer coisa, ",
+  p2_link: "entre em contato conosco",
+  p2_suffix: "!"
+};
+en.AboutUs_Home = {
+  title: "WELCOME!",
+  p1: "It is a pleasure for us to welcome you! We hope you feel embraced, loved, and at ease among us. We want you to know more of Jesus here.",
+  p2_prefix: "If you need anything, ",
+  p2_link: "get in touch with us",
+  p2_suffix: "!"
+};
+
+// --- Highlights (HighlightsCarousel): many hardcoded strings ---
+pt.Highlights.section_title = "Última Mensagem";
+pt.Highlights.other_resources = "Outros Recursos";
+pt.Highlights.watch_youtube = "Assistir no YouTube";
+pt.Highlights.sermons_title = "Mensagens Anteriores";
+pt.Highlights.sermons_desc = "Assista ao arquivo de cultos e mensagens passadas.";
+pt.Highlights.sermons_btn = "Acessar Arquivo";
+pt.Highlights.playlist_title = "Playlist de Louvores";
+pt.Highlights.playlist_desc = "As músicas que cantamos juntos todos os domingos.";
+pt.Highlights.playlist_btn = "Ouvir agora";
+pt.Highlights.reading_title = "Plano de Leitura";
+pt.Highlights.reading_desc = "Acompanhe nossa leitura bíblica diária da semana.";
+pt.Highlights.reading_btn = "Acessar";
+
+en.Highlights.section_title = "Latest Message";
+en.Highlights.other_resources = "Other Resources";
+en.Highlights.watch_youtube = "Watch on YouTube";
+en.Highlights.sermons_title = "Previous Messages";
+en.Highlights.sermons_desc = "Watch previous services and messages.";
+en.Highlights.sermons_btn = "Access Archive";
+en.Highlights.playlist_title = "Worship Playlist";
+en.Highlights.playlist_desc = "The songs we sing together every Sunday.";
+en.Highlights.playlist_btn = "Listen now";
+en.Highlights.reading_title = "Reading Plan";
+en.Highlights.reading_desc = "Follow our weekly daily Bible reading plan.";
+en.Highlights.reading_btn = "Access";
+
+// Remove "youtube_desc" - user wants it gone
+delete pt.Highlights.youtube_desc;
+delete en.Highlights.youtube_desc;
+
+// --- Agenda: "Ver Calendário Completo" button is hardcoded ---
+pt.Agenda.btn_calendar = "Ver Calendário Completo";
+en.Agenda.btn_calendar = "View Full Calendar";
+
+// --- Footer: copyright MUST stay in Portuguese even in EN ---
+en.Footer.copyright = "© 2026 Igreja Batista Farol. Todos os direitos reservados.";
+
+// --- Sermoes page: add missing i18n keys ---
+pt.Sermoes.no_messages = "Nenhuma mensagem encontrada no momento.";
+pt.Sermoes.published = "Publicado em";
+pt.Sermoes.breadcrumb = "Mensagens Anteriores";
+
+en.Sermoes.no_messages = "No messages found at the moment.";
+en.Sermoes.published = "Published on";
+en.Sermoes.breadcrumb = "Previous Messages";
+
+fs.writeFileSync('messages/pt-BR.json', JSON.stringify(pt, null, 2));
+fs.writeFileSync('messages/en.json', JSON.stringify(en, null, 2));
+
+console.log('✅ Translation files updated');
+
+// =============================================
+// 2. REWRITE AboutUs.tsx with i18n
+// =============================================
+
+const aboutUs = `"use client";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+
+export default function AboutUs() {
+  const t = useTranslations('AboutUs_Home');
+  return (
+    <section id="sobre" className="w-full relative z-20 px-6 md:px-8 -mt-24 md:-mt-32 mb-8">
+      <div className="max-w-[1280px] w-full mx-auto bg-[#e2d7c9] rounded-2xl shadow-xl p-10 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left: Big Title */}
+        <div>
+          <h2 className="text-4xl md:text-5xl lg:text-[60px] font-bold text-brand-ink leading-[1.1] uppercase tracking-tight">
+            {t('title')}
+          </h2>
+        </div>
+        
+        {/* Right: Text */}
+        <div className="text-lg md:text-xl text-brand-ink/90 leading-relaxed font-medium space-y-6 md:pl-8 lg:pl-12">
+          <p>
+            {t('p1')}
+          </p>
+          <p>
+            {t('p2_prefix')}<Link href="/ministerios" className="text-brand-ink font-bold hover:underline decoration-brand-ink underline-offset-4">{t('p2_link')}</Link>{t('p2_suffix')}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+`;
+fs.writeFileSync('src/components/AboutUs.tsx', aboutUs);
+console.log('✅ AboutUs.tsx rewritten with i18n');
+
+// =============================================
+// 3. REWRITE HighlightsCarousel.tsx with i18n
+// =============================================
+
+const highlights = `import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/routing";
+import { fetchCultos } from "@/lib/youtube";
+
+export default async function HighlightsCarousel() {
+  const t = await getTranslations('Highlights');
+  
+  // Fetch latest videos and get the first one (most recent)
+  const videos = await fetchCultos();
+  const latestVideo = videos.length > 0 ? videos[0] : null;
+
+  return (
+    <section className="bg-brand-canvas py-16" id="destaques">
+      <div className="max-w-[1280px] w-full mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+          
+          {/* Left Column */}
+          <div className="lg:col-span-2">
+            <h2 className="text-2xl font-bold text-brand-ink mb-6">{t('section_title')}</h2>
+            <a 
+              href={latestVideo ? latestVideo.url : "https://www.youtube.com/@batistafarol"} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block relative bg-black rounded-xl overflow-hidden shadow-sm group h-[300px] md:h-[450px]"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src={latestVideo ? latestVideo.thumbnail : "https://img.youtube.com/vi/DrmJw_7Z4Gw/maxresdefault.jpg"} 
+                alt={latestVideo ? latestVideo.title : t('section_title')} 
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+              
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                </div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  {latestVideo ? latestVideo.title : t('youtube_title')}
+                </h3>
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                  <span className="font-semibold text-white md:ml-auto mt-2 md:mt-0 opacity-0 md:opacity-100 group-hover:opacity-100 transition-opacity">{t('watch_youtube')} &rarr;</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/* Right Column */}
+          <div className="lg:col-span-1">
+            <h2 className="text-2xl font-bold text-brand-ink mb-6">{t('other_resources')}</h2>
+            <div className="flex flex-col gap-4">
+              
+              {/* Arquivo de Mensagens */}
+              <Link href="/sermoes" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-red-600/10 rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">{t('sermons_title')}</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">{t('sermons_desc')}</p>
+                  <span className="text-xs font-bold text-red-600 uppercase mt-2 block group-hover:underline">{t('sermons_btn')}</span>
+                </div>
+              </Link>
+
+              {/* Spotify Playlist */}
+              <a href="https://open.spotify.com/playlist/7febx03V2BfDHGR7Qdxv5r?si=f4d6de968b1f4733" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-[#191414] rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-10 h-10 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.661 12.9c.42.18.6.78.3 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">{t('playlist_title')}</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">{t('playlist_desc')}</p>
+                  <span className="text-xs font-bold text-[#1DB954] uppercase mt-2 block group-hover:underline">{t('playlist_btn')}</span>
+                </div>
+              </a>
+
+              {/* Reading Plan */}
+              <Link href="/recursos#estudo" className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-hairline shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-20 h-20 bg-brand-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-8 h-8 text-brand-primary-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-ink text-lg">{t('reading_title')}</h4>
+                  <p className="text-sm text-brand-body line-clamp-2">{t('reading_desc')}</p>
+                  <span className="text-xs font-bold text-brand-primary-ink uppercase mt-2 block group-hover:underline">{t('reading_btn')}</span>
+                </div>
+              </Link>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+`;
+fs.writeFileSync('src/components/HighlightsCarousel.tsx', highlights);
+console.log('✅ HighlightsCarousel.tsx rewritten with i18n');
+
+// =============================================
+// 4. FIX Agenda.tsx - "Ver Calendário Completo" button
+// =============================================
+
+let agenda = fs.readFileSync('src/components/Agenda.tsx', 'utf8');
+agenda = agenda.replace(
+  'Ver Calendário Completo',
+  '{t(\'btn_calendar\')}'
+);
+fs.writeFileSync('src/components/Agenda.tsx', agenda);
+console.log('✅ Agenda.tsx button fixed');
+
+// =============================================
+// 5. FIX Sermoes page - use locale for dates
+// =============================================
+
+const sermoesPage = `import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getTranslations, getLocale } from "next-intl/server";
+import { fetchCultos } from "@/lib/youtube";
+
+export default async function SermoesPage() {
+  const t = await getTranslations('Sermoes');
+  const locale = await getLocale();
+  
+  // Fetch real videos from YouTube
+  const videos = await fetchCultos();
+
+  return (
+    <>
+      <Header />
+      <Breadcrumb items={[{ label: t('breadcrumb') }]} />
+      <main className="min-h-[70vh] bg-brand-canvas py-20 px-6 md:px-8">
+        <div className="max-w-[1280px] mx-auto">
+          <h1 className="text-[32px] md:text-[40px] font-bold text-brand-ink mb-4">{t('title')}</h1>
+          <p className="text-lg md:text-xl text-brand-body mb-12">{t('desc')}</p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+            {videos.length === 0 && (
+              <p className="text-brand-mute italic">{t('no_messages')}</p>
+            )}
+            
+            {videos.map(video => {
+              const dateObj = new Date(video.published);
+              const dateStr = dateObj.toLocaleDateString(locale === 'en' ? 'en-US' : 'pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+              
+              return (
+                <a href={video.url} target="_blank" rel="noopener noreferrer" key={video.id} className="bg-white rounded-lg border border-brand-hairline shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row group">
+                  <div className="w-full md:w-[280px] h-[200px] md:h-auto bg-black relative flex-shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={video.thumbnail} alt={video.title} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col justify-center flex-grow">
+                    <span className="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">YouTube</span>
+                    <h2 className="text-lg md:text-xl font-bold text-brand-ink leading-snug mb-3 group-hover:text-brand-primary transition-colors">{video.title}</h2>
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-brand-mute font-medium mt-auto">
+                      <span>{t('published')} {dateStr}</span>
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+`;
+fs.writeFileSync('src/app/[locale]/sermoes/page.tsx', sermoesPage);
+console.log('✅ Sermoes page rewritten with i18n');
+
+console.log('\n🎉 Full i18n sweep complete!');

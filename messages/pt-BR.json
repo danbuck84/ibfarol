@@ -161,7 +161,8 @@
     "rest_time": "Último Sábado do mês (Livre, sem programação oficial)",
     "current_events_title": "Programação Corrente",
     "no_events": "Nenhum evento especial programado no momento. Confira nossa programação fixa abaixo!",
-    "fixed_events_title": "Programação Fixa"
+    "fixed_events_title": "Programação Fixa",
+    "btn_calendar": "Ver Calendário Completo"
   },
   "Counseling": {
     "title": "Aconselhamento Bíblico",
@@ -209,11 +210,22 @@
   "Highlights": {
     "headline": "Destaques",
     "youtube_title": "Série: No Princípio",
-    "youtube_desc": "Acompanhe a nova série de mensagens no livro de Gênesis.",
     "btn_watch": "Assistir no YouTube",
     "spotify_title": "Podcast & Louvor",
     "spotify_desc": "Ouça nossas mensagens e as músicas que cantamos nos domingos.",
-    "btn_listen": "Ouvir no Spotify"
+    "btn_listen": "Ouvir no Spotify",
+    "section_title": "Última Mensagem",
+    "other_resources": "Outros Recursos",
+    "watch_youtube": "Assistir no YouTube",
+    "sermons_title": "Mensagens Anteriores",
+    "sermons_desc": "Assista ao arquivo de cultos e mensagens passadas.",
+    "sermons_btn": "Acessar Arquivo",
+    "playlist_title": "Playlist de Louvores",
+    "playlist_desc": "As músicas que cantamos juntos todos os domingos.",
+    "playlist_btn": "Ouvir agora",
+    "reading_title": "Plano de Leitura",
+    "reading_desc": "Acompanhe nossa leitura bíblica diária da semana.",
+    "reading_btn": "Acessar"
   },
   "Give": {
     "headline": "Adoração Através da Contribuição",
@@ -228,7 +240,10 @@
     "title": "Sermões",
     "desc": "Assista ou ouça nossas mensagens recentes.",
     "watch": "Assistir",
-    "listen": "Ouvir (Spotify)"
+    "listen": "Ouvir (Spotify)",
+    "no_messages": "Nenhuma mensagem encontrada no momento.",
+    "published": "Publicado em",
+    "breadcrumb": "Mensagens Anteriores"
   },
   "ProximosPassos": {
     "title": "Próximos Passos",
@@ -309,5 +324,12 @@
     "analyt_desc": "Ajudam-nos a entender como os visitantes interagem com o site, coletando informações anonimamente.",
     "btn_back": "Voltar",
     "btn_save": "Salvar Minhas Escolhas"
+  },
+  "AboutUs_Home": {
+    "title": "SEJA BEM-VINDO!",
+    "p1": "É um prazer para nós receber você! Esperamos que se sinta acolhido, amado, e à vontade entre nós. Desejamos que aqui você conheça mais de Jesus.",
+    "p2_prefix": "Se precisar de qualquer coisa, ",
+    "p2_link": "entre em contato conosco",
+    "p2_suffix": "!"
   }
 }

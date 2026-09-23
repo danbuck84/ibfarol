@@ -53,7 +53,7 @@ export default function Agenda() {
 
           <div className="text-center">
             <a href="https://claude.ai/code/artifact/d9edf148-2b8f-4459-91e6-c40fc2636412" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-ink text-white font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-md hover:bg-black transition-colors shadow-md">
-              Ver Calendário Completo
+              {t('btn_calendar')}
             </a>
           </div>
         </div>
