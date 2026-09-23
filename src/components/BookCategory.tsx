@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface Book {
   title: string;
@@ -14,6 +15,7 @@ interface BookCategoryProps {
 }
 
 export default function BookCategory({ category, books }: BookCategoryProps) {
+  const t = useTranslations('BookCategories');
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,7 +25,7 @@ export default function BookCategory({ category, books }: BookCategoryProps) {
         className="w-full flex items-center justify-between p-6 bg-white hover:bg-brand-canvas-soft transition-colors focus:outline-none text-left"
       >
         <h2 className="text-xl md:text-2xl font-bold text-brand-ink m-0 text-left">
-          {category}
+          {t(category)}
         </h2>
         <svg 
           className={`w-6 h-6 text-brand-mute transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 

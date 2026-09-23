@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";\nimport { translateReadingPlan } from "@/lib/readingPlanI18n";
+import { useTranslations, useLocale } from "next-intl";
+import { translateReadingPlan } from "@/lib/readingPlanI18n";
 import { readingPlans, ReadingPlan as ReadingPlanType } from "@/data/readingPlans";
 
 export default function ReadingPlan({ compact = false }: { compact?: boolean }) {
