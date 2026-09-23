@@ -1,9 +1,18 @@
 "use client";
 
+import "./globals.css";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
 export default function NotFound() {
   return (
     <html lang="pt-BR">
-      <body className="bg-brand-canvas text-brand-ink font-sans h-screen flex flex-col items-center justify-center">
+      <body className={`${poppins.variable} font-sans bg-brand-canvas text-brand-ink h-screen flex flex-col items-center justify-center`}>
         <div className="text-center px-6">
           <div className="flex justify-center mb-8">
             <img src="/logo.png" alt="Igreja Batista Farol" className="h-16 w-auto" />
