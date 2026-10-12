@@ -4,13 +4,34 @@ import { useTranslations, useLocale } from "next-intl";
 import { translateReadingPlan } from "@/lib/readingPlanI18n";
 import { readingPlans, ReadingPlan as ReadingPlanType } from "@/data/readingPlans";
 
+function getTodayInBrazil(): string {
+  try {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
+  } catch {
+    return new Date().toISOString().slice(0, 10);
+  }
+}
+
 export default function ReadingPlan({ compact = false }: { compact?: boolean }) {
   const t = useTranslations('ReadingPlan');
+  const locale = useLocale();
+
+  const today = getTodayInBrazil();
   
-  // Sort plans descending by id (assuming year-week format sorts nicely)
-  const sortedPlans = [...readingPlans].sort((a, b) => b.id.localeCompare(a.id));
-  const currentPlan = sortedPlans[0];
-  const archivedPlans = sortedPlans.slice(1);
+  // Sort plans descending by year, then weekNumber
+  const sortedPlans = [...readingPlans].sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return b.weekNumber - a.weekNumber;
+  });
+
+  // Only plans that have already started (startDate <= today) are released
+  const releasedPlans = sortedPlans.filter(p => !p.startDate || p.startDate <= today);
+
+  // Current featured plan is the latest released plan
+  const currentPlan = releasedPlans.length > 0 ? releasedPlans[0] : sortedPlans[sortedPlans.length - 1];
+
+  // Archived plans are all previous released plans
+  const archivedPlans = releasedPlans.length > 0 ? releasedPlans.slice(1) : [];
   
   // Group archived plans by year
   const archivedByYear = archivedPlans.reduce((acc, plan) => {
@@ -22,55 +43,58 @@ export default function ReadingPlan({ compact = false }: { compact?: boolean }) 
   const [expandedArchiveId, setExpandedArchiveId] = useState<string | null>(null);
   const [expandedYear, setExpandedYear] = useState<string | null>(null);
 
-  const renderPlanContent = (plan: ReadingPlanType, isCompact: boolean) => (
-    <>
-      {!isCompact && (
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
-            {t('eyebrow')}
-          </p>
-          <h2 className="text-[28px] md:text-[36px] font-normal leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
-            {t('headline')}
-          </h2>
-          <p className="mt-3 text-lg text-brand-body font-medium flex flex-col items-center">
-            <span>{plan.subtitle}</span>
-            {plan.dateRange && <span className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</span>}
-          </p>
-        </div>
-      )}
-      {isCompact && (
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-bold text-brand-ink">{plan.subtitle}</h3>
-          {plan.dateRange && <p className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</p>}
-        </div>
-      )}
-      
-      <div className="space-y-6">
-        {plan.days.map((day) => (
-          <div key={day.key} className={`border-b border-brand-hairline-soft ${isCompact ? 'pb-2' : 'pb-4'}`}>
-            <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{day.name}</h3>
-            <ul className={`mt-1 text-brand-body ${isCompact ? 'text-sm' : ''}`}>
-              {day.readings.map((reading: string, idx: number) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="text-brand-primary mt-1 leading-none">•</span> 
-                  <span className="leading-snug">{reading}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-        <div className={isCompact ? 'pt-1' : 'pt-2'}>
-          <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{plan.sunday.name}</h3>
-          <div className={`mt-2 p-4 bg-brand-canvas border-l-4 border-brand-primary rounded-r-lg`}>
-            <p className={`${isCompact ? 'text-sm' : 'text-sm md:text-base'} leading-[1.4] text-brand-body italic`}>
-              "{plan.sunday.prayer}"
+  const renderPlanContent = (rawPlan: ReadingPlanType, isCompact: boolean) => {
+    const plan = translateReadingPlan(rawPlan, locale);
+    return (
+      <>
+        {!isCompact && (
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold tracking-[2.52px] uppercase text-brand-primary-ink mb-4">
+              {t('eyebrow')}
+            </p>
+            <h2 className="text-[28px] md:text-[36px] font-normal leading-[34px] md:leading-[40px] tracking-[-0.9px] m-0 text-brand-ink">
+              {t('headline')}
+            </h2>
+            <p className="mt-3 text-lg text-brand-body font-medium flex flex-col items-center">
+              <span>{plan.subtitle}</span>
+              {plan.dateRange && <span className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</span>}
             </p>
           </div>
+        )}
+        {isCompact && (
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold text-brand-ink">{plan.subtitle}</h3>
+            {plan.dateRange && <p className="text-sm font-normal text-brand-mute mt-1">{plan.dateRange}</p>}
+          </div>
+        )}
+        
+        <div className="space-y-6">
+          {plan.days.map((day) => (
+            <div key={day.key} className={`border-b border-brand-hairline-soft ${isCompact ? 'pb-2' : 'pb-4'}`}>
+              <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{day.name}</h3>
+              <ul className={`mt-1 text-brand-body ${isCompact ? 'text-sm' : ''}`}>
+                {day.readings.map((reading: string, idx: number) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-brand-primary mt-1 leading-none">•</span> 
+                    <span className="leading-snug">{reading}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div className={isCompact ? 'pt-1' : 'pt-2'}>
+            <h3 className={`${isCompact ? 'text-base' : 'text-lg'} font-semibold text-brand-ink`}>{plan.sunday.name}</h3>
+            <div className={`mt-2 p-4 bg-brand-canvas border-l-4 border-brand-primary rounded-r-lg`}>
+              <p className={`${isCompact ? 'text-sm' : 'text-sm md:text-base'} leading-[1.4] text-brand-body italic`}>
+                "{plan.sunday.prayer}"
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  };
 
   if (!currentPlan) return null;
 

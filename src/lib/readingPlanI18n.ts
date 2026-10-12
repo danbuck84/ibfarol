@@ -49,6 +49,7 @@ export function translateReadingPlan(plan: ReadingPlan, locale: string): Reading
       }
     }
     newName = newName.replace("Oração", "Prayer");
+    newName = newName.replace("Páscoa", "Easter");
     return newName;
   };
 
