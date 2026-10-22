@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import CookiePreferencesLink from "@/components/CookiePreferencesLink";
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -73,8 +74,9 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="max-w-[1280px] mx-auto mt-10 pt-4 border-t border-brand-hairline/20 text-brand-mute text-xs leading-[16px]">
-        {t('copyright')}
+      <div className="max-w-[1280px] mx-auto mt-10 pt-4 border-t border-brand-hairline/20 text-brand-mute text-xs leading-[16px] flex flex-col sm:flex-row sm:justify-between gap-2">
+        <span>{t('copyright')}</span>
+        <CookiePreferencesLink className="text-left sm:text-right underline underline-offset-2 hover:text-brand-primary transition-colors cursor-pointer" />
       </div>
     </footer>
   );

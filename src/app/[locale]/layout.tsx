@@ -1,6 +1,6 @@
 import PwaRegistry from "@/components/PwaRegistry";
 import CookieBanner from "@/components/CookieBanner";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import ConsentAwareAnalytics from "@/components/ConsentAwareAnalytics";
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
@@ -52,9 +52,9 @@ export default async function LocaleLayout({
           <PwaRegistry />
           {children}
           <CookieBanner />
+          <ConsentAwareAnalytics />
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalytics gaId="G-GXMT14GY9V" />
     </html>
   );
 }

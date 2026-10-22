@@ -340,6 +340,7 @@
     "copy_email": "Copiar E-mail"
   },
   "CookieBanner": {
+    "manage": "Preferências de cookies",
     "title": "Nós valorizamos sua privacidade",
     "desc": "Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos para entender como você interage com nosso conteúdo. Você pode aceitar todos os cookies ou configurar suas preferências.",
     "btn_config": "Configurar",

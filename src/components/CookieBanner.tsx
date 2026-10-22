@@ -2,21 +2,35 @@
 import { useState, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
+import { getConsent, setConsent, OPEN_PREFERENCES_EVENT, type ConsentLevel } from "@/lib/cookieConsent";
 
 export default function CookieBanner() {
   const t = useTranslations('CookieBanner');
   const [isVisible, setIsVisible] = useState(false);
   const [showConfig, setShowConfig] = useState(false);
+  const [analyticsOn, setAnalyticsOn] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
+    const consent = getConsent();
     if (!consent) {
       setIsVisible(true);
     }
+    setAnalyticsOn(consent === "all");
+
+    // Reopen the preferences panel when requested (e.g. footer "Cookie preferences" link)
+    const onOpen = () => {
+      setAnalyticsOn(getConsent() === "all");
+      setShowConfig(true);
+      setIsVisible(true);
+    };
+    window.addEventListener(OPEN_PREFERENCES_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_PREFERENCES_EVENT, onOpen);
   }, []);
 
-  const handleConsent = (level: "all" | "essential") => {
-    localStorage.setItem("cookieConsent", level);
+  const handleConsent = (level: ConsentLevel) => {
+    setConsent(level);
+    setAnalyticsOn(level === "all");
+    setShowConfig(false);
     setIsVisible(false);
   };
 
@@ -70,9 +84,16 @@ export default function CookieBanner() {
                 <p className="font-bold text-white text-sm">{t('analyt_title')}</p>
                 <p className="text-xs text-gray-400 mt-1">{t('analyt_desc')}</p>
               </div>
-              <div className="w-10 h-5 bg-white/20 rounded-full relative cursor-pointer" onClick={() => handleConsent("all")}>
-                <div className="w-4 h-4 bg-white rounded-full absolute left-0.5 top-0.5"></div>
-              </div>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={analyticsOn}
+                aria-label={t('analyt_title')}
+                onClick={() => setAnalyticsOn((v) => !v)}
+                className={`w-10 h-5 shrink-0 rounded-full relative cursor-pointer transition-colors ${analyticsOn ? 'bg-brand-primary' : 'bg-white/20'}`}
+              >
+                <div className={`w-4 h-4 bg-white rounded-full absolute top-0.5 transition-all ${analyticsOn ? 'right-0.5' : 'left-0.5'}`}></div>
+              </button>
             </div>
           </div>
           
@@ -82,7 +103,7 @@ export default function CookieBanner() {
               className="px-4 py-2.5 text-sm font-semibold rounded-md border border-white/20 hover:bg-white/10 transition-colors"
             >{t('btn_back')}</button>
             <button 
-              onClick={() => handleConsent("essential")}
+              onClick={() => handleConsent(analyticsOn ? "all" : "essential")}
               className="px-6 py-2.5 text-sm font-bold rounded-md bg-brand-primary hover:bg-brand-primary-deep text-white transition-colors"
             >{t('btn_save')}</button>
           </div>
