@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   const t = useTranslations('Hero');
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brand-canvas-dark">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-brand-canvas-dark">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 bg-[#010506]">
         <Image 
@@ -24,7 +24,7 @@ export default function Hero() {
         />
       </div>
       
-      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-8 md:px-12 pt-20 pb-20">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-8 md:px-12 pt-20 pb-36 md:pb-48">
         <h1 className="text-[52px] md:text-[72px] lg:text-[90px] text-white font-sans font-bold leading-[1.05] tracking-[-1px] whitespace-pre-line">
           {t('headline')}
         </h1>
