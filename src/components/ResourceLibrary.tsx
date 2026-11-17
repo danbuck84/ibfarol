@@ -55,6 +55,10 @@ const UI_TEXT = {
     closeBtn: "Fechar",
     readOnline: "Visualizar no site",
     loadMore: "Ver mais materiais",
+    qrBtn: "QR Code da EBD",
+    qrModalTitle: "Material da EBD no Celular",
+    qrModalDesc: "Aponte a câmera do celular para acessar as apostilas e slides da Escola Bíblica Dominical.",
+    qrDownloadBtn: "Baixar QR Code (PNG)",
   },
   en: {
     eyebrow: "RESOURCE LIBRARY",
@@ -87,6 +91,10 @@ const UI_TEXT = {
     closeBtn: "Close",
     readOnline: "Read on site",
     loadMore: "Load more resources",
+    qrBtn: "EBD QR Code",
+    qrModalTitle: "EBD Materials on Your Phone",
+    qrModalDesc: "Point your phone camera here to open Sunday School handouts and slides.",
+    qrDownloadBtn: "Download QR Code (PNG)",
   },
 };
 
@@ -135,6 +143,7 @@ export default function ResourceLibrary({
   const [selectedBook, setSelectedBook] = useState<string>("");
   const [visibleCount, setVisibleCount] = useState(12);
   const [modalState, setModalState] = useState<ActiveModalState>(null);
+  const [showQrModal, setShowQrModal] = useState(false);
 
   // Sync with URL query parameters (e.g. ?tipo=ebd or ?q=...)
   useEffect(() => {
@@ -420,15 +429,27 @@ export default function ResourceLibrary({
             {t.showing} <strong className="text-brand-ink">{filteredItems.length}</strong> {t.of}{" "}
             {items.length} {t.results}
           </span>
-          {hasActiveFilters && (
+          <div className="flex items-center gap-4">
+            {hasActiveFilters && (
+              <button
+                type="button"
+                onClick={clearAllFilters}
+                className="text-brand-primary-ink hover:underline font-semibold flex items-center gap-1 cursor-pointer"
+              >
+                <span>✕</span> {t.clearFilters}
+              </button>
+            )}
             <button
               type="button"
-              onClick={clearAllFilters}
-              className="text-brand-primary-ink hover:underline font-semibold flex items-center gap-1 cursor-pointer"
+              onClick={() => setShowQrModal(true)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-canvas-soft hover:bg-brand-hairline text-brand-ink font-semibold text-xs transition-colors cursor-pointer"
             >
-              <span>✕</span> {t.clearFilters}
+              <svg className="w-4 h-4 text-brand-primary-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 3h3m3 0h-3m0 0v-3m0 3v3" />
+              </svg>
+              <span>{t.qrBtn}</span>
             </button>
-          )}
+          </div>
         </div>
       </div>
 
@@ -724,6 +745,56 @@ export default function ResourceLibrary({
                   allow="autoplay"
                 />
               ) : null}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* EBD QR Code Projector & Download Modal */}
+      {showQrModal && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4"
+          onClick={() => setShowQrModal(false)}
+        >
+          <div
+            className="bg-[#1A1714] text-white w-full max-w-md rounded-2xl p-8 text-center shadow-2xl border border-brand-primary/30 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowQrModal(false)}
+              className="absolute top-4 right-4 text-white/60 hover:text-white text-sm font-bold px-2.5 py-1 rounded-md bg-white/10 cursor-pointer"
+            >
+              ✕
+            </button>
+            <p className="text-xs font-bold tracking-[2.5px] uppercase text-brand-primary mb-2">
+              IGREJA BATISTA FAROL
+            </p>
+            <h3 className="text-2xl font-bold mb-2">{t.qrModalTitle}</h3>
+            <p className="text-sm text-white/75 mb-6">{t.qrModalDesc}</p>
+
+            <div className="bg-white p-4 rounded-2xl inline-block shadow-lg mb-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/qrcode-ebd.png"
+                alt="QR Code EBD Igreja Batista Farol"
+                className="w-64 h-64 md:w-72 md:h-72 object-contain mx-auto"
+              />
+            </div>
+
+            <p className="text-sm font-mono text-brand-primary font-semibold mb-6">
+              batistafarol.org/ebd
+            </p>
+
+            <div className="flex justify-center gap-3">
+              <a
+                href="/qrcode-ebd.png"
+                download="QRCode-EBD-IBFarol.png"
+                className="bg-brand-primary hover:bg-brand-primary-deep text-brand-ink font-bold px-5 py-2.5 rounded-lg text-xs md:text-sm transition-colors inline-flex items-center gap-2"
+              >
+                <span>⬇</span>
+                <span>{t.qrDownloadBtn}</span>
+              </a>
             </div>
           </div>
         </div>
