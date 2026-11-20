@@ -202,6 +202,7 @@ export default function SecretaryChatbot() {
   const [pMessage, setPMessage] = useState("");
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     try {
@@ -226,11 +227,17 @@ export default function SecretaryChatbot() {
       // Ignore storage errors
     }
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (isOpen && activePanel === "chat") {
+      inputRef.current?.focus();
+    }
   }, [messages, isOpen, activePanel]);
 
   const sendChatMessage = async (textToSend: string) => {
     const trimmed = textToSend.trim();
-    if (!trimmed || isLoading) return;
+    if (!trimmed || isLoading) {
+      inputRef.current?.focus();
+      return;
+    }
 
     const userMsg: UiMessage = {
       id: `user-${Date.now()}`,
@@ -247,6 +254,9 @@ export default function SecretaryChatbot() {
     setInput("");
     setIsLoading(true);
     setActivePanel("chat");
+    requestAnimationFrame(() => {
+      inputRef.current?.focus();
+    });
 
     try {
       const res = await fetch("/api/chat", {
@@ -299,6 +309,9 @@ export default function SecretaryChatbot() {
       ]);
     } finally {
       setIsLoading(false);
+      requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
     }
   };
 
@@ -366,6 +379,9 @@ export default function SecretaryChatbot() {
       setCReason("");
     } finally {
       setIsLoading(false);
+      requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
     }
   };
 
@@ -431,6 +447,9 @@ export default function SecretaryChatbot() {
       setPMessage("");
     } finally {
       setIsLoading(false);
+      requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
     }
   };
 
@@ -917,10 +936,12 @@ export default function SecretaryChatbot() {
                 onSubmit={(e) => {
                   e.preventDefault();
                   sendChatMessage(input);
+                  inputRef.current?.focus();
                 }}
                 className="p-3 bg-white border-t border-brand-hairline flex items-center gap-2 shrink-0"
               >
                 <input
+                  ref={inputRef}
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
@@ -929,8 +950,7 @@ export default function SecretaryChatbot() {
                       ? "Ask Clara anything about the church..."
                       : "Pergunte sobre a igreja, aconselhamento..."
                   }
-                  disabled={isLoading}
-                  className="flex-1 text-sm bg-brand-canvas border border-brand-hairline rounded-xl px-3.5 py-2.5 text-brand-ink placeholder:text-brand-mute focus:outline-none focus:border-brand-primary disabled:opacity-60"
+                  className="flex-1 text-sm bg-brand-canvas border border-brand-hairline rounded-xl px-3.5 py-2.5 text-brand-ink placeholder:text-brand-mute focus:outline-none focus:border-brand-primary"
                 />
                 <button
                   type="submit"
