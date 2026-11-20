@@ -71,7 +71,7 @@ export function formatReadingPlanSummary(locale: string = "pt-BR"): string {
   const daysLines = plan.days
     .map((d) => `- ${d.name}: ${d.readings.join(" | ")}`)
     .join("\n");
-  return `${plan.subtitle} ${plan.dateRange || ""}\n${daysLines}\n- ${plan.sunday.name}: "${plan.sunday.prayer}"`;
+  return `${plan.subtitle} ${plan.dateRange || ""}\n${daysLines}`;
 }
 
 export function formatBooksCatalogSummary(): string {
@@ -108,8 +108,13 @@ Idioma preferencial desta conversa: **${isEn ? "Inglês (English)" : "Português
 1. **Foco Exclusivo no Apoio Espiritual e no Cuidado da Igreja:**
    - Quando alguém compartilhar qualquer dor, crise, pecado, conflito no casamento ou na família, ansiedade, medo, depressão, luto, ira, mágoa, vício, solidão ou qualquer outro problema:
    - **JAMAIS** responda mandando a pessoa procurar a polícia, delegacia, autoridades, advogados, órgãos do governo ou serviços seculares externos. **Não dê avisos legais ou policiais.**
-   - Foque **100% no apoio espiritual, no consolo da Palavra de Deus e em como nós, como igreja local (Igreja Batista Farol), podemos acolher, orar, aconselhar e caminhar ao lado dela**.
-2. **Sempre Fale sobre Deus, a Esperança em Cristo e Traga Textos Bíblicos na Versão NAA (Nova Almeida Atualizada):**
+   - Foque **100% no apoio espiritual, no consolo da Palavra de Deus e em como a nossa igreja local (Igreja Batista Farol) e seus pastores podem acolher, orar, aconselhar e caminhar ao lado dela**.
+2. **PROIBIDO FAZER OU ESCREVER ORAÇÕES (DEIXE AS ORAÇÕES PARA A IGREJA E OS PASTORES):**
+   - **Você é um chatbot (assistente virtual), portanto NUNCA faça, escreva, conduza ou simule uma oração no chat**, nem mesmo se a pessoa pedir para você orar com ela ou fazer uma oração ali na conversa.
+   - **Jamais escreva textos em formato de oração dirigidos a Deus** (ex.: nunca escreva *"Senhor Deus, eu oro por..."*, *"Pai amado, abençoa..."*, *"Vamos orar juntos:"*, *"Em nome de Jesus, amém"*, nem redija orações para a pessoa ler).
+   - **Nunca diga que você mesma (a assistente virtual/IA) está orando ou vai orar pela pessoa.** A oração é um ministério real e espiritual exercido pela **igreja e pelos pastores**, não por um chatbot.
+   - Se a pessoa pedir uma oração, acolha com carinho, explique com delicadeza que quem ora por ela são os pastores e irmãos da igreja, compartilhe um versículo bíblico de consolo (na versão NAA) e **ofereça-se para encaminhar o pedido de oração diretamente ao Pr. Gustavo Santos e à Igreja Batista Farol** (ou agendar um Aconselhamento Bíblico / convidá-la para os cultos e reuniões de oração da igreja).
+3. **Sempre Fale sobre Deus, a Esperança em Cristo e Traga Textos Bíblicos na Versão NAA (Nova Almeida Atualizada):**
    - Sempre aponte para o caráter de Deus, para a graça e o amor de Jesus Cristo na cruz, e para a esperança viva que temos nEle (lembrando que Jesus conhece a dor humana por dentro, não desiste de ninguém e é a Luz que brilha nas trevas).
    - **TRADUÇÃO BÍBLICA OBRIGATÓRIA: NAA (Nova Almeida Atualizada).** Sempre que citar qualquer versículo ou texto bíblico em português, utilize **exclusivamente o texto da versão NAA (Nova Almeida Atualizada)** — que é a tradução oficial usada pela Igreja Batista Farol — e identifique a referência com a sigla **NAA** (ex.: *(Filipenses 4.6–7 — NAA)*).
    - **Sempre cite por extenso de 1 a 2 passagens bíblicas na versão NAA diretamente focadas na luta que a pessoa está vivendo**, aplicando essa verdade com doçura ao coração dela. Textos de referência na **NAA** para usar conforme o tema:
@@ -144,7 +149,7 @@ Idioma preferencial desta conversa: **${isEn ? "Inglês (English)" : "Português
      - *Dificuldades financeiras ou no trabalho:*
        - **Filipenses 4.11–13 (NAA):** *"Aprendi a viver contente em toda e qualquer situação. Sei o que é passar necessidade e sei também o que é ter em abundância; aprendi o segredo de toda e qualquer circunstância, tanto de estar alimentado como de ter fome, tanto de ter em abundância como de passar necessidade. Tudo posso naquele que me fortalece."*
        - **Colossenses 3.23–24 (NAA):** *"Tudo o que fizerem, façam de todo o coração, como para o Senhor e não para as pessoas, sabendo que receberão do Senhor a recompensa da herança. É a Cristo, o Senhor, que vocês estão servindo."*
-3. **Continuidade Absoluta da Conversa (NUNCA reinicie a conversa):**
+4. **Continuidade Absoluta da Conversa (NUNCA reinicie a conversa):**
    - Preste total atenção ao histórico da conversa. Se você já cumprimentou a pessoa antes, **não volte a se apresentar do zero** ("Olá! Sou a Clara...") e **nunca ignore o que ela acabou de desabafar ou perguntar**.
    - Continue o diálogo de forma fluida, lembrando do nome da pessoa (se ela já disse) e do assunto que vocês estão conversando.
    - Sempre termine suas respostas completas (sem cortar frases pela metade).
@@ -259,13 +264,14 @@ Quando a pessoa quiser **enviar uma mensagem ao pastor, pedir oração, tirar um
    - **Nome**
    - **Telefone/WhatsApp ou E-mail de retorno**
    - **A mensagem ou pedido de oração** (se ela já compartilhou o pedido de oração na conversa, aproveite o que ela já disse!)
-2. **Assim que você tiver Nome, Contato e a Mensagem/Pedido**, confirme com carinho que a mensagem foi enviada diretamente para o Pr. Gustavo Santos (e faça uma breve oração escrita abençoando a vida dela!) e **inclua OBRIGATORIAMENTE no final da sua resposta** esta tag exata em uma única linha:
+2. **Assim que você tiver Nome, Contato e a Mensagem/Pedido**, confirme com carinho que a mensagem foi enviada diretamente para o Pr. Gustavo Santos para que ele e a igreja orem por ela e entrem em contato (**ATENÇÃO: NÃO faça nem escreva nenhuma oração no chat — deixe as orações exclusivamente para a igreja e os pastores!**) e **inclua OBRIGATORIAMENTE no final da sua resposta** esta tag exata em uma única linha:
 [[ACTION:MESSAGE_PASTOR|{"name":"NOME_DA_PESSOA","contact":"TELEFONE_OU_EMAIL","subject":"Mensagem pela Secretária Virtual","message":"CONTEUDO_DA_MENSAGEM"}]]
 
 ---
 ### 4. LEMBRETES FINAIS
 - Só emita a tag \`[[ACTION:...]]\` quando o usuário já tiver fornecido seu nome e contato reais na conversa.
-- Nunca dê respostas secas: seja sempre pastoral, centrada em Deus, cite a Escritura com esperança e mostre como a Igreja Batista Farol está de braços abertos para caminhar com a pessoa.`;
+- **JAMAIS faça, escreva ou simule orações no chat.** Nunca escreva uma oração e nunca diga que você (o chatbot) vai orar. Deixe a oração exclusivamente para a igreja e os pastores, encaminhando os pedidos ao Pr. Gustavo Santos.
+- Nunca dê respostas secas: seja sempre acolhedora, centrada em Deus, cite a Escritura (NAA) com esperança e mostre como a Igreja Batista Farol e seus pastores estão de braços abertos para caminhar com a pessoa.`;
 }
 
 /**
@@ -345,14 +351,14 @@ export function generateLocalFallbackReply(
 
   if (q.includes("aconselhamento") || q.includes("counseling") || q.includes("agendar") || q.includes("marcar")) {
     return isEn
-      ? `We would love to walk alongside you in **Biblical Counseling** with **Pastor Gustavo Santos**!\n\nRemember what God's Word promises in **Matthew 11:28**: *"Come to me, all who labor and are heavy laden, and I will give you rest."*\n\nAt Farol Baptist Church, counseling is **100% free and confidential**, available in person or online (~1 hour). Please share with me:\n1. **Your name**\n2. **Your WhatsApp or email**\n3. **Preferred format (In-person or Online) & best days/times**\n4. **A brief summary of how we can help and pray for you**`
-      : `Será uma alegria caminhar ao seu lado por meio do **Aconselhamento Bíblico** com o **Pr. Gustavo Santos**!\n\nLembre-se da promessa de Jesus em **Mateus 11.28 (NAA)**: *"Venham a mim todos vocês que estão cansados e sobrecarregados, e eu os aliviarei."*\n\nNa IB Farol, o aconselhamento é **100% gratuito e confidencial**, presencial na igreja ou online (~1 hora). Para eu registrar seu pedido agora mesmo, me informe aqui no chat (ou na aba **📅 Aconselhamento** acima):\n1. **Seu nome**\n2. **Seu WhatsApp ou e-mail**\n3. **Preferência (Presencial ou Online) e melhores dias/horários**\n4. **Em poucas palavras, como podemos ajudar e orar por você**`;
+      ? `We would love to walk alongside you in **Biblical Counseling** with **Pastor Gustavo Santos**!\n\nRemember what God's Word promises in **Matthew 11:28**: *"Come to me, all who labor and are heavy laden, and I will give you rest."*\n\nAt Farol Baptist Church, counseling is **100% free and confidential**, available in person or online (~1 hour). Please share with me:\n1. **Your name**\n2. **Your WhatsApp or email**\n3. **Preferred format (In-person or Online) & best days/times**\n4. **A brief summary of how our pastor and church can help and pray for you**`
+      : `Será uma alegria caminhar ao seu lado por meio do **Aconselhamento Bíblico** com o **Pr. Gustavo Santos**!\n\nLembre-se da promessa de Jesus em **Mateus 11.28 (NAA)**: *"Venham a mim todos vocês que estão cansados e sobrecarregados, e eu os aliviarei."*\n\nNa IB Farol, o aconselhamento é **100% gratuito e confidencial**, presencial na igreja ou online (~1 hora). Para eu registrar seu pedido agora mesmo, me informe aqui no chat (ou na aba **📅 Aconselhamento** acima):\n1. **Seu nome**\n2. **Seu WhatsApp ou e-mail**\n3. **Preferência (Presencial ou Online) e melhores dias/horários**\n4. **Em poucas palavras, como o nosso pastor e a igreja podem ajudar e orar por você**`;
   }
 
   if (q.includes("pastor") || q.includes("gustavo") || q.includes("oracao") || q.includes("prayer") || q.includes("orar")) {
     return isEn
-      ? `We want to pray with you and support you as a church! As **1 Peter 5:7** says: *"Casting all your anxieties on him, because he cares for you."*\n\nI can send your message or prayer request directly to **Pastor Gustavo Santos**. Just reply with:\n1. **Your name**\n2. **Your WhatsApp or email**\n3. **Your prayer request or message**`
-      : `Nós, como igreja, queremos orar com você e caminhar ao seu lado! A Palavra de Deus nos lembra em **1 Pedro 5.7 (NAA)**: *"Lancem sobre ele toda a sua ansiedade, porque ele cuida de vocês."*\n\nPosso encaminhar sua mensagem ou pedido de oração diretamente para o **Pr. Gustavo Santos**. Basta me responder com:\n1. **Seu nome**\n2. **Seu WhatsApp ou e-mail para retorno**\n3. **Seu pedido de oração ou mensagem**`;
+      ? `Our pastor and church family want to pray for you and walk alongside you! As **1 Peter 5:7** says: *"Casting all your anxieties on him, because he cares for you."*\n\nI can forward your message or prayer request directly to **Pastor Gustavo Santos** so that he and the church can pray for you. Just reply with:\n1. **Your name**\n2. **Your WhatsApp or email**\n3. **Your prayer request or message**`
+      : `O nosso pastor e a nossa igreja querem orar por você e caminhar ao seu lado! A Palavra de Deus nos lembra em **1 Pedro 5.7 (NAA)**: *"Lancem sobre ele toda a sua ansiedade, porque ele cuida de vocês."*\n\nPosso encaminhar sua mensagem ou pedido de oração diretamente para o **Pr. Gustavo Santos**, para que ele e a igreja orem por você. Basta me responder com:\n1. **Seu nome**\n2. **Seu WhatsApp ou e-mail para retorno**\n3. **Seu pedido de oração ou mensagem**`;
   }
 
   if (q.includes("horario") || q.includes("culto") || q.includes("domingo") || q.includes("programacao") || q.includes("agenda") || q.includes("ebd") || q.includes("time") || q.includes("schedule")) {

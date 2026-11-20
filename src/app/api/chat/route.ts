@@ -136,7 +136,7 @@ export async function POST(req: NextRequest) {
         const { name, contact, modality, preferredTime } = directAction.payload;
         const reply = isEn
           ? `Thank you, **${name}**! I have registered your **Biblical Counseling** request and forwarded your details (**${contact}** • *${modality || "To be arranged"}* • *${preferredTime || "Flexible"}*) directly to **Pastor Gustavo Santos**.\n\nRemember God's promise in **Psalm 34:18**: *"The LORD is near to the brokenhearted and saves the crushed in spirit."*\n\nTo lock in an exact time slot on his calendar right away, you can also click the **Calendly** button below:`
-          : `Muito obrigada, **${name}**! Já registrei sua solicitação de **Aconselhamento Bíblico** e encaminhei seus dados (**${contact}** • *${modality || "A combinar"}* • *${preferredTime || "A combinar"}*) diretamente para o **Pr. Gustavo Santos**.\n\nQue o Senhor console e fortaleça o seu coração com a promessa de **Salmos 34.18 (NAA)**: *"Perto está o Senhor dos que têm o coração quebrantado e salva os de espírito oprimido."*\n\nSe você já quiser reservar o dia e horário exatos na agenda do Pr. Gustavo, basta clicar no botão do **Calendly** abaixo:`;
+          : `Muito obrigada, **${name}**! Já registrei sua solicitação de **Aconselhamento Bíblico** e encaminhei seus dados (**${contact}** • *${modality || "A combinar"}* • *${preferredTime || "A combinar"}*) diretamente para o **Pr. Gustavo Santos**.\n\nLembre-se da promessa da Palavra de Deus em **Salmos 34.18 (NAA)**: *"Perto está o Senhor dos que têm o coração quebrantado e salva os de espírito oprimido."*\n\nSe você já quiser reservar o dia e horário exatos na agenda do Pr. Gustavo, basta clicar no botão do **Calendly** abaixo:`;
         return NextResponse.json({
           reply,
           action: directAction,
@@ -147,8 +147,8 @@ export async function POST(req: NextRequest) {
       if (directAction.type === "MESSAGE_PASTOR") {
         const { name, contact } = directAction.payload;
         const reply = isEn
-          ? `Thank you, **${name}**! Your message has been sent directly to **Pastor Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). We are praying for you, and he will get back to you via **${contact}** as soon as possible.`
-          : `Muito obrigada, **${name}**! Sua mensagem foi encaminhada diretamente para o **Pr. Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). Estaremos orando por você e, assim que possível, ele responderá pelo contato informado (**${contact}**).`;
+          ? `Thank you, **${name}**! Your message has been sent directly to **Pastor Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). Our pastor and church family will be praying for you, and he will get back to you via **${contact}** as soon as possible.`
+          : `Muito obrigada, **${name}**! Sua mensagem foi encaminhada diretamente para o **Pr. Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). O nosso pastor e a igreja estarão orando por você e, assim que possível, ele responderá pelo contato informado (**${contact}**).`;
         return NextResponse.json({
           reply,
           action: directAction,
