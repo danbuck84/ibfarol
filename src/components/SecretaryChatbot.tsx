@@ -71,19 +71,40 @@ function renderFormattedText(text: string) {
       return <div key={lineIdx} className="h-2" />;
     }
 
-    const isBullet = /^[-•]\s+/.test(trimmed);
-    const cleanLine = isBullet ? trimmed.replace(/^[-•]\s+/, "") : line;
+    if (/^---+$/.test(trimmed)) {
+      return <hr key={lineIdx} className="my-2 border-brand-hairline" />;
+    }
 
-    // Split by bold (**...**), inline code (`...`), or URLs
-    const tokenRegex = /(\*\*[^*]+\*\*|`[^`]+`|https?:\/\/[^\s)]+)/g;
+    const isHeading = /^#{1,4}\s+/.test(trimmed);
+    const isBlockquote = /^>\s+/.test(trimmed);
+    const isBullet = /^([-•]|\*(?!\*))\s+/.test(trimmed);
+
+    let cleanLine = line;
+    if (isHeading) {
+      cleanLine = trimmed.replace(/^#{1,4}\s+/, "");
+    } else if (isBlockquote) {
+      cleanLine = trimmed.replace(/^>\s+/, "");
+    } else if (isBullet) {
+      cleanLine = trimmed.replace(/^([-•]|\*(?!\*))\s+/, "");
+    }
+
+    // Split by bold (**...**), italic (*...*), inline code (`...`), or URLs
+    const tokenRegex = /(\*\*[^*]+\*\*|\*[^*\n]+\*|`[^`]+`|https?:\/\/[^\s)]+)/g;
     const parts = cleanLine.split(tokenRegex);
 
     const renderedParts = parts.map((part, idx) => {
-      if (part.startsWith("**") && part.endsWith("**")) {
+      if (part.startsWith("**") && part.endsWith("**") && part.length > 4) {
         return (
           <strong key={idx} className="font-semibold text-inherit">
             {part.slice(2, -2)}
           </strong>
+        );
+      }
+      if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**") && part.length > 2) {
+        return (
+          <em key={idx} className="italic text-inherit">
+            {part.slice(1, -1)}
+          </em>
         );
       }
       if (part.startsWith("`") && part.endsWith("`")) {
@@ -112,17 +133,36 @@ function renderFormattedText(text: string) {
       return <React.Fragment key={idx}>{part}</React.Fragment>;
     });
 
+    if (isHeading) {
+      return (
+        <p key={lineIdx} className="font-bold text-brand-ink mt-2 mb-1 leading-snug break-words">
+          {renderedParts}
+        </p>
+      );
+    }
+
+    if (isBlockquote) {
+      return (
+        <blockquote
+          key={lineIdx}
+          className="my-1.5 pl-3 py-1.5 border-l-3 border-brand-primary bg-brand-canvas-soft/60 rounded-r-md italic text-brand-body leading-relaxed break-words"
+        >
+          {renderedParts}
+        </blockquote>
+      );
+    }
+
     if (isBullet) {
       return (
-        <div key={lineIdx} className="flex items-start gap-2 pl-1 my-0.5">
-          <span className="text-brand-primary font-bold leading-snug">•</span>
-          <span className="leading-snug">{renderedParts}</span>
+        <div key={lineIdx} className="flex items-start gap-2 pl-1 my-0.5 break-words">
+          <span className="text-brand-primary font-bold leading-snug shrink-0">•</span>
+          <span className="leading-snug break-words">{renderedParts}</span>
         </div>
       );
     }
 
     return (
-      <p key={lineIdx} className="leading-relaxed my-0.5">
+      <p key={lineIdx} className="leading-relaxed my-0.5 break-words">
         {renderedParts}
       </p>
     );
@@ -215,6 +255,7 @@ export default function SecretaryChatbot() {
         body: JSON.stringify({
           locale,
           messages: updatedHistory.map((m) => ({
+            id: m.id,
             role: m.role,
             content: m.content,
           })),

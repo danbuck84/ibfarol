@@ -8,17 +8,67 @@ import {
 } from "@/lib/churchKnowledge";
 
 type ChatMessage = {
+  id?: string;
   role: "user" | "assistant" | "system";
   content: string;
 };
 
 const OPENROUTER_FREE_NEMOTRON_MODELS = [
+  "nvidia/nemotron-3.5-super-vl:free",
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "nvidia/nemotron-3.5-lightning:free",
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "openrouter/free",
+];
+
+// Deprecated OpenRouter model IDs that now return 404
+const DEPRECATED_NEMOTRON_IDS = new Set([
   "nvidia/llama-3.3-nemotron-super-49b-v1:free",
   "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
   "nvidia/nemotron-nano-12b-v2-vl:free",
   "nvidia/llama-3.1-nemotron-nano-8b-v1:free",
-  "openrouter/free",
-];
+]);
+
+/**
+ * Ensures message history starts with 'user' (removing initial UI welcome bubble if needed)
+ * and strictly alternates user / assistant roles so OpenRouter templates never reset context.
+ */
+function normalizeConversationHistory(rawMessages: ChatMessage[]): {
+  role: "user" | "assistant";
+  content: string;
+}[] {
+  const valid = rawMessages
+    .filter(
+      (m) =>
+        m &&
+        m.id !== "welcome" &&
+        (m.role === "user" || m.role === "assistant") &&
+        typeof m.content === "string" &&
+        m.content.trim().length > 0
+    )
+    .map((m) => ({
+      role: m.role as "user" | "assistant",
+      content: m.content.trim(),
+    }));
+
+  // Drop any leading assistant messages before the first user message
+  while (valid.length > 0 && valid[0].role === "assistant") {
+    valid.shift();
+  }
+
+  // Merge consecutive messages of the same role to preserve strict user/assistant alternation
+  const normalized: { role: "user" | "assistant"; content: string }[] = [];
+  for (const msg of valid) {
+    const prev = normalized[normalized.length - 1];
+    if (prev && prev.role === msg.role) {
+      prev.content = `${prev.content}\n\n${msg.content}`;
+    } else {
+      normalized.push({ ...msg });
+    }
+  }
+
+  return normalized.slice(-24);
+}
 
 async function notifyPastorServerSide(action: SecretaryAction) {
   try {
@@ -85,8 +135,8 @@ export async function POST(req: NextRequest) {
       if (directAction.type === "SCHEDULE_COUNSELING") {
         const { name, contact, modality, preferredTime } = directAction.payload;
         const reply = isEn
-          ? `Thank you, **${name}**! I have registered your **Biblical Counseling** request and forwarded your details (**${contact}** • *${modality || "To be arranged"}* • *${preferredTime || "Flexible"}*) directly to **Pastor Gustavo Santos**.\n\nTo lock in an exact time slot on his calendar right away, you can also click the **Calendly** button below:`
-          : `Muito obrigada, **${name}**! Já registrei sua solicitação de **Aconselhamento Bíblico** e encaminhei seus dados (**${contact}** • *${modality || "A combinar"}* • *${preferredTime || "A combinar"}*) diretamente para o **Pr. Gustavo Santos**.\n\nSe você já quiser reservar o dia e horário exatos na agenda dele, basta clicar no botão do **Calendly** abaixo:`;
+          ? `Thank you, **${name}**! I have registered your **Biblical Counseling** request and forwarded your details (**${contact}** • *${modality || "To be arranged"}* • *${preferredTime || "Flexible"}*) directly to **Pastor Gustavo Santos**.\n\nRemember God's promise in **Psalm 34:18**: *"The LORD is near to the brokenhearted and saves the crushed in spirit."*\n\nTo lock in an exact time slot on his calendar right away, you can also click the **Calendly** button below:`
+          : `Muito obrigada, **${name}**! Já registrei sua solicitação de **Aconselhamento Bíblico** e encaminhei seus dados (**${contact}** • *${modality || "A combinar"}* • *${preferredTime || "A combinar"}*) diretamente para o **Pr. Gustavo Santos**.\n\nQue o Senhor console e fortaleça o seu coração com a promessa de **Salmos 34.18**: *"Perto está o Senhor dos que têm o coração quebrantado e salva os de espírito oprimido."*\n\nSe você já quiser reservar o dia e horário exatos na agenda do Pr. Gustavo, basta clicar no botão do **Calendly** abaixo:`;
         return NextResponse.json({
           reply,
           action: directAction,
@@ -97,8 +147,8 @@ export async function POST(req: NextRequest) {
       if (directAction.type === "MESSAGE_PASTOR") {
         const { name, contact } = directAction.payload;
         const reply = isEn
-          ? `Thank you, **${name}**! Your message has been sent directly to **Pastor Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). He will get back to you via **${contact}** as soon as possible.`
-          : `Muito obrigada, **${name}**! Sua mensagem foi encaminhada diretamente para o **Pr. Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). Assim que possível, ele responderá pelo contato informado (**${contact}**).`;
+          ? `Thank you, **${name}**! Your message has been sent directly to **Pastor Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). We are praying for you, and he will get back to you via **${contact}** as soon as possible.`
+          : `Muito obrigada, **${name}**! Sua mensagem foi encaminhada diretamente para o **Pr. Gustavo Santos** (${CHURCH_CONSTANTS.pastorEmail}). Estaremos orando por você e, assim que possível, ele responderá pelo contato informado (**${contact}**).`;
         return NextResponse.json({
           reply,
           action: directAction,
@@ -108,18 +158,11 @@ export async function POST(req: NextRequest) {
     }
 
     const rawMessages: ChatMessage[] = Array.isArray(body.messages) ? body.messages : [];
-    const sanitizedMessages = rawMessages
-      .filter(
-        (m) =>
-          m &&
-          (m.role === "user" || m.role === "assistant") &&
-          typeof m.content === "string" &&
-          m.content.trim().length > 0
-      )
-      .slice(-14);
+    const normalizedMessages = normalizeConversationHistory(rawMessages);
+    const isOngoingConversation = normalizedMessages.length > 1;
 
     const lastUserMessage =
-      [...sanitizedMessages].reverse().find((m) => m.role === "user")?.content || "";
+      [...normalizedMessages].reverse().find((m) => m.role === "user")?.content || "";
 
     const openRouterKey =
       process.env.OPENROUTER_API_KEY || process.env.NEXT_PUBLIC_OPENROUTER_API_KEY || "";
@@ -127,9 +170,12 @@ export async function POST(req: NextRequest) {
 
     const systemPrompt = buildSecretarySystemPrompt(locale);
 
-    // 1. OpenRouter (Primary — supports 100% free NVIDIA Nemotron models)
+    // 1. OpenRouter (Primary — supports 100% free NVIDIA Nemotron 3 / 3.5 models)
     if (openRouterKey) {
-      const customModel = process.env.OPENROUTER_MODEL?.trim();
+      const envModel = process.env.OPENROUTER_MODEL?.trim();
+      const customModel =
+        envModel && !DEPRECATED_NEMOTRON_IDS.has(envModel) ? envModel : undefined;
+
       const modelsToTry = customModel
         ? [
             customModel,
@@ -149,9 +195,9 @@ export async function POST(req: NextRequest) {
             },
             body: JSON.stringify({
               model,
-              messages: [{ role: "system", content: systemPrompt }, ...sanitizedMessages],
-              temperature: 0.4,
-              max_tokens: 900,
+              messages: [{ role: "system", content: systemPrompt }, ...normalizedMessages],
+              temperature: 0.45,
+              max_tokens: 4096,
             }),
           });
 
@@ -168,12 +214,16 @@ export async function POST(req: NextRequest) {
           }
 
           const { cleanReply, action } = extractActionFromReply(rawContent);
+          if (!cleanReply) {
+            continue;
+          }
+
           if (action) {
             await notifyPastorServerSide(action);
           }
 
           return NextResponse.json({
-            reply: cleanReply || generateLocalFallbackReply(lastUserMessage, locale),
+            reply: cleanReply,
             action,
             modelUsed: model,
           });
@@ -198,9 +248,9 @@ export async function POST(req: NextRequest) {
             },
             body: JSON.stringify({
               model: nvidiaModel,
-              messages: [{ role: "system", content: systemPrompt }, ...sanitizedMessages],
-              temperature: 0.4,
-              max_tokens: 900,
+              messages: [{ role: "system", content: systemPrompt }, ...normalizedMessages],
+              temperature: 0.45,
+              max_tokens: 4096,
             }),
           }
         );
@@ -210,14 +260,16 @@ export async function POST(req: NextRequest) {
           const rawContent: string = data?.choices?.[0]?.message?.content || "";
           if (rawContent.trim()) {
             const { cleanReply, action } = extractActionFromReply(rawContent);
-            if (action) {
-              await notifyPastorServerSide(action);
+            if (cleanReply) {
+              if (action) {
+                await notifyPastorServerSide(action);
+              }
+              return NextResponse.json({
+                reply: cleanReply,
+                action,
+                modelUsed: nvidiaModel,
+              });
             }
-            return NextResponse.json({
-              reply: cleanReply,
-              action,
-              modelUsed: nvidiaModel,
-            });
           }
         }
       } catch (err) {
@@ -225,8 +277,12 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // 3. Built-in Intelligent Church Knowledge Fallback (works even without API key)
-    const fallbackReply = generateLocalFallbackReply(lastUserMessage, locale);
+    // 3. Built-in Intelligent Pastoral & Church Knowledge Fallback (never resets an ongoing conversation)
+    const fallbackReply = generateLocalFallbackReply(
+      lastUserMessage,
+      locale,
+      isOngoingConversation
+    );
     return NextResponse.json({
       reply: fallbackReply,
       action: null,
@@ -238,7 +294,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         reply:
-          "Desculpe, ocorreu uma instabilidade momentânea. Você também pode falar conosco pelo WhatsApp (12) 99162-6321.",
+          "Desculpe, ocorreu uma instabilidade momentânea na conexão. Continue falando comigo aqui ou, se preferir, chame no nosso WhatsApp (12) 99162-6321.",
         action: null,
       },
       { status: 200 }
