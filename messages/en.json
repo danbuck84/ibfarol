@@ -162,7 +162,7 @@
     "form_message": "Message",
     "btn_submit": "Send Message",
     "success_title": "Message Sent!",
-    "success_msg": "Thank you for reaching out. Pastor Gustavo will respond to your message soon.",
+    "success_msg": "Thank you for reaching out. We will respond to your message soon.",
     "send_another": "Send another message",
     "error_msg": "An error occurred while sending. Please try again later.",
     "submitting": "Sending..."
