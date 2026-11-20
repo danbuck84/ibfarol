@@ -1,6 +1,7 @@
 import PwaRegistry from "@/components/PwaRegistry";
 import CookieBanner from "@/components/CookieBanner";
 import ConsentAwareAnalytics from "@/components/ConsentAwareAnalytics";
+import SecretaryChatbot from "@/components/SecretaryChatbot";
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
@@ -51,6 +52,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <PwaRegistry />
           {children}
+          <SecretaryChatbot />
           <CookieBanner />
           <ConsentAwareAnalytics />
         </NextIntlClientProvider>
