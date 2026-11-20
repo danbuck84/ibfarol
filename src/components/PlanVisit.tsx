@@ -2,6 +2,8 @@
 import { useTranslations } from "next-intl";
 import { FormEvent, useRef, useState } from "react";
 
+const PASTOR_EMAIL = "gustavo@batistafarol.org";
+
 export default function PlanVisit() {
   const t = useTranslations('PlanVisit');
   const formRef = useRef<HTMLFormElement>(null);
@@ -11,25 +13,58 @@ export default function PlanVisit() {
     e.preventDefault();
     if (!formRef.current) return;
     setStatus("submitting");
-    
+
     const formData = new FormData(formRef.current);
-    // Netlify Forms requires this hidden field
-    formData.append("form-name", "visita");
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const botField = String(formData.get("bot-field") || "").trim();
+
+    if (botField) {
+      setStatus("success");
+      return;
+    }
+
+    formData.set("form-name", "visita");
 
     try {
-      const res = await fetch("/", {
+      // 1. Send directly to Pastor Gustavo's email via FormSubmit AJAX endpoint
+      const emailPromise = fetch(`https://formsubmit.co/ajax/${PASTOR_EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          Nome: name,
+          Email: email,
+          Mensagem: message,
+          _replyto: email,
+          _subject: `Nova mensagem pelo site IBFarol — ${name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+
+      // 2. Also record in Netlify Forms static handler (__forms.html) as backup log
+      const netlifyPromise = fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
-      
-      if (res.ok) {
+
+      const [emailRes, netlifyRes] = await Promise.allSettled([emailPromise, netlifyPromise]);
+
+      const emailOk = emailRes.status === "fulfilled" && emailRes.value.ok;
+      const netlifyOk = netlifyRes.status === "fulfilled" && netlifyRes.value.ok;
+
+      if (emailOk || netlifyOk) {
         setStatus("success");
         formRef.current.reset();
       } else {
         setStatus("error");
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
     }
   };
@@ -76,8 +111,8 @@ export default function PlanVisit() {
                 <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 <h4 className="text-xl font-bold mb-2">{t('success_title')}</h4>
                 <p>{t('success_msg')}</p>
-                <button onClick={() => setStatus("idle")} className="mt-6 text-green-700 font-semibold hover:underline">
-                  Enviar outra mensagem
+                <button onClick={() => setStatus("idle")} className="mt-6 text-green-700 font-semibold hover:underline cursor-pointer">
+                  {t('send_another')}
                 </button>
               </div>
             ) : (
