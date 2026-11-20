@@ -177,8 +177,8 @@ export default function SecretaryChatbot() {
     id: "welcome",
     role: "assistant",
     content: isEn
-      ? "Hello! Peace be with you! I'm **Clara**, Farol Baptist Church's virtual secretary.\n\nI can answer questions about our church, **schedule Biblical Counseling**, or **send a message / prayer request directly to Pastor Gustavo**.\n\nHow can I help you today?"
-      : "Olá! A paz! Sou a **Clara**, secretária virtual da **Igreja Batista Farol**.\n\nPosso tirar dúvidas sobre a igreja, **agendar um Aconselhamento Bíblico** ou **enviar uma mensagem / pedido de oração direto ao Pr. Gustavo**.\n\nComo posso ajudar você hoje?",
+      ? "Hello! The peace of Christ be with you! I'm **Clara**, Farol Baptist Church's virtual secretary.\n\nI can answer questions about our church, **schedule Biblical Counseling**, or **send a message / prayer request directly to Pastor Gustavo**.\n\nHow can I help you today?"
+      : "Olá! A paz de Cristo! Sou a **Clara**, secretária virtual da **Igreja Batista Farol**.\n\nPosso tirar dúvidas sobre a igreja, **agendar um Aconselhamento Bíblico** ou **enviar uma mensagem / pedido de oração direto ao Pr. Gustavo**.\n\nComo posso ajudar você hoje?",
     timestamp: "Agora",
   };
 
@@ -210,12 +210,15 @@ export default function SecretaryChatbot() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setMessages(parsed);
+          setMessages(
+            parsed.map((m: UiMessage) => (m.id === "welcome" ? welcomeMessage : m))
+          );
         }
       }
     } catch {
       // Ignore storage errors
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
