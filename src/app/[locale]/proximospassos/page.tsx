@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 
 export default async function ProximosPassosPage() {
@@ -16,7 +17,7 @@ export default async function ProximosPassosPage() {
   return (
     <>
       <Header />
-      <main className="min-h-[70vh] bg-brand-canvas py-20 px-8">
+      <main className="min-h-[70vh] bg-brand-canvas py-20 px-6 md:px-8">
         <div className="max-w-[800px] mx-auto text-center mb-16">
           <h1 className="text-[40px] font-bold text-brand-ink mb-4">{t('title')}</h1>
           <p className="text-xl text-brand-body text-balance">
@@ -24,40 +25,63 @@ export default async function ProximosPassosPage() {
           </p>
         </div>
         
-        <div className="max-w-[600px] mx-auto relative">
-          {/* Vertical Line */}
-          <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-1 bg-brand-hairline -translate-x-1/2"></div>
-          
-          <div className="space-y-12 relative z-10">
-            {steps.map((step, idx) => (
-              <div key={step.num} className={`flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 ${idx % 2 === 0 ? 'md:flex-row-reverse text-left md:text-right' : 'text-left'}`}>
-                
-                {/* Content */}
-                <div className="flex-1 bg-white p-6 rounded-lg border border-brand-hairline shadow-sm w-full md:w-auto ml-16 md:ml-0 relative">
-                  <h3 className="text-2xl font-bold text-brand-ink mb-2">
-                    <span className="text-brand-primary md:hidden mr-2">#{step.num}</span>
-                    {step.title}
-                  </h3>
-                  <p className="text-brand-body text-lg">{step.desc}</p>
-                </div>
-                
-                {/* Circle */}
-                <div className="absolute left-8 md:static md:left-auto md:w-16 h-16 w-16 bg-brand-primary text-white font-bold text-2xl rounded-full flex items-center justify-center flex-shrink-0 shadow-lg border-4 border-brand-canvas -translate-x-1/2 md:translate-x-0 mt-4 md:mt-0">
-                  {step.num}
-                </div>
-                
-                {/* Empty Space for layout */}
-                <div className="flex-1 hidden md:block"></div>
-              </div>
-            ))}
+        <div className="max-w-[760px] mx-auto">
+          {/* Timeline Wrapper (line stops strictly at step 5) */}
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-7 md:left-1/2 top-8 bottom-8 w-0.5 bg-brand-hairline -translate-x-1/2"></div>
+            
+            <div className="space-y-10 md:space-y-12 relative z-10">
+              {steps.map((step, idx) => {
+                const isLeftOnDesktop = idx % 2 === 0;
+                return (
+                  <div
+                    key={step.num}
+                    className="relative flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8"
+                  >
+                    {/* Desktop Left Slot */}
+                    <div className={`hidden md:block ${isLeftOnDesktop ? '' : 'invisible'}`}>
+                      {isLeftOnDesktop && (
+                        <div className="bg-white p-6 rounded-xl border border-brand-hairline shadow-sm text-right">
+                          <h3 className="text-2xl font-bold text-brand-ink mb-2">{step.title}</h3>
+                          <p className="text-brand-body text-base leading-relaxed">{step.desc}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Center Circle (strictly aligned with the vertical line) */}
+                    <div className="w-14 h-14 md:w-16 md:h-16 bg-brand-primary text-white font-bold text-xl md:text-2xl rounded-full flex items-center justify-center flex-shrink-0 shadow-md border-4 border-brand-canvas z-10">
+                      {step.num}
+                    </div>
+
+                    {/* Desktop Right Slot */}
+                    <div className={`hidden md:block ${!isLeftOnDesktop ? '' : 'invisible'}`}>
+                      {!isLeftOnDesktop && (
+                        <div className="bg-white p-6 rounded-xl border border-brand-hairline shadow-sm text-left">
+                          <h3 className="text-2xl font-bold text-brand-ink mb-2">{step.title}</h3>
+                          <p className="text-brand-body text-base leading-relaxed">{step.desc}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Mobile Card (always to the right of the circle) */}
+                    <div className="md:hidden flex-1 ml-5 bg-white p-5 rounded-xl border border-brand-hairline shadow-sm text-left">
+                      <h3 className="text-xl font-bold text-brand-ink mb-1.5">{step.title}</h3>
+                      <p className="text-brand-body text-base leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           
-          <div className="mt-20 text-center bg-brand-canvas-soft border border-brand-hairline p-10 rounded-xl">
+          {/* Bottom CTA Box (outside the timeline container so the vertical line never crosses it) */}
+          <div className="mt-20 text-center bg-brand-canvas-soft border border-brand-hairline p-10 rounded-xl relative z-10">
             <h3 className="text-2xl font-bold text-brand-ink mb-4">{t('ready')}</h3>
             <p className="text-lg text-brand-body mb-8">{t('ready_desc')}</p>
-            <a href="/novosmembros" className="inline-block bg-brand-primary hover:bg-brand-primary-deep text-white font-bold px-8 py-4 rounded-lg transition-colors text-lg">
+            <Link href="/novosmembros" className="inline-block bg-brand-primary hover:bg-brand-primary-deep text-white font-bold px-8 py-4 rounded-lg transition-colors text-lg">
               {t('btn')}
-            </a>
+            </Link>
           </div>
         </div>
       </main>
