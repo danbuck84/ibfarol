@@ -177,8 +177,8 @@ export default function SecretaryChatbot() {
     id: "welcome",
     role: "assistant",
     content: isEn
-      ? "Hello! Peace be with you! I'm **Clara**, Farol Baptist Church's virtual secretary.\n\nI can answer questions about our church, **schedule Biblical Counseling**, or **send a message / prayer request directly to Pastor Gustavo**.\n\nHow can I help you today?"
-      : "Olá! A paz! Sou a **Clara**, secretária virtual da **Igreja Batista Farol**.\n\nPosso tirar dúvidas sobre a igreja, **agendar um Aconselhamento Bíblico** ou **enviar uma mensagem / pedido de oração direto ao Pr. Gustavo**.\n\nComo posso ajudar você hoje?",
+      ? "Hello! The peace of Christ be with you! I'm **Clara**, Farol Baptist Church's virtual secretary.\n\nI can answer questions about our church, **schedule Biblical Counseling**, or **send a message / prayer request directly to Pastor Gustavo**.\n\nHow can I help you today?"
+      : "Olá! A paz de Cristo! Sou a **Clara**, secretária virtual da **Igreja Batista Farol**.\n\nPosso tirar dúvidas sobre a igreja, **agendar um Aconselhamento Bíblico** ou **enviar uma mensagem / pedido de oração direto ao Pr. Gustavo**.\n\nComo posso ajudar você hoje?",
     timestamp: "Agora",
   };
 
@@ -201,7 +201,8 @@ export default function SecretaryChatbot() {
   const [pSubject, setPSubject] = useState("Mensagem ao Pastor");
   const [pMessage, setPMessage] = useState("");
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const lastMessageRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -210,12 +211,15 @@ export default function SecretaryChatbot() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setMessages(parsed);
+          setMessages(
+            parsed.map((m: UiMessage) => (m.id === "welcome" ? welcomeMessage : m))
+          );
         }
       }
     } catch {
       // Ignore storage errors
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -226,11 +230,38 @@ export default function SecretaryChatbot() {
     } catch {
       // Ignore storage errors
     }
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    if (isOpen && activePanel === "chat") {
-      inputRef.current?.focus();
-    }
-  }, [messages, isOpen, activePanel]);
+
+    if (!isOpen || activePanel !== "chat") return;
+
+    const container = chatContainerRef.current;
+    if (!container) return;
+
+    const lastMessage = messages[messages.length - 1];
+
+    requestAnimationFrame(() => {
+      if (isLoading || lastMessage?.role === "user") {
+        // When user sends a message or while waiting for response, show the bottom (user msg + loading indicator)
+        container.scrollTo({
+          top: container.scrollHeight,
+          behavior: "smooth",
+        });
+      } else if (messages.length <= 1) {
+        // Initial welcome message: show from the top
+        container.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else if (lastMessage?.role === "assistant" && lastMessageRef.current) {
+        // When assistant responds, scroll to the beginning (top) of the assistant's response
+        const targetTop = Math.max(0, lastMessageRef.current.offsetTop - 12);
+        container.scrollTo({
+          top: targetTop,
+          behavior: "smooth",
+        });
+      }
+      inputRef.current?.focus({ preventScroll: true });
+    });
+  }, [messages, isLoading, isOpen, activePanel]);
 
   const sendChatMessage = async (textToSend: string) => {
     const trimmed = textToSend.trim();
@@ -799,12 +830,17 @@ export default function SecretaryChatbot() {
           {/* Panel 3: Conversation Messages */}
           {activePanel === "chat" && (
             <>
-              <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3.5 bg-brand-canvas">
-                {messages.map((msg) => {
+              <div
+                ref={chatContainerRef}
+                className="relative flex-1 overflow-y-auto px-4 py-4 space-y-3.5 bg-brand-canvas"
+              >
+                {messages.map((msg, idx) => {
                   const isUser = msg.role === "user";
+                  const isLastMessage = idx === messages.length - 1;
                   return (
                     <div
                       key={msg.id}
+                      ref={isLastMessage ? lastMessageRef : undefined}
                       className={`flex flex-col ${isUser ? "items-end" : "items-start"}`}
                     >
                       <div
@@ -927,8 +963,6 @@ export default function SecretaryChatbot() {
                     </div>
                   </div>
                 )}
-
-                <div ref={messagesEndRef} />
               </div>
 
               {/* Input Form */}
