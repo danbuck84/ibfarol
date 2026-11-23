@@ -21,7 +21,7 @@ export default function NotFound() {
 
           <div className="text-center px-6 relative z-10">
             <div className="flex justify-center mb-8">
-              <img src="/logo.png" alt="Igreja Batista Farol" className="h-20 w-auto drop-shadow-2xl" />
+              <img src="/logo.svg" alt="Igreja Batista Farol" className="h-20 w-auto drop-shadow-2xl" />
             </div>
             
             <h1 className="text-8xl md:text-[120px] font-bold text-[#FFB63D] mb-2 opacity-90 tracking-tighter">404</h1>

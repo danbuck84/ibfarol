@@ -519,7 +519,7 @@ export default function SecretaryChatbot() {
               <div className="relative w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center text-brand-on-primary font-bold text-base shadow-sm shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/icons/farol-chatbot.png"
+                  src="/icons/ibfarol-icone-preto.svg"
                   alt="Farol"
                   className="w-7 h-7 object-contain"
                 />
@@ -1012,7 +1012,7 @@ export default function SecretaryChatbot() {
         <div className="relative w-9 h-9 rounded-full bg-brand-primary text-brand-on-primary flex items-center justify-center font-bold shadow-xs shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/icons/farol-chatbot.png"
+            src="/icons/ibfarol-icone-preto.svg"
             alt="Farol"
             className="w-6 h-6 object-contain"
           />

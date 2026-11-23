@@ -7,7 +7,6 @@ function MinistryCard({
   role,
   isInactive = false,
   icon = "/avatar-placeholder.svg",
-  iconBg = "bg-brand-ink",
   spotifyUrl,
   spotifyLabel,
 }: {
@@ -16,16 +15,15 @@ function MinistryCard({
   role: string;
   isInactive?: boolean;
   icon?: string;
-  iconBg?: string;
   spotifyUrl?: string;
   spotifyLabel?: string;
 }) {
   return (
     <li className={`bg-white border ${isInactive ? 'border-dashed border-brand-hairline opacity-70 bg-brand-canvas-soft' : 'border-brand-hairline shadow-sm'} p-6 rounded-lg flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6`}>
       <div className="flex items-center gap-5 flex-grow">
-        <div className={`w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border border-brand-hairline ${iconBg}`}>
+        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border border-brand-hairline shadow-xs">
            {/* eslint-disable-next-line @next/next/no-img-element */}
-           <img src={icon} alt={title} className="w-full h-full object-contain p-2 drop-shadow-sm" />
+           <img src={icon} alt={title} className="w-full h-full object-cover block" />
         </div>
         <div className="flex-grow">
           <h4 className={`font-semibold text-xl ${isInactive ? 'text-brand-mute' : 'text-brand-ink'}`}>{title}</h4>
@@ -74,31 +72,31 @@ export default function Ministries() {
             <p className="text-brand-body mb-8">{t('internal_desc')}</p>
             
             <ul className="space-y-4">
-              <MinistryCard title={t('min_jpeg')} leader="Gustavo" role={t('role_leader')} icon="/icons/faroljovens.png" />
-              <MinistryCard title={t('min_diaconia')} leader="Gustavo" role={t('role_leader')} icon="/icons/faroldiaconia.png" />
-              <MinistryCard title={t('min_eventos')} leader="Rose" role={t('role_leader')} icon="/icons/faroleventos.png" />
-              <MinistryCard title={t('min_homens_list')} leader="Gustavo" role={t('role_leader')} icon="/icons/farolhomens.png" />
+              <MinistryCard title={t('min_jpeg')} leader="Gustavo" role={t('role_leader')} icon="/icons/jovens-avatar.svg" />
+              <MinistryCard title={t('min_diaconia')} leader="Gustavo" role={t('role_leader')} icon="/icons/diaconia-avatar.svg" />
+              <MinistryCard title={t('min_eventos')} leader="Rose" role={t('role_leader')} icon="/icons/eventos-avatar.svg" />
+              <MinistryCard title={t('min_homens_list')} leader="Gustavo" role={t('role_leader')} icon="/icons/homens-avatar.svg" />
               <MinistryCard
                 title={t('min_infantil_list')}
                 leader="Débora"
                 role={t('role_leader')}
-                icon="/icons/farolkids1.png"
+                icon="/icons/farolkids-avatar.svg"
                 spotifyUrl="https://open.spotify.com/playlist/2InHUcZFQTbEVi3nmZgn00?si=2f0202c8adf54a2b"
                 spotifyLabel={isEn ? "Farol Kids Playlist" : "Playlist Farol Kids"}
               />
-              <MinistryCard title={t('min_integracao')} leader="Stephanie" role={t('role_leader')} icon="/icons/farolmembros.png" />
+              <MinistryCard title={t('min_integracao')} leader="Stephanie" role={t('role_leader')} icon="/icons/membros-avatar.svg" />
               <MinistryCard
                 title={t('min_louvor_list')}
                 leader="Gustavo"
                 role={t('role_leader')}
-                icon="/icons/farollouvor.png"
+                icon="/icons/louvor-avatar.svg"
                 spotifyUrl="https://open.spotify.com/playlist/3n76y1PIXbhw5NoiOq4JA8?si=83f6432026ef4525"
                 spotifyLabel={isEn ? "Worship Playlist" : "Playlist de Louvores"}
               />
-              <MinistryCard title={t('min_manutencao_list')} leader="Marco" role={t('role_leader')} icon="/icons/farolmanutencao.png" />
-              <MinistryCard title={t('min_midia_list')} leader="Talita" role={t('role_leader')} icon="/icons/farolmidia.png" />
-              <MinistryCard title={t('min_mulheres_list')} leader="Amanda" role={t('role_leader')} icon="/icons/farolmulheres1.png" />
-              <MinistryCard title={t('min_som')} leader="William" role={t('role_leader')} icon="/icons/farol2.png" />
+              <MinistryCard title={t('min_manutencao_list')} leader="Marco" role={t('role_leader')} icon="/icons/manutencao-avatar.svg" />
+              <MinistryCard title={t('min_midia_list')} leader="Talita" role={t('role_leader')} icon="/icons/midia-avatar.svg" />
+              <MinistryCard title={t('min_mulheres_list')} leader="Amanda" role={t('role_leader')} icon="/icons/mulheres-floral-avatar.svg" />
+              <MinistryCard title={t('min_som')} leader="William" role={t('role_leader')} icon="/icons/ibfarol-avatar-escuro.svg" />
             </ul>
           </div>
 
@@ -108,9 +106,9 @@ export default function Ministries() {
             <p className="text-brand-body mb-8">{t('external_desc')}</p>
             
             <ul className="space-y-4">
-              <MinistryCard title={t('min_acao_list')} leader="Steve" role={t('role_leader')} icon="/icons/farolamarelo.png" />
-              <MinistryCard title={t('min_agape_list')} leader="Mafê" role={t('role_leader')} icon="/icons/farolbranco.png" iconBg="bg-brand-ink" />
-              <MinistryCard title={t('min_jiujitsu_list')} leader="Emerson" role={t('role_leader')} icon="/icons/farolpreto.png" />
+              <MinistryCard title={t('min_acao_list')} leader="Steve" role={t('role_leader')} icon="/icons/ibfarol-avatar-amarelo.svg" />
+              <MinistryCard title={t('min_agape_list')} leader="Mafê" role={t('role_leader')} icon="/icons/ibfarol-avatar-escuro.svg" />
+              <MinistryCard title={t('min_jiujitsu_list')} leader="Emerson" role={t('role_leader')} icon="/icons/ibfarol-avatar-creme.svg" />
             </ul>
           </div>
         </div>
