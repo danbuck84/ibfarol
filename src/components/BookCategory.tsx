@@ -44,9 +44,9 @@ export default function BookCategory({ category, books }: BookCategoryProps) {
           {isKidsCategory && (
             <div className="mt-6 bg-white border border-brand-hairline rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-ink flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/icons/farolkids1.png" alt="Farol Kids" className="w-full h-full object-contain p-1.5" />
+                  <img src="/icons/farolkids-avatar.svg" alt="Farol Kids" className="w-full h-full object-cover block" />
                 </div>
                 <div>
                   <h3 className="font-bold text-brand-ink text-base md:text-lg">

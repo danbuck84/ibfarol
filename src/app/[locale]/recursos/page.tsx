@@ -79,9 +79,9 @@ export default async function RecursosPage() {
               className="flex items-center justify-between gap-4 bg-white p-5 rounded-xl border border-brand-hairline shadow-xs hover:shadow-md transition-shadow group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-brand-ink flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/icons/farollouvor.png" alt="Louvor" className="w-full h-full object-contain p-2" />
+                  <img src="/icons/louvor-avatar.svg" alt="Louvor" className="w-full h-full object-cover block" />
                 </div>
                 <div>
                   <h3 className="font-bold text-brand-ink text-base md:text-lg group-hover:text-brand-primary-ink transition-colors">
@@ -109,9 +109,9 @@ export default async function RecursosPage() {
               className="flex items-center justify-between gap-4 bg-white p-5 rounded-xl border border-brand-hairline shadow-xs hover:shadow-md transition-shadow group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-brand-ink flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 border border-brand-hairline overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/icons/farolkids1.png" alt="Farol Kids" className="w-full h-full object-contain p-2" />
+                  <img src="/icons/farolkids-avatar.svg" alt="Farol Kids" className="w-full h-full object-cover block" />
                 </div>
                 <div>
                   <h3 className="font-bold text-brand-ink text-base md:text-lg group-hover:text-brand-primary-ink transition-colors">
